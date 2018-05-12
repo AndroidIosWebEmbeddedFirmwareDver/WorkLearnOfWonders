@@ -1,9 +1,0 @@
-<?xml version="1.0" encoding="utf-8"?>
-<inset xmlns:android="http://schemas.android.com/apk/res/android"
-    android:insetLeft="@dimen/XL">
-    <shape>
-        <solid android:color="@color/dc1"/>
-        <size android:height="@dimen/divider_line_thickness"/>
-
-    </shape>
-</inset>

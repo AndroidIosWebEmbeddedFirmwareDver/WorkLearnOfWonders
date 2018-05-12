@@ -1,6 +1,0 @@
-framework module Pods_BASE_POD_SCHCDoctor_DEV {
-  umbrella header "Pods-BASE_POD-SCHCDoctor_DEV-umbrella.h"
-
-  export *
-  module * { export * }
-}

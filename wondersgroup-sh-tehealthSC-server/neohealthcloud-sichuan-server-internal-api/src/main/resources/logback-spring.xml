@@ -1,6 +1,0 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<configuration scan="false">
-    <property name="LOG_HOME" value="/usr/local/dir_samba/HC_logs"/>
-    <property name="APP_NAME" value="sichuan-internal-api"/>
-    <include resource="logback-wonders-base.xml"/>
-</configuration>
