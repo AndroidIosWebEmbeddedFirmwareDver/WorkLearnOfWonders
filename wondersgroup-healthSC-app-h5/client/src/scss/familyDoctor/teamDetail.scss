@@ -1,0 +1,148 @@
+@import "../common/public";
+body{
+  background-color: #f6f6f6;
+  @media screen and (min-width: 320px) {
+    .top{
+      position: relative;
+      height: 6rem;
+    }
+  }
+
+  @media screen and (max-width: 320px) {
+    .top{
+      position: relative;
+      height: 6.3rem;
+    }
+  }
+  .main{
+    background: url(../../images/familyDoctor/team_icon1.png) no-repeat;
+    background-size: 100% 100%;
+    width: 60%;
+    height: 100%;
+    margin: 0 20%;
+    filter: blur(0.24rem);
+  }
+  .wrap{
+    position: absolute;
+    top:0;
+    background: url(../../images/familyDoctor/bg_icon.png) no-repeat;
+    background-size: 100% 100%;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+  }
+  .body{
+    position: absolute;
+    top:0;
+    width: 100%;
+    padding-top: 1.07rem;
+    text-align: center;
+    color: #ffffff;
+    .title_img{
+      width: 2.13rem;
+      height: 2.13rem;
+      margin-bottom: 0.27rem;
+    }
+    .title_content{
+      margin: 0.2rem;
+      word-break: break-all;
+      line-height: 0.4rem;
+    }
+  }
+
+  .center{
+    margin: 0.27rem 0;
+    background-color: #ffffff;
+    padding: 0.4rem;
+
+    hr{
+      border:0;
+      background-color:#F1F1F1;
+      height:1Px;
+    }
+
+    .text{
+      @include font-dpr(14px);
+      color: #333333;
+      margin: 0.27rem 0;
+    }
+    .online_service{
+      display: -webkit-flex;
+      display: flex;
+      flex-direction:row;
+      align-items: center;
+
+      .pic_icon{
+        width: 1.28rem;
+        height: 1.28rem;
+        margin-right: 0.32rem;
+      }
+      .sign_icon{
+        width: 0.91rem;
+        height: 0.43rem;
+      }
+
+      .team_name{
+        @include font-dpr(16px);
+      }
+    }
+
+    .div_width{
+      width: 80%;
+      padding-bottom: 0.53rem;
+    }
+    .div_bottom{
+      border-bottom: 1Px solid #F1F1F1;
+    }
+    .service_row{
+      justify-content: space-between;
+    }
+    .team_row{
+      justify-content: flex-start;
+    }
+  }
+}
+.padding{
+  padding: 0.4rem 0 0 ;
+}
+.title_topic{
+  @include font-dpr(14px);
+}
+.service_topic{
+  @include font-dpr(18px);
+}
+.count{
+  @include font-dpr(20px);
+}
+.font_color{
+  color: #333333;
+}
+.content_font_color{
+  color: #999999;
+}
+.title{
+  color: #666666;
+}
+.topic_font_color{
+  color: #2D3F51;
+}
+.pic_bottom{
+  padding-bottom: 0.53rem;
+}
+.footer_btn{
+  padding: 0.27rem 0;
+}
+.btn_primary{
+  width: 100%;
+  height: 1.17rem;
+  background-color: #3697FF ;
+  border-radius:0.1rem;
+  color: #FFFFFF;
+  @include font-dpr(18px);
+  border: 0;
+}
+.service_div{
+  width: 6rem;
+}
+
+

@@ -1,0 +1,69 @@
+<div class="wrapper" ng-controller="imformationArticlesEditController">
+    <div class="panel panel-default">
+        <div class="panel-heading font-bold">
+            <a href ng-click="back()"><i class="fa fa-mail-reply"></i></a>
+            <string ng-bind="title"></string>
+        </div>
+        <div class="panel-body">
+            <form class="form-horizontal m-t-md" name="imformationArticlesEdit">
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">文章ID：</label>
+                    <div class="col-lg-6">
+                        <input type="text" class="form-control m-b-sm" ng-model="editObj.article_id" ng-blur="getArticleData()" ng-disabled="idIsEdit" required />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">标题：</label>
+                    <div class="col-lg-6">
+                        <div>
+                            <input type="text" class="form-control" ng-model="editObj.title" disabled />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">图片：</label>
+                    <div class="col-lg-4">
+                        <div>
+                            <img ng-src="{{editObj.thumb}}" class="w" onerror="javascript:this.src='img/nopic.gif'" src="" />
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">文章分类：</label>
+                    <div class="col-lg-6">
+                        <div style="line-height: 38px" ng-model="editObj.ids">
+                            <label ng-repeat="item in classifyList" style="margin-right: 20px">
+                                <input type="checkbox" id={{item.id}} name="{{item.c_name}}" ng-checked="isSelected(item.id)" ng-click="updateSelection($event,item.id)" />
+                                <span ng-bind="item.c_name"></span>
+                            </label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">描述：</label>
+                    <div class="col-lg-6">
+                        <textarea class="form-control" rows="3" ng-model="editObj.brief" disabled></textarea>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">关键词：</label>
+                    <div class="col-lg-6">
+                        <input type="text" class="form-control" ng-model="editObj.keyword" disabled/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">阅读量：</label>
+                    <div class="col-lg-6">
+                        <input type="text" class="form-control" ng-model="editObj.fake_pv" disabled/>
+                    </div>
+                </div>
+                <div class="form-group m-b-xl m-t-xl">
+                    <div class="col-lg-offset-2 col-lg-10">
+                        <button type="button" class="btn btn-sm btn-success" ng-disabled="imformationArticlesEdit.$invalid" ng-click="saveData()">保存</button>
+                        <a class="btn btn-sm btn-default" href ng-click="back()">取消</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

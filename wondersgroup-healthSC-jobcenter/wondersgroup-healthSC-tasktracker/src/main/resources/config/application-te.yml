@@ -1,0 +1,50 @@
+server:
+  port: 3901
+  contextPath: /healthSC-tasktracker
+  tomcat:
+    uri-encoding: UTF-8
+
+
+lts:
+  tasktracker:
+     cluster-name: healthSC-job
+     registry-address: zookeeper://zookeeper.wdjky.me:9062
+     node-group: healthSC_tasktracker
+     dataPath: /usr/src/lts/failstore
+     dispatch-runner:
+      enable: true
+      shard-value: jobType
+     configs:
+      job:
+       fail:
+        store: leveldb
+
+mysql:
+  connection:
+    url: jdbc:mysql://mysql-m.wdjky.me:9034/healthcloud_sc_server?useUnicode=true&characterEncoding=UTF8&autoReconnect=true&rewriteBatchedStatements=TRUE&zeroDateTimeBehavior=convertToNull
+    username: healthcloud
+    password: healthcloud123456
+
+qiniu:
+  access_key: uWCBSNid5ZGbs1exNGwoV9oCfvz3embV5lfojnog
+  secret_key: 7ms0V8Lk4S1goqClOaFL9mJmoOeMOwhdl3Zfi_XV
+  bucket: healthcloud
+  domain: http://og3xulzx6.bkt.clouddn.com/
+
+
+#区域平台诊间支付调用接口url
+his:
+ pay:
+  url: http://172.16.110.110:8080/ehrview_pre/payment?st=
+
+internal:
+  api:
+    url: http://10.1.64.195/sichuan-internal
+
+spring:
+  mail:
+    sendFrom: wondershealth@wondersgroup.com
+    username: wondershealth
+    password: Wonders@2009
+    host: pop3.wondersgroup.com
+    port: 587

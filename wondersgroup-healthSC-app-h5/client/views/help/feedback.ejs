@@ -1,0 +1,93 @@
+<!DOCTYPE HTMl>
+<html>
+<head>
+<title>意见反馈</title>
+<% include ../commontags/metatags %>
+<link rel="stylesheet" href="<%=_src('/libs/css/font-awesome.min.css')%>">
+<link rel="stylesheet" href="<%=_src('/css/helpCenter/feedback.min.css')%>">
+</head>
+<body style="background: #F6F6F6;">
+    <div class="wrap">
+        <textarea id="content" class="content" placeholder="请输入您的意见或反馈"></textarea>
+        <input id="mobilePhone" type="tel" class="mobilePhone" placeholder="请填写您的联系方式" >
+        <button id="submit" class="submit">提 交</button>
+    </div>
+    <script type="text/javascript">
+        $(function(){
+            var tel = '<%=query.tel%>'
+            if(tel){
+                $('#mobilePhone').val(tel.substring(0,3)+"****"+tel.substring(7))
+            }
+
+            function getParams(){
+                var param = {}
+                param.userId = '<%=query.userId%>'
+                param.content = $('#content').val()
+                param.mobilePhone = tel
+                param.platform = '<%=platform%>'
+                return param
+            }
+
+            function  tip(tipMsg,func){
+                $("body").append('<div class="tip">'+tipMsg+'</div>');
+                var $tip=$(".tip");
+                $tip.animate({
+                    opacity:"1",
+                    bottom:"60px"
+                },500,function () {
+                    $tip.animate({
+                        opacity:"0",
+                    },2500,function(){
+                        $tip.remove();
+                        if(func){func();};
+                    });
+                });
+            }
+
+            $('#mobilePhone').on('input',function(){
+                tel = $(this).val()
+            })
+
+            var flg = true;
+            $('#submit').on('touchstart',function(){
+
+                var param = getParams()
+
+                if(!param.content){
+                    tip('请填写意见或反馈')
+                    return false
+                }
+
+                if($.trim(param.content).length < 5){
+                    tip('意见内容太少啦，不能少于5个字')
+                    return false
+                }
+
+                if(param.mobilePhone){
+                    if(!(/^1[34578]\d{9}$/.test(param.mobilePhone))){
+                        tip("请填写正确的手机号");
+                        return false;
+                    }
+                }
+
+                if(!flg){
+                    return false;
+                }
+                $.post('feedback/add',param,function(data){
+                    if(data.code == 0){
+                        tip(data.msg,function(){
+                            history.back()
+                            flg = true
+                        })
+                    }else{
+                        tip('服务器出现问题,请稍尝试!',function(){
+                            flg = true
+                        })
+                    }
+                })
+                flg = false
+            })
+        })
+    </script>
+</body>
+</html>

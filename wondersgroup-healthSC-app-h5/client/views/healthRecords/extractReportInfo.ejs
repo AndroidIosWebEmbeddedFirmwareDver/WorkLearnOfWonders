@@ -1,0 +1,80 @@
+<!DOCTYPE HTMl>
+<html>
+<head>
+<title>报告详情</title>
+<% include ../commontags/metatags %>
+<link rel="stylesheet" href="<%=_src('/css/healthRecords/healthRecords.min.css')%>">
+</head>
+<body>
+<%if(data){%>
+<ul class="drug_list operation_list clearfix">
+	<li>
+        <div class="p_line line-border">
+            <label>检查时间：</label>
+            <p id="date"></p>
+        </div>
+        <div class="p_line line-border">
+            <label>医　　院：</label>
+            <p id="name"></p>
+        </div>
+        <div class="p_line line-border">
+            <label>科　　室：</label>
+            <p id="department"></p>
+        </div>
+        <div class="p_line">
+            <label>检查类别：</label>
+            <p id="type"></p>
+        </div>
+        <div class="table_wrap"  style="padding-left:0;padding-right:0">
+            <table width="100%">
+                <tr><td>项目</td><td>结果</td><td>参考值</td></tr>
+                <%data.forEach(function(element){%>
+                <tr>
+                    <td><%=element.item_name%></td>
+                    <td>
+                        <%=element.item_value%>
+                        <% 
+                           var flag = element.item_status; 
+                           var text = '';
+                           if(flag == '1'){
+                               text = '<span class="arrow_up">↑</span>';
+                           }else if(flag == '2'){
+                               text = '<span class="arrow_down">↓</span>';
+                           }
+                        %>
+                        <%-text%>
+                    </td>
+                    <td><%=element.refer_value%></td>
+                </tr>
+                <%})%>
+            </table>
+        </div>
+    </li>
+</ul>
+<div id="bg" style="display: none;"></div>
+<div class="popup-normal" style="display: none">
+    <div class="con">
+        <div class="popup-wsinfo">
+            <h4>您的账户信息尚未完善</h4>
+            <p>完善后可获得更多服务</p>
+        </div>
+    </div>
+    <div class="btm">
+        <a href="" class="tc2">暂不完善</a>
+        <a href="" class="tc3">立即完善</a>
+    </div>
+</div>
+<%}else{%>
+<div class="nodata" ><p>暂无内容</p></div>
+<%}%>
+</body>
+<script>
+    function queryString(key){
+        return decodeURIComponent((document.location.search.match(new RegExp("(?:^\\?|&)"+key+"=(.*?)(?=&|$)"))||['',null])[1]);
+    }
+    queryString('name') && $('#name').html(queryString('name'));
+    queryString('date') && $('#date').html(queryString('date'));
+    queryString('department') && $('#department').html(queryString('department'));
+    queryString('type') && $('#type').html(queryString('type'));
+</script>
+</html>

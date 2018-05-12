@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_search"
+        android:layout_width="match_parent"
+        android:layout_height="62dp"
+        android:paddingLeft="@dimen/XXXXL"
+        android:paddingRight="@dimen/XXXXL"
+        android:gravity="center_vertical"
+        android:background="@color/bc1">
+
+        <EditText
+            android:id="@+id/tv_search"
+            android:layout_width="match_parent"
+            android:layout_height="32dp"
+            android:background="@drawable/btn_radius_stroke_white_gray"
+            android:drawableLeft="@mipmap/icon_search_white"
+            android:drawablePadding="@dimen/M"
+            android:gravity="center_vertical"
+            android:hint="搜索患者"
+            android:paddingLeft="@dimen/L"
+            android:paddingRight="@dimen/L"
+            android:singleLine="true"
+            android:textColor="@color/tc0"
+            android:textColorHint="@color/tc4"
+            android:textSize="@dimen/text_size_14"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/L"
+        android:layout_below="@+id/rl_search">
+
+        <com.wondersgroup.hs.healthcloud.common.view.PagerSlidingTabStrip
+            android:id="@+id/tabs"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height_L"
+            android:background="@color/bc1"
+            app:pstsIndicatorColor="@color/tc5"
+            app:pstsIndicatorHeight="3dp"
+            app:pstsSelectedTabTextColor="@color/tc5"
+            app:pstsSelectedTabTextSize="@dimen/text_size_14"
+            app:pstsTabPaddingLeftRight="@dimen/L"
+            app:pstsTabTextColor="@color/tc1"
+            app:pstsTabTextSize="@dimen/text_size_14"
+            app:pstsUnderlineColor="@color/dc1"
+            app:pstsUnderlineHeight="@dimen/divider_line_thickness"
+            app:redPointPosition="right"
+            app:pstsUnderlinePadding="30dp"/>
+
+        <android.support.v4.view.ViewPager
+            android:id="@+id/pager"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tabs"/>
+    </RelativeLayout>
+</RelativeLayout>

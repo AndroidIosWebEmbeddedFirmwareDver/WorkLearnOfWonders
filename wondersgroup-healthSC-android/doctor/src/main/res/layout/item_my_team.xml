@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:id="@+id/iv_item_doctorlist_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/bg_item_white_selector">
+
+
+        <com.wondersgroup.hs.healthcloud.common.view.CircleImageView
+            android:id="@+id/iv_item_team_img"
+            android:layout_width="@dimen/XXXXXL"
+            android:layout_height="@dimen/XXXXXL"
+            android:layout_alignParentLeft="true"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="@dimen/XL"
+            android:layout_marginRight="@dimen/XL"
+            android:src="@mipmap/ic_doctor_default_man" />
+
+
+        <LinearLayout
+            android:id="@+id/sign_ll_content"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/XL"
+            android:layout_marginRight="@dimen/XL"
+            android:layout_marginTop="@dimen/XL"
+            android:layout_toRightOf="@id/iv_item_team_img"
+            android:orientation="vertical">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxEms="5"
+                android:maxLines="1"
+                android:text="ssss"
+                android:id="@+id/team_name"
+                android:textColor="@color/tc1"
+                android:textSize="@dimen/text_size_16" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:ellipsize="end"
+                android:maxEms="5"
+                android:maxLines="1"
+                android:id="@+id/team_address"
+                android:text="ssss"
+                android:textColor="@color/tc3"
+                android:textSize="@dimen/text_size_14" />
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_marginLeft="@dimen/XL"
+            android:layout_height="@dimen/divider_line_thickness"
+            android:layout_below="@id/sign_ll_content"
+            android:background="@color/dc1" />
+
+    </RelativeLayout>
+
+</LinearLayout>
+

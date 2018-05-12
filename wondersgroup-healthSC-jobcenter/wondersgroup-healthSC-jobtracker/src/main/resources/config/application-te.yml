@@ -1,0 +1,20 @@
+server:
+  port: 3900
+  contextPath: /healthSC-jobtracker
+  tomcat:
+    uri-encoding: UTF-8
+
+lts:
+  jobtracker:
+    cluster-name: healthSC-job
+    listen-port: 35009
+    registry-address: zookeeper://zookeeper.wdjky.me:9062
+    dataPath: /usr/src/lts/failstore
+
+    configs:
+        logger: mysql
+        queue: mysql
+        jdbc:
+          url: jdbc:mysql://mysql-m.wdjky.me:9034/healthSC_lts
+          username: healthcloud
+          password: healthcloud123456

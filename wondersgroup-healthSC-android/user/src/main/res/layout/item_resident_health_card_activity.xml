@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="#ffffff"
+    android:orientation="vertical"
+    android:padding="19.2dp">
+<!--
+    android:layout_marginBottom="19.2dp"
+    android:layout_marginLeft="19.2dp"
+    android:layout_marginRight="19.2dp"
+    android:layout_marginTop="19.2dp"-->
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@mipmap/bg_cover_medicalcard"
+        android:orientation="vertical"
+        android:padding="19.2dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical"
+            android:layout_marginBottom="4.8dp"
+            android:layout_marginTop="4.8dp"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/item_resident_health_card_activity_hospital_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="9.6dp"
+                android:layout_marginRight="9.6dp"
+                android:layout_weight="1"
+                android:text="绵阳市第三人民医院附属医院"
+                android:textColor="#ffffff"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText,NestedWeights" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="end"
+                android:text="院内就诊卡"
+                android:textColor="#ffffff"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4.8dp"
+            android:layout_marginTop="4.8dp"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:gravity="center_vertical"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="就诊卡号"
+                android:textColor="#ffffff"
+                android:textSize="10sp"
+                tools:ignore="HardcodedText,SmallSp" />
+
+
+            <TextView
+                android:id="@+id/item_resident_health_card_activity_mediacl_card_no"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingTop="4.8dp"
+                android:text="4410 6278 1011 2413 886"
+                android:textColor="#ffffff"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="4.8dp"
+            android:layout_marginTop="4.8dp"
+            android:layout_weight="1"
+            android:background="@color/transparent"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/ic_user_s"
+                tools:ignore="ContentDescription" />
+
+            <TextView
+                android:id="@+id/item_resident_health_card_activity_user_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4.8dp"
+                android:layout_weight="1"
+                android:text="张有德"
+                android:textColor="#ffffff"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText,InefficientWeight,NestedWeights,RtlHardcoded" />
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="end"
+                android:text="证件号"
+                android:textColor="#ffffff"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText" />
+
+            <TextView
+                android:id="@+id/item_resident_health_card_activity_user_idcard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="4.8dp"
+                android:gravity="end"
+                android:text="310***********4839"
+                android:textColor="#ffffff"
+                android:textSize="14sp"
+                tools:ignore="HardcodedText,RtlHardcoded" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/transparent"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/item_resident_health_card_activity_btn_delete"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_radius_in_health_cards_left"
+            android:paddingBottom="9.6dp"
+            android:paddingTop="9.6dp"
+            android:text="解除绑定"
+            android:textAlignment="center"
+            android:textColor="#666666"
+            android:textSize="14sp"
+            tools:ignore="ButtonStyle,HardcodedText" />
+
+
+        <Button
+            android:id="@+id/item_resident_health_card_activity_btn_gh"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:background="@drawable/btn_radius_in_health_cards_right"
+            android:paddingBottom="9.6dp"
+            android:paddingTop="9.6dp"
+            android:text="挂号"
+            android:textAlignment="center"
+            android:textColor="#2E7AF0"
+            android:textSize="14sp"
+            tools:ignore="ButtonStyle,HardcodedText" />
+
+    </LinearLayout>
+
+</LinearLayout>

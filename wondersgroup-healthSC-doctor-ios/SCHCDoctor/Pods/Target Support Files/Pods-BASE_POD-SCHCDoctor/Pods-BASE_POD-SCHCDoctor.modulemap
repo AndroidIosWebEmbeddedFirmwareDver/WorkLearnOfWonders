@@ -1,0 +1,6 @@
+framework module Pods_BASE_POD_SCHCDoctor {
+  umbrella header "Pods-BASE_POD-SCHCDoctor-umbrella.h"
+
+  export *
+  module * { export * }
+}

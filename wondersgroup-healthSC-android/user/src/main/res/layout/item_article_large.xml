@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_item_white_selector"
+    android:orientation="vertical"
+    android:paddingLeft="10dp"
+    android:paddingRight="10dp"
+    android:paddingTop="@dimen/L">
+
+    <com.wondersgroup.hs.healthcloud.common.view.RatioImageView
+        xmlns:app="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/item_iv"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:scaleType="centerCrop"
+        app:ratio="3"/>
+
+    <TextView
+        android:id="@+id/item_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/M"
+        android:lineSpacingExtra="3dp"
+        android:text="糖尿病糖尿病糖尿病糖尿病糖尿病糖尿病糖尿病糖尿病糖尿病糖尿病糖尿病糖尿病"
+        android:textColor="@color/tc4"
+        android:textSize="@dimen/text_size_14"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_line_thickness"
+        android:layout_marginTop="6dp"
+        android:background="@color/dc1"/>
+</LinearLayout>

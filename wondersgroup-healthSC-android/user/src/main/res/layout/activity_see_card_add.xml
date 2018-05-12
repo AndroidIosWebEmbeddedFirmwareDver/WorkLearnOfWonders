@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+    <!--<include layout="@layout/activity_resident_card_add"/>-->
+    <LinearLayout
+        android:id="@+id/ll_add_card_see"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+
+        >
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="#ffffff">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:text="就诊人姓名"
+                android:textColor="@color/tc2"
+                android:textSize="@dimen/text_size_14"
+                tools:ignore="HardcodedText,RtlHardcoded" />
+
+            <TextView
+                android:id="@+id/tv_name_add"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:text="张**"
+                android:textColor="@color/tc2"
+                android:textSize="@dimen/text_size_14"
+                tools:ignore="HardcodedText,RtlHardcoded" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_line_thickness"
+            android:background="@color/divider_color" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="#ffffff">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:text="身份证"
+                android:textColor="@color/tc2"
+                android:textSize="@dimen/text_size_14"
+                tools:ignore="HardcodedText,RtlHardcoded" />
+
+            <TextView
+                android:id="@+id/tv_idcard"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:text="5130******000"
+                android:textColor="@color/tc2"
+                android:textSize="@dimen/text_size_14"
+                tools:ignore="HardcodedText,RtlHardcoded" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="10dp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="#ffffff">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:text="医院"
+                android:textColor="@color/tc2"
+                android:textSize="@dimen/text_size_14"
+                tools:ignore="HardcodedText,RtlHardcoded" />
+
+            <TextView
+                android:id="@+id/tv_select_hospital"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="15dp"
+                android:drawablePadding="5dp"
+                android:drawableRight="@mipmap/ic_default_arrow"
+                android:text="请选择医院"
+                android:textColor="@color/tc3"
+                android:textSize="@dimen/text_size_14"
+                tools:ignore="HardcodedText,RtlHardcoded" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_line_thickness"
+            android:background="@color/divider_color" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:background="#ffffff">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="15dp"
+                android:text="就诊卡卡号"
+                android:textColor="@color/tc2"
+                android:textSize="@dimen/text_size_14"
+                tools:ignore="HardcodedText,RtlHardcoded" />
+
+            <EditText
+                android:id="@+id/et_number"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:layout_marginRight="@dimen/L"
+                android:background="@color/transparent"
+                android:drawablePadding="5dp"
+                android:gravity="right"
+                android:hint="请输入院内就诊卡卡号"
+                android:maxLines="1"
+                android:textColor="@color/tc3"
+                android:textSize="@dimen/text_size_14"
+                tools:ignore="HardcodedText,RtlHardcoded,TextFields" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:layout_marginRight="15dp"
+            android:layout_marginTop="10dp"
+            android:text="说明：\n请输入认证身份证办理的医院就诊卡"
+            android:textColor="#FF665E"
+            android:textSize="@dimen/text_size_12"
+            tools:ignore="HardcodedText" />
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <Button
+                android:id="@+id/btn_next"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentBottom="true"
+                android:text="下一步"
+                android:textColor="@color/tc0"
+                android:textSize="@dimen/text_size_16"
+                tools:ignore="HardcodedText" />
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</LinearLayout>

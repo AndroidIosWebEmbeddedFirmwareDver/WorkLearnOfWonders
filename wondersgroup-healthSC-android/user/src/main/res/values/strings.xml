@@ -1,0 +1,27 @@
+<resources>
+    <string name="app_name">微健康 </string>
+    <!--实名认证start-->
+    <string name="auth_explain">您的实名认证申请已提交，我们将在24小时内完成审核，请耐心等待</string>
+    <string name="auth_checking">正在审核中</string>
+    <string name="auth_check_success">审核已通过</string>
+    <string name="auth_check_fail">审核未通过</string>
+    <string name="auth_tip">请务必填写真实信息，您的信息我们将严格保密</string>
+    <string name="auth_required">姓名与身份证为必填信息</string>
+    <string name="auth_clause">点击查看实名认证责任条款</string>
+    <string name="auth_sample_tip">拍照时请把双手手指，肩部，头部在镜头里显示出来</string>
+    <string name="auth_success">您的认证信息已提交\n请等待工作人员审核</string>
+    <string name="auth_dialog_title">您的账户未实名认证</string>
+    <string name="auth_dialog_content">实名认证后可获取更多服务</string>
+    <string name="order_count">接诊量 %s</string>
+    <!--实名认证end-->
+    <string name="version_info">您的当前版本v%1$s,发现新版本v%2$s</string>
+    <string name="dialog_text">1、目前只支持有卡预约挂号；\n2、目前只支持自己在医院办理的就诊卡；\n3、请输入本账号认证身份证办理的就诊卡卡号；\n4、预约挂号成功后，携带就诊卡到医院取号或进去排队系统</string>
+    <string name="extract_dialog_text">1、输入医院名称和时间段，即可查看检验检查报告；\n2、检验检查报告需实名认证；\n3、特殊项目（如HIV、病毒、微生物项目）请到医院查询；\n4、查询结果不作为任何医学凭据，请以医院提供的报告单为准。</string>
+
+    <string name="account_login_in_other_deivce">账号在其他地方登录</string>
+
+
+    <string name="turn_enter">转入 :</string>
+    <string name="turn_exit">转出 :</string>
+    <string name="apply_time">申请时间:</string>
+</resources>

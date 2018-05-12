@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/S"
+        android:background="@color/bc1"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:padding="@dimen/M">
+
+
+        <ImageView
+            android:id="@+id/iv_icon1"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:src="@mipmap/ic_launcher"/>
+
+        <TextView
+            android:id="@+id/tv_title1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_marginTop="@dimen/L"
+            android:text="查床纪录"
+            android:textColor="@color/tc2"
+            android:textSize="@dimen/text_size_16"/>
+
+
+    </LinearLayout>
+</FrameLayout>

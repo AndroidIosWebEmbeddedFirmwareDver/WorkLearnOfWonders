@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#ececec"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:weightSum="1"
+        android:id="@+id/department_select_rootView"
+        android:orientation="horizontal">
+
+
+        <com.wondersgroup.hs.healthcloud.common.view.BaseRecyclerView
+            android:id="@+id/lv_firstclass_dept"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.3"
+            android:background="@color/category_bgk"
+            android:listSelector="@null"
+            android:scrollbars="none"
+            app:recyclerStyle="list" />
+
+        <com.wondersgroup.hs.healthcloud.common.view.BaseRecyclerView
+            android:id="@+id/lv_secondclass_dept"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="0.7"
+            android:background="@color/bc1"
+            android:listSelector="@null"
+            android:scrollbars="none"
+            app:recyclerStyle="list" />
+    </LinearLayout>
+</LinearLayout>

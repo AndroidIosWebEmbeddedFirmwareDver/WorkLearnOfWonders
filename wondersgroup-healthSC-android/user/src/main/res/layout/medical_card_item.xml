@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="289dp"
+        android:layout_height="190dp"
+        android:orientation="vertical"
+        android:layout_gravity="center">
+
+        <RelativeLayout
+            android:id="@+id/rl_hospital_title"
+            android:layout_width="289dp"
+            android:layout_height="150dp"
+            android:layout_centerHorizontal="true"
+
+            android:background="@mipmap/bg_cover_medicalcard">
+
+            <TextView
+                android:id="@+id/tv_hospital_see_name"
+                android:layout_width="156dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="27dp"
+                android:layout_marginTop="18dp"
+                android:text="绵阳市第三人民医院附属医院"
+                android:textColor="#ffffff"
+                android:textSize="@dimen/text_size_13" />
+
+            <TextView
+                android:id="@+id/tv_card_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="16dp"
+                android:layout_marginTop="18dp"
+                android:layout_toRightOf="@id/tv_hospital_see_name"
+                android:background="#FFE899"
+                android:gravity="center"
+                android:text="就诊卡类型"
+                android:textColor="@color/tc2"
+                android:textSize="@dimen/text_size_13" />
+
+            <TextView
+                android:id="@+id/tv_card_number_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_hospital_see_name"
+                android:layout_marginLeft="27dp"
+                android:layout_marginTop="18dp"
+                android:text="就诊卡号"
+                android:textColor="@color/tc0"
+                android:textSize="@dimen/text_size_10" />
+
+            <TextView
+                android:id="@+id/tv_card_number"
+                android:layout_width="239dp"
+                android:layout_height="23dp"
+                android:layout_below="@id/tv_card_number_title"
+                android:layout_marginLeft="27dp"
+                android:layout_marginRight="23dp"
+
+                android:text="4410 6278 1011 2413 886"
+                android:textColor="@color/tc0"
+                android:textSize="@dimen/text_size_13" />
+
+            <RelativeLayout
+                android:id="@+id/rl_hospital_card_person"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_card_number"
+                android:layout_marginLeft="27dp"
+                android:layout_marginTop="8dp">
+
+                <TextView
+                    android:id="@+id/tv_hospital_card_person"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawableLeft="@mipmap/ic_user_head"
+                    android:drawablePadding="5dp"
+                    android:text="张有德"
+                    android:textColor="@color/tc0"
+                    android:textSize="@dimen/text_size_12" />
+
+                <TextView
+                    android:id="@+id/tv_id_card"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="21dp"
+                    android:layout_toRightOf="@id/tv_hospital_card_person"
+                    android:text="证件号"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/text_size_12" />
+
+                <TextView
+                    android:id="@+id/tv_id_card_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginRight="27dp"
+                    android:layout_toRightOf="@id/tv_id_card"
+                    android:text="513000000000000000"
+                    android:textColor="#ffffff"
+                    android:textSize="@dimen/text_size_12" />
+
+            </RelativeLayout>
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/bt_unbind"
+            android:layout_width="145dp"
+            android:layout_height="40dp"
+            android:textSize="@dimen/text_size_14"
+            android:textColor="@color/tc2"
+            android:background="@drawable/btn_circular_stroke_left"
+            android:text="解除绑定" />
+            <Button
+                android:id="@+id/btn_register1"
+                android:layout_toRightOf="@id/bt_unbind"
+                android:layout_width="145dp"
+                android:layout_height="40dp"
+                android:textSize="@dimen/text_size_14"
+                android:textColor="@color/tc_addtion2"
+               android:background="@drawable/btn_circular_stroke_right"
+                android:text="挂号" />
+        </RelativeLayout>
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,26 @@
+<resources>
+
+    <dimen name="S">2.5dp</dimen>
+    <dimen name="M">5dp</dimen>
+    <dimen name="L">10dp</dimen>
+    <dimen name="XL">15dp</dimen>
+    <dimen name="XXL">20dp</dimen>
+    <dimen name="XXXL">30dp</dimen>
+    <dimen name="XXXXL">40dp</dimen>
+    <dimen name="XXXXXL">50dp</dimen>
+
+    <dimen name="actionbar_height">45dip</dimen>
+
+    <!-- 栏目高度 -->
+    <dimen name="item_height">44dp</dimen>
+
+    <!-- 输入框高度 -->
+    <dimen name="edit_text_height">44dp</dimen>
+
+    <!-- 按钮高度 -->
+    <dimen name="btn_height_S">35dp</dimen>
+    <dimen name="btn_height_M">40dp</dimen>
+    <dimen name="btn_height_L">45dp</dimen>
+
+</resources>
+

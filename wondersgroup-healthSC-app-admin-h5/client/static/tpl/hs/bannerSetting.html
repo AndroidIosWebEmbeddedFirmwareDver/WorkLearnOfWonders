@@ -1,0 +1,76 @@
+<div class="wrapper-md" ng-controller="HealthBannerSettingCtrl">
+    <div class="panel panel-default">
+        <div class="panel-heading font-bold">
+            Banner设置
+            <div class="r">
+                <a class="btn m-b-xs btn-sm btn-primary btn-addon" ui-sref="app.hs.bannerSettingEdit">
+                    <i class="fa fa-plus"></i>添加
+                </a>
+            </div>
+        </div>
+        <div class="panel-body">
+            <div class="wrapper searchbox clearfix m-b-sm">
+                <form class="form-inline">
+                    <div class="form-group formGroup">
+                        <label class="control-label">是否显示：</label>
+                        <select class="form-control" ng-model="bannerObj.delFlag">
+                            <option value="">全部</option>
+                            <option value="0">是</option>
+                            <option value="1">否</option>
+                        </select>
+                    </div>
+                    <div style="margin: 5px 20px 5px 0" class="form-group formGroup" ng-controller="DatepickerDemoCtrl">
+                        <label class="control-label">显示时间：</label>
+                        <div class="input-group" ng-controller="DatepickerDemoCtrl">
+                            <input type="text" ng-model="bannerObj.startTime" class="form-control" datepicker-popup="yyyy-MM-dd HH:mm:ss" is-open="opened" datepicker-options="dateOptions" />
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                            </span>
+                        </div>
+                    </div>
+                    <label class="control-label formGroup">到</label>
+                    <div class="form-group formGroup">
+                        <div class="input-group" ng-controller="DatepickerDemoCtrl">
+                            <input type="text" ng-model="bannerObj.endTime" class="form-control" datepicker-popup="yyyy-MM-dd HH:mm:ss" is-open="opened" datepicker-options="dateOptions" />
+                            <span class="input-group-btn">
+                                <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                            </span>
+                        </div>
+                    </div>
+                    <button type="button" class="btn btn-success" ng-click="search(bannerObj)">
+                        <i class="fa fa-search"></i>查询
+                    </button>
+                </form>
+            </div>
+            <table class="table m-b-none table table-striped table-bordered table-hover">
+                <thead>
+                    <tr>
+                        <th data-toggle="true" style="width: 8%">排序</th>
+                        <th data-hide="phone,tablet" style="width:15%;">主题</th>
+                        <th data-hide="phone,tablet">图片</th>
+                        <th data-hide="phone,tablet" style="width: 20%">跳转地址</th>
+                        <th data-hide="phone,tablet" style="width: 30%">显示时间段</th>
+                        <th data-hide="phone" style="width:10%;">是否显示</th>
+                        <th data-hide="phone" style="width: 15%">操作</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr ng-repeat="item in pager.data">
+                        <td class="v-middle">{{item.sequence}}</td>
+                        <td class="v-middle">{{item.mainTitle}}</td>
+                        <td><img src="{{item.imgUrl}}" style="max-width: 100px;max-height: 50px;"></td>
+                        <td class="v-middle">{{item.hoplink}}</td>
+                        <td class="v-middle">{{item.startTime | date:'yyyy-MM-dd HH:mm:ss'}}{{(item.startTime && item.endTime)?'~':''}}{{item.endTime | date:'yyyy-MM-dd HH:mm:ss'}}</td>
+                        <td class="v-middle">{{item.delFlag==0?'显示':'不显示'}}</td>
+                        <td class="v-middle">
+                            <button class="btn m-b-xs btn-sm btn-default" ng-click="editBanner(item.id)"><i class="fa fa-pencil"></i>编辑</button>
+                            <button class="btn m-b-xs btn-sm btn-danger" ng-show="item.delFlag==0" ng-click="changeBanner(item)">不显示</button>
+                            <button class="btn m-b-xs btn-sm btn-success" ng-show="item.delFlag==1" ng-click="changeBanner(item)">显示</button>
+                        </td>
+                    </tr>
+                </tbody>
+                <tfoot class="hide-if-no-paging" paging-pager="pager" go-page="goPage(number)" paging></tfoot>
+            </table>
+        </div>
+    </div>
+</div>

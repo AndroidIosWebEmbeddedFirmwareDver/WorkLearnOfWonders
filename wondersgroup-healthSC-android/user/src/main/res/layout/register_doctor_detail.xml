@@ -1,0 +1,186 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:id="@+id/register_doctor_detail_root"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/registration_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:background="@color/bc1"
+        android:orientation="vertical">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_line_thickness"
+            android:background="@color/divider_color" />
+
+        <Button
+            android:id="@+id/go_registration"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/L"
+            android:layout_marginLeft="@dimen/XL"
+            android:layout_marginRight="@dimen/XL"
+            android:layout_marginTop="@dimen/L"
+            android:visibility="gone"
+            android:background="@drawable/btn_submit_selector_blue"
+            android:text="预约挂号"
+            android:textColor="@color/bc1"
+            android:textSize="@dimen/text_size_16" />
+    </LinearLayout>
+
+
+    <com.wonders.health.venus.open.user.view.ObservableScrollView
+        android:id="@+id/doctor_detail_scroll"
+        android:layout_width="match_parent"
+        android:layout_above="@id/registration_btn"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true">
+
+        <LinearLayout
+            android:id="@+id/doctor_detail_root"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:id="@+id/doctor_detail_head"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical" />
+
+            <LinearLayout
+                android:id="@+id/doctor_detail_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bc1"
+                android:layout_marginTop="@dimen/L"
+                android:orientation="vertical"
+                android:paddingBottom="@dimen/XL"
+                android:paddingLeft="@dimen/XL"
+                android:paddingTop="@dimen/XL">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="所属医院"
+                    android:textColor="@color/tc1"
+                    android:textSize="@dimen/text_size_16" />
+
+                <TextView
+                    android:id="@+id/tv_hospital"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/XL"
+                    android:layout_marginTop="@dimen/XL"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_line_thickness"
+                    android:background="@color/divider_color" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/XL"
+                    android:text="专业擅长"
+                    android:textColor="@color/tc1"
+                    android:textSize="@dimen/text_size_16" />
+
+                <TextView
+                    android:id="@+id/tv_expertin"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="@dimen/XL"
+                    android:layout_marginTop="@dimen/XL"/>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_line_thickness"
+                    android:background="@color/dc1" />
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:paddingBottom="@dimen/XL"
+                    android:paddingRight="@dimen/XL"
+                    android:paddingTop="@dimen/XL">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:text="医生详情"
+                        android:textColor="@color/tc1"
+                        android:textSize="@dimen/text_size_16" />
+
+                    <TextView
+                        android:id="@+id/tv_docotor_more"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawablePadding="@dimen/L"
+                        android:drawableRight="@mipmap/ic_default_arrow"
+                        android:text="查看全部" />
+
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_doctor_detail"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:maxLines="3"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_comment_more"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/L"
+                android:background="@color/bc1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:padding="@dimen/XL">
+
+                <TextView
+                    android:id="@+id/tv_mevalu_num"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="患者评价(0)"
+                    android:textColor="@color/tc1"
+                    android:textSize="@dimen/text_size_16" />
+
+                <TextView
+                    android:id="@+id/tv_comment_more"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:drawablePadding="@dimen/L"
+                    android:drawableRight="@mipmap/ic_default_arrow"
+                    android:text="更多" />
+
+            </LinearLayout>
+            <com.wondersgroup.hs.healthcloud.common.view.FitHeightListView
+                android:id="@+id/doctor_detail_list"
+                android:layout_width="match_parent"
+                android:background="@color/bc1"
+                app:list_divider="@color/dc1"
+                android:layout_height="wrap_content"
+                app:list_divider_height="@dimen/divider_line_thickness" />
+        </LinearLayout>
+    </com.wonders.health.venus.open.user.view.ObservableScrollView>
+
+    <RelativeLayout
+        android:id="@+id/fading_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:gravity="center_vertical" />
+
+</RelativeLayout>

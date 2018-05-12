@@ -1,0 +1,479 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:id="@+id/order_submit"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bc1"
+        android:orientation="vertical"
+        android:clickable="false"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_line_thickness"
+            android:background="@color/divider_color" />
+
+        <Button
+            android:id="@+id/order_submit_btn"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/L"
+            android:layout_marginLeft="@dimen/XL"
+            android:layout_marginRight="@dimen/XL"
+            android:layout_marginTop="@dimen/L"
+            android:background="@drawable/btn_submit_selector_blue"
+            android:text="提交"
+            android:textColor="@color/bc1"
+            android:textSize="@dimen/text_size_16" />
+    </LinearLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_above="@id/order_submit"
+        android:layout_alignParentStart="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/shape_corners_white_none_padding"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/XL"
+                    android:gravity="center_vertical"
+                    android:orientation="vertical">
+
+                    <com.wondersgroup.hs.healthcloud.common.view.CircleImageView
+                        android:id="@+id/iv_item_doctor_info_head_img"
+                        android:layout_width="@dimen/XXXXL"
+                        android:layout_height="@dimen/XXXXL"
+                        android:layout_gravity="center"
+                        android:src="@mipmap/ic_launcher" />
+
+                    <TextView
+                        android:id="@+id/tv_item_doctor_info_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/L"
+                        android:ellipsize="end"
+                        android:text="林医生"
+                        android:textColor="@color/tc2"
+                        android:textSize="@dimen/text_size_16" />
+
+                    <TextView
+                        android:id="@+id/tv_item_doctor_info_title"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="@dimen/L"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="副主任"
+                        android:textColor="@color/tc3"
+                        android:textSize="@dimen/text_size_12" />
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/XL"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/XL"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="就诊医院"
+                        android:textColor="@color/tc2"
+                        android:textSize="@dimen/text_size_14" />
+
+                    <TextView
+                        android:id="@+id/tv_item_doctor_info_hospital"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/XL"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textColor="@color/tc1"
+                        android:textSize="@dimen/text_size_14" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/L"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/XL"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="就诊科室"
+                        android:textColor="@color/tc2"
+                        android:textSize="@dimen/text_size_14" />
+
+                    <TextView
+                        android:id="@+id/tv_item_doctor_info_category"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/XL"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textColor="@color/tc1"
+                        android:textSize="@dimen/text_size_14" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/L"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/XL"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="门诊时间"
+                        android:textColor="@color/tc2"
+                        android:textSize="@dimen/text_size_14" />
+
+                    <TextView
+                        android:id="@+id/tv_item_doctor_info_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/XL"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textColor="@color/stc1"
+                        android:textSize="@dimen/text_size_14" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/registration_outpatient_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/L"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/XL"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="门诊类型"
+                        android:textColor="@color/tc2"
+                        android:textSize="@dimen/text_size_14" />
+
+                    <TextView
+                        android:id="@+id/tv_item_doctor_info_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/XL"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textColor="@color/tc1"
+                        android:textSize="@dimen/text_size_14" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/L"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/XL"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:text="挂号费用"
+                        android:textColor="@color/tc2"
+                        android:textSize="@dimen/text_size_14" />
+
+                    <TextView
+                        android:id="@+id/tv_item_doctor_info_fee"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="@dimen/XL"
+                        android:ellipsize="end"
+                        android:maxLines="1"
+                        android:textColor="@color/tc1"
+                        android:textSize="@dimen/text_size_14" />
+
+                </LinearLayout>
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_line_thickness"
+                    android:layout_marginTop="@dimen/XL"
+                    android:background="@color/dc1" />
+
+                <FrameLayout
+                    android:id="@+id/ll_rule"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:gravity="center_vertical">
+
+                </FrameLayout>
+            </LinearLayout>
+
+
+            <LinearLayout
+                android:id="@+id/contact_layout"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_height"
+                android:layout_marginTop="@dimen/L"
+                android:background="@color/bc1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:paddingLeft="@dimen/XL"
+                    android:text="就诊人"
+                    android:textColor="@color/tc2"
+                    android:textSize="@dimen/text_size_16" />
+
+                <TextView
+                    android:id="@+id/register_doctor_person_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/L"
+                    android:layout_weight="1"
+                    android:gravity="right"
+                    android:maxLines="1"
+                    android:ellipsize="end"
+                    android:textColor="@color/tc1"
+                    android:textSize="@dimen/text_size_16" />
+
+            </LinearLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bc1">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_line_thickness"
+                    android:layout_marginLeft="@dimen/XL"
+                    android:background="@color/divider_color" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_height"
+                android:background="@color/bc1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:paddingLeft="@dimen/XL"
+                    android:text="预约时间段"
+                    android:textColor="@color/tc2"
+                    android:textSize="@dimen/text_size_16" />
+
+                <TextView
+                    android:id="@+id/tv_time_range"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/L"
+                    android:gravity="right"
+                    android:maxLines="1"
+                    android:textColor="@color/tc1"
+                    android:textSize="@dimen/text_size_16" />
+
+
+            </LinearLayout>
+
+
+            <!--就诊卡类型-->
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bc1">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_line_thickness"
+                    android:layout_marginLeft="@dimen/XL"
+                    android:background="@color/divider_color" />
+            </FrameLayout>
+
+            <LinearLayout
+                android:id="@+id/ll_card_type"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_height"
+                android:background="@color/bc1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:paddingLeft="@dimen/XL"
+                    android:text="就诊卡类型"
+                    android:textColor="@color/tc2"
+                    android:textSize="@dimen/text_size_16" />
+
+                <TextView
+                    android:id="@+id/tv_card_type"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/L"
+                    android:gravity="right"
+                    android:maxLines="1"
+                    android:text="请选择"
+                    android:textColor="@color/tc1"
+                    android:textSize="@dimen/text_size_16" />
+
+
+            </LinearLayout>
+
+
+
+            <!--就诊卡卡号-->
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bc1">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_line_thickness"
+                    android:layout_marginLeft="@dimen/XL"
+                    android:background="@color/divider_color" />
+            </FrameLayout>
+
+
+
+            <LinearLayout
+                android:id="@+id/medi_card_root"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_height"
+                android:background="@color/bc1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:paddingLeft="@dimen/XL"
+                    android:text="就诊卡卡号"
+                    android:textColor="@color/tc2"
+                    android:textSize="@dimen/text_size_16" />
+
+                <LinearLayout
+                    android:layout_width="0px"
+                    android:layout_height="0px"
+                    android:focusable="true"
+                    android:focusableInTouchMode="true" />
+
+                <EditText
+                    android:id="@+id/tv_medi_card_id"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/L"
+                    android:background="@color/transparent"
+                    android:gravity="right"
+                    android:hint=""
+                    android:maxLines="1"
+                    android:textColor="@color/tc1"
+                    android:textColorHint="@color/stc2"
+                    android:textSize="@dimen/text_size_16" />
+
+
+            </LinearLayout>
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/bc1">
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/divider_line_thickness"
+                    android:layout_marginLeft="@dimen/XL"
+                    android:background="@color/divider_color" />
+            </FrameLayout>
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/item_height"
+                android:background="@color/bc1"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="120dp"
+                    android:layout_height="wrap_content"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:paddingLeft="@dimen/XL"
+                    android:text="支付方式"
+                    android:textColor="@color/tc2"
+                    android:textSize="@dimen/text_size_16" />
+
+                <TextView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginRight="@dimen/L"
+                    android:gravity="right"
+                    android:maxLines="1"
+                    android:text="在线支付"
+                    android:textColor="@color/tc1"
+                    android:textSize="@dimen/text_size_16" />
+
+
+            </LinearLayout>
+        </LinearLayout>
+    </android.support.v4.widget.NestedScrollView>
+
+
+</RelativeLayout>

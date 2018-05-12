@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:orientation="vertical">
+    <!--文章分类层-->
+    <com.wondersgroup.hs.healthcloud.common.view.PagerSlidingTabStrip
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height"
+        android:background="@color/bc1"
+        app:pstsIndicatorColor="@color/tc5"
+        app:pstsIndicatorHeight="@dimen/S"
+        app:pstsSelectedTabTextColor="@color/tc5"
+        app:pstsSelectedTabTextSize="@dimen/text_size_16"
+        app:pstsTabTextSize="@dimen/text_size_16"
+        app:pstsTabPaddingLeftRight="@dimen/L"
+        app:pstsUnderlinePadding="@dimen/M"
+        />
+    <android.support.v4.view.ViewPager
+        android:id="@+id/view_pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+</LinearLayout>

@@ -1,0 +1,7 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="false">
+    <property name="LOG_HOME" value="/usr/local/dir_samba/HC_logs"/>
+    <property name="APP_NAME" value="sichuan-his-api"/>
+    <include resource="logback-wonders-base.xml"/>
+    <!--<include resource="logback-spring-kafka.xml"/>-->
+</configuration>

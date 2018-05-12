@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/bc6</color>
+    <color name="colorPrimaryDark">@color/bc6</color>
+    <color name="colorAccent">@color/bc6</color>
+    <color name="colorTitleBar">@color/tc0</color>
+    <color name="colorActionText">@color/colorTitleBar</color>
+
+    <color name="transparent">#00000000</color>
+    <!-- 背景色 -->
+    <color name="bc0">#000000</color>
+    <color name="bc1">#ffffff</color>
+    <color name="bc2">#f9f9f9</color>
+    <color name="bc3">#dddddd</color>
+    <color name="bc4">#cccccc</color>
+    <color name="bc5">#eeeeee</color>
+    <color name="bc6">#0cb7f5</color>
+    <color name="bc7">#3dc4f5</color>
+    <color name="bc8">#309cc4</color>
+    <color name="bc9">#d0ebf5</color>
+
+    <!-- 文字颜色 -->
+    <color name="tc0">#ffffff</color>
+    <color name="tc1">#333333</color>
+    <color name="tc2">#666666</color>
+    <color name="tc3">#999999</color>
+    <color name="tc4">#bbbbbb</color>
+    <color name="tc5">#0cb7f5</color>
+
+    <color name="tutorial_tc">#13c26e</color>
+    <color name="tutorial_bc">#F5FAFD</color>
+    <color name="tc_addtion">#f54949</color>
+    <color name="tc_addtion2">#2e7af0</color>
+    <color name="bc_addtion">#fff9c9</color>
+    <!-- 通用分割线 便于与UI规范冲突时统一替换 -->
+    <color name="divider_color">@color/bc3</color>
+
+    <!-- wheelview -->
+    <color name="pickerview_timebtn_nor">@color/tc1</color>
+    <color name="pickerview_timebtn_pre">@color/tc2</color>
+    <color name="pickerview_bg_topbar">@color/bc2</color>
+    <color name="pickerview_topbar_title">@color/tc5</color>
+    <color name="pickerview_wheelview_textcolor_out">@color/tc3</color>
+    <color name="pickerview_wheelview_textcolor_center">@color/tc1</color>
+    <color name="pickerview_wheelview_textcolor_divider">@color/bc3</color>
+    <color name="tutorial_indicator_selected">#13c26e</color>
+    <color name="tutorial_indicator_unselected">#02ffff</color>
+    <color name="bc_tutorial">#39AEAD</color>
+
+    <color name="measure_normal">#13c26e</color>
+    <color name="measure_exception">#f54949</color>
+    <color name="category_bgk">#f6f9fd</color>
+
+    <color name="bc_extract_addition">#ffa217</color>
+
+</resources>

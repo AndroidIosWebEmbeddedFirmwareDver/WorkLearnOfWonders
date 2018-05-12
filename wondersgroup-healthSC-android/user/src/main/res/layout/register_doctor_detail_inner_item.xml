@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bc1"
+    android:orientation="vertical">
+
+    <LinearLayout
+        style="@style/MineItem"
+        android:background="@color/transparent"
+        android:paddingLeft="@dimen/L_">
+
+        <TextView
+            android:id="@+id/inner_item_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/tc5"
+            android:textSize="@dimen/text_size_14" />
+
+        <Button
+            style="@style/AppointmentButton"
+            android:id="@+id/inner_item_action_btn"
+            android:layout_marginRight="@dimen/L_"
+            android:text="预约"/>
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_line_thickness"
+        android:background="@color/dc1" />
+</LinearLayout>

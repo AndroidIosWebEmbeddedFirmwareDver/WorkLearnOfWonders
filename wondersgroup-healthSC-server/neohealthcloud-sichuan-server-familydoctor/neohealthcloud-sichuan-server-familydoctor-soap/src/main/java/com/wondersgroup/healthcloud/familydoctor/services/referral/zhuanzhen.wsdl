@@ -1,0 +1,341 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://webservice.fjzl.wondersgroup.com/"
+                  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="ZhuanzhenImplService"
+                  targetNamespace="http://webservice.fjzl.wondersgroup.com/">
+    <wsdl:types>
+        <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://webservice.fjzl.wondersgroup.com/" elementFormDefault="unqualified"
+                   targetNamespace="http://webservice.fjzl.wondersgroup.com/" version="1.0">
+
+            <xs:element name="inpatientAction" type="tns:inpatientAction"/>
+
+            <xs:element name="inpatientActionResponse" type="tns:inpatientActionResponse"/>
+
+            <xs:element name="inpatientApply" type="tns:inpatientApply"/>
+
+            <xs:element name="inpatientApplyResponse" type="tns:inpatientApplyResponse"/>
+
+            <xs:element name="inpatientDetail" type="tns:inpatientDetail"/>
+
+            <xs:element name="inpatientDetailResponse" type="tns:inpatientDetailResponse"/>
+
+            <xs:element name="inpatientList" type="tns:inpatientList"/>
+
+            <xs:element name="inpatientListResponse" type="tns:inpatientListResponse"/>
+
+            <xs:element name="outpatientAction" type="tns:outpatientAction"/>
+
+            <xs:element name="outpatientActionResponse" type="tns:outpatientActionResponse"/>
+
+            <xs:element name="outpatientApply" type="tns:outpatientApply"/>
+
+            <xs:element name="outpatientApplyResponse" type="tns:outpatientApplyResponse"/>
+
+            <xs:element name="outpatientDetail" type="tns:outpatientDetail"/>
+
+            <xs:element name="outpatientDetailResponse" type="tns:outpatientDetailResponse"/>
+
+            <xs:element name="outpatientList" type="tns:outpatientList"/>
+
+            <xs:element name="outpatientListResponse" type="tns:outpatientListResponse"/>
+
+            <xs:complexType name="outpatientAction">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+                    <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+
+            <xs:complexType name="outpatientActionResponse">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="return" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+
+            <xs:complexType name="inpatientApply">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+                    <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+
+            <xs:complexType name="inpatientApplyResponse">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="return" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+
+            <xs:complexType name="outpatientList">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+                    <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+
+            <xs:complexType name="outpatientListResponse">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="return" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+
+            <xs:complexType name="inpatientList">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+                    <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+
+            <xs:complexType name="inpatientListResponse">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="return" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+
+            <xs:complexType name="outpatientDetail">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+                    <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+
+            <xs:complexType name="outpatientDetailResponse">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="return" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+
+            <xs:complexType name="outpatientApply">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+                    <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+
+            <xs:complexType name="outpatientApplyResponse">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="return" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+
+            <xs:complexType name="inpatientAction">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+                    <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+
+            <xs:complexType name="inpatientActionResponse">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="return" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+
+            <xs:complexType name="inpatientDetail">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+                    <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+
+            <xs:complexType name="inpatientDetailResponse">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="return" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:message name="outpatientListResponse">
+        <wsdl:part element="tns:outpatientListResponse" name="parameters">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="outpatientDetail">
+        <wsdl:part element="tns:outpatientDetail" name="parameters">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="outpatientApplyResponse">
+        <wsdl:part element="tns:outpatientApplyResponse" name="parameters">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="inpatientDetailResponse">
+        <wsdl:part element="tns:inpatientDetailResponse" name="parameters">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="inpatientListResponse">
+        <wsdl:part element="tns:inpatientListResponse" name="parameters">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="outpatientDetailResponse">
+        <wsdl:part element="tns:outpatientDetailResponse" name="parameters">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="inpatientApply">
+        <wsdl:part element="tns:inpatientApply" name="parameters">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="inpatientList">
+        <wsdl:part element="tns:inpatientList" name="parameters">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="outpatientList">
+        <wsdl:part element="tns:outpatientList" name="parameters">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="inpatientApplyResponse">
+        <wsdl:part element="tns:inpatientApplyResponse" name="parameters">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="outpatientApply">
+        <wsdl:part element="tns:outpatientApply" name="parameters">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="outpatientAction">
+        <wsdl:part element="tns:outpatientAction" name="parameters">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="outpatientActionResponse">
+        <wsdl:part element="tns:outpatientActionResponse" name="parameters">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="inpatientAction">
+        <wsdl:part element="tns:inpatientAction" name="parameters">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="inpatientActionResponse">
+        <wsdl:part element="tns:inpatientActionResponse" name="parameters">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="inpatientDetail">
+        <wsdl:part element="tns:inpatientDetail" name="parameters">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:portType name="ZhuanzhenInterface">
+        <wsdl:operation name="outpatientAction">
+            <wsdl:input message="tns:outpatientAction" name="outpatientAction">
+            </wsdl:input>
+            <wsdl:output message="tns:outpatientActionResponse" name="outpatientActionResponse">
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="inpatientApply">
+            <wsdl:input message="tns:inpatientApply" name="inpatientApply">
+            </wsdl:input>
+            <wsdl:output message="tns:inpatientApplyResponse" name="inpatientApplyResponse">
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="outpatientList">
+            <wsdl:input message="tns:outpatientList" name="outpatientList">
+            </wsdl:input>
+            <wsdl:output message="tns:outpatientListResponse" name="outpatientListResponse">
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="inpatientList">
+            <wsdl:input message="tns:inpatientList" name="inpatientList">
+            </wsdl:input>
+            <wsdl:output message="tns:inpatientListResponse" name="inpatientListResponse">
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="outpatientDetail">
+            <wsdl:input message="tns:outpatientDetail" name="outpatientDetail">
+            </wsdl:input>
+            <wsdl:output message="tns:outpatientDetailResponse" name="outpatientDetailResponse">
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="outpatientApply">
+            <wsdl:input message="tns:outpatientApply" name="outpatientApply">
+            </wsdl:input>
+            <wsdl:output message="tns:outpatientApplyResponse" name="outpatientApplyResponse">
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="inpatientAction">
+            <wsdl:input message="tns:inpatientAction" name="inpatientAction">
+            </wsdl:input>
+            <wsdl:output message="tns:inpatientActionResponse" name="inpatientActionResponse">
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="inpatientDetail">
+            <wsdl:input message="tns:inpatientDetail" name="inpatientDetail">
+            </wsdl:input>
+            <wsdl:output message="tns:inpatientDetailResponse" name="inpatientDetailResponse">
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="ZhuanzhenImplServiceSoapBinding" type="tns:ZhuanzhenInterface">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="inpatientApply">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input name="inpatientApply">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="inpatientApplyResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="outpatientAction">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input name="outpatientAction">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="outpatientActionResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="outpatientList">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input name="outpatientList">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="outpatientListResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="inpatientList">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input name="inpatientList">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="inpatientListResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="outpatientApply">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input name="outpatientApply">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="outpatientApplyResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="outpatientDetail">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input name="outpatientDetail">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="outpatientDetailResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="inpatientAction">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input name="inpatientAction">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="inpatientActionResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="inpatientDetail">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input name="inpatientDetail">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="inpatientDetailResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="ZhuanzhenImplService">
+        <wsdl:port binding="tns:ZhuanzhenImplServiceSoapBinding" name="ZhuanzhenImplPort">
+            <soap:address location="http://218.89.178.119:8088/fjzl/webservice/zhuanzhen"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

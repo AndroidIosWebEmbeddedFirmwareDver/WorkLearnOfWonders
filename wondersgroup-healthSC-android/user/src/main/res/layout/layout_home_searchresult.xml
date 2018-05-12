@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:paddingLeft="15dp"
+              android:paddingRight="15dp"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:background="@color/bc1"
+              android:orientation="vertical">
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:gravity="center_horizontal">
+        <TextView
+            android:id="@+id/tv_title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="相关"/>
+        <TextView
+            android:id="@+id/tv_location"
+            android:visibility="invisible"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:text="成都"/>
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_line_thickness"
+        android:background="@color/divider_color"/>
+    <com.wondersgroup.hs.healthcloud.common.view.FitHeightListView
+        android:id="@+id/lv_homeresult"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:list_divider="@color/divider_color"
+        app:list_divider_height="0.5dp"
+        app:footer_dividers_enabled="true">
+
+    </com.wondersgroup.hs.healthcloud.common.view.FitHeightListView>
+    <TextView
+        android:id="@+id/tv_loadmore"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="15dp"
+        android:paddingBottom="15dp"
+        android:gravity="center"
+        android:text="查看更多相关"/>
+
+</LinearLayout>

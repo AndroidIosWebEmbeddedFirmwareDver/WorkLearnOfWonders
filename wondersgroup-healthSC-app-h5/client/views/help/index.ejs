@@ -1,0 +1,38 @@
+<!DOCTYPE HTMl>
+<html>
+<head>
+<title>帮助与反馈</title>
+<% include ../commontags/metatags %>
+<link rel="stylesheet" href="<%=_src('/libs/css/font-awesome.min.css')%>">
+<link rel="stylesheet" href="<%=_src('/css/helpCenter/helpCenter.min.css')%>">
+</head>
+<body style="background: #f8f9fa;">
+  <div class="wrap">
+    <ul id="accordion" class="accordion">
+      <% data.forEach(function(data){ %>
+      <li>
+        <div class="question">
+          <span class="wen"></span> <%= data.title %>
+          <i class="fa fa-angle-down" aria-hidden="true"></i>
+        </div>
+        <div class="answer" style="display: none">
+          <%- data.content %>
+        </div>
+      </li>
+      <% }) %>
+      <%if(query){%>
+      <li>
+        <div class="question">
+          <a href="help/feedback?userId=<%=query.userId%>&tel=<%=query.tel%>" style="display: block">
+            <span class="wen"></span> 意见与反馈
+            <i class="fa fa-angle-right" aria-hidden="true"></i>
+          </a>
+        </div>
+      </li>
+      <%}%>
+    </ul>
+  </div>
+  <p class="btm"><a href="tel:4009009957" class="tel"><em></em>呼叫客服</a></p>
+  <script src="<%=_src('/js/helpCenter/helpCenter.min.js')%>"></script>
+</body>
+</html>

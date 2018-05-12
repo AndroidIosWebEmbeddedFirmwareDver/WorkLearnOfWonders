@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:background="@color/bc1"
+    android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:background="@drawable/search_stroke_gray"
+        android:id="@+id/hos_list_search"
+        android:layout_margin="@dimen/L"
+        android:layout_height="32dp">
+        <TextView
+            android:id="@+id/title_search_edit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:hint="搜索医院"
+            android:textColor="@color/tc4"
+            android:textColorHint="@color/tc4"
+            android:textSize="@dimen/text_size_16" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/M"
+            android:layout_toLeftOf="@id/title_search_edit"
+            android:src="@mipmap/icon_search" />
+    </RelativeLayout>
+
+
+</RelativeLayout>

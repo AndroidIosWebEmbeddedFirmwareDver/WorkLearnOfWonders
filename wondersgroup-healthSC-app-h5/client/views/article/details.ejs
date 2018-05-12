@@ -1,0 +1,30 @@
+<!DOCTYPE HTMl>
+<html>
+<head>
+    <title>文章详情</title>
+    <% include ../commontags/metatags %>
+    <link rel='stylesheet' href='<%=_src('/css/article/main.min.css')%>'/>
+</head>
+<body>
+    <div class="wrap">
+        <%if(data){%>
+        <div class="title text-title-main">
+            <%=data.title%>
+        </div>
+        <div class="interaction text-title-assist ">
+            <span>
+                <%=data.author%>&nbsp;&nbsp;<%=data.update_time%>
+            </span>
+            <span id="praise">
+                <!-- <i class="iconfont icon-eye"></i>&nbsp; -->
+            </span>
+        </div>
+        <div class="content text-content">
+            <%-data.content%>
+        </div>
+        <%}else{%>
+            <div class="nodata"><h4>暂无数据</h4></div>
+        <%}%>
+    </div>
+</body>
+</html>

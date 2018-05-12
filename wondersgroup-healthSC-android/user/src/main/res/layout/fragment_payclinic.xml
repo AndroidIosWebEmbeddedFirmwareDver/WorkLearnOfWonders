@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/XL"
+        android:layout_marginLeft="@dimen/XL"
+        android:textSize="@dimen/text_size_14"
+        android:textColor="@color/tc2"
+        android:text="医院名称"/>
+
+    <com.wondersgroup.hs.healthcloud.common.view.ClearEditText
+        android:id="@+id/et_nickname"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="@dimen/L"
+        android:paddingLeft="@dimen/XL"
+        android:paddingRight="@dimen/XL"
+        android:background="@color/bc1"
+        android:hint="请输入医院名称"
+        android:textColorHint="@color/tc3"
+        android:textColor="@color/tc1"
+        android:textSize="@dimen/text_size_16"
+        android:singleLine="true"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <Button
+            android:id="@+id/btn_confirm"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/btn_height_L"
+            android:background="@drawable/btn_selector"
+            android:layout_marginTop="45dp"
+            android:layout_marginLeft="@dimen/XL"
+            android:layout_marginRight="@dimen/XL"
+            android:text="提取"
+            android:textColor="@color/tc0"
+            android:textSize="@dimen/text_size_16"/>
+
+        <View
+            android:id="@+id/line_blue"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_line_thickness"
+            android:background="@color/tc5"
+            android:layout_marginLeft="@dimen/XL"
+            android:visibility="gone"/>
+
+        <LinearLayout
+            android:id="@+id/ll_search"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bc1"
+            android:layout_below="@+id/line_blue"
+            android:paddingLeft="@dimen/XL"
+            android:visibility="gone">
+            <com.wondersgroup.hs.healthcloud.common.view.BaseRecyclerView
+                android:id="@+id/recycle_search"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scrollbars="vertical"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_container"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_marginTop="@dimen/XXL"
+        android:orientation="vertical">
+
+    </LinearLayout>
+
+</LinearLayout>
+

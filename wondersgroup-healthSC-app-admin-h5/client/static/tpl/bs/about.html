@@ -1,0 +1,35 @@
+<div class="wrapper-md" ng-controller="AboutController">
+    <div class="panel panel-default">
+        <div class="panel-heading font-bold">
+            APP关于
+        </div>
+        <div class="panel-body">
+            <form class="form-horizontal form-validation" name="aboutForm" ng-submit="pushData(about)" novalidate>
+                <div class="form-group m-t-xxl">
+                    <label class="col-lg-2 control-label">App描述：</label>
+                    <div class="col-lg-5">
+                        <input type="text" class="form-control" ng-model="about.value.appDesc" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">App说明：</label>
+                    <div class="col-lg-5">
+                        <input type="text" class="form-control" ng-model="about.value.appExplanation" required>
+                    </div>
+                </div>
+                <!--<div class="form-group">-->
+                <!--<label class="col-lg-2 control-label">客服热线：</label>-->
+                <!--<div class="col-lg-5">-->
+                <!--<input type="text" class="form-control" ng-model="about.value.consumerHotline" required>-->
+                <!--</div>-->
+                <!--</div>-->
+                <div class="form-group m-b-xxl m-t-xl">
+                    <div class="col-lg-offset-2 col-lg-10">
+                        <button type="submit" class="btn btn-sm btn-success"  ng-disabled="aboutForm.$invalid">更改</button>
+                        <button type="button" class="btn btn-sm btn-default" ng-click="pullData()">重置</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="7dp"
+        android:background="@color/divider_color" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="@color/bc1">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:text="选择患者"
+            android:textColor="@color/tc2"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/tv_extract_name"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@null"
+            android:hint="患者姓名"
+            android:drawablePadding="5dp"
+            android:drawableRight="@mipmap/right"
+            android:gravity="center"
+
+            android:textColor="@color/tc3"
+            android:textSize="@dimen/text_size_14" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/divider_color" />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+        android:background="@color/bc1">
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:text="身份证号"
+            android:textColor="@color/tc2"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/tv_extract_card"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="10dp"
+            android:background="@null"
+            android:gravity="center"
+            android:text="5130171199009091315"
+            android:textColor="@color/tc3"
+            android:textSize="@dimen/text_size_14" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <Button
+          android:id="@+id/bt_submit"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/bc1"
+            android:textSize="@dimen/text_size_14"
+        android:background="@drawable/shape_button"
+            android:text="提取患者信息" />
+    </RelativeLayout>
+</LinearLayout>

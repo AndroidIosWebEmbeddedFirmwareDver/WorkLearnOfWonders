@@ -1,0 +1,35 @@
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.wondersgroup.hs.healthcloud.common.view.PullToRefreshView
+        android:id="@+id/pull_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.wondersgroup.hs.healthcloud.common.view.BaseRecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/transparent"
+            android:descendantFocusability="blocksDescendants"
+            android:orientation="vertical"
+            android:divider="@color/divider_color"
+            android:dividerHeight="@dimen/divider_line_thickness"
+            android:scrollbars="vertical"
+            app:recyclerStyle="list">
+
+        </com.wondersgroup.hs.healthcloud.common.view.BaseRecyclerView>
+        <RelativeLayout
+            android:id="@+id/rl_empty"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/bc2"
+            android:visibility="gone">
+        </RelativeLayout>
+    </com.wondersgroup.hs.healthcloud.common.view.PullToRefreshView>
+
+</RelativeLayout>

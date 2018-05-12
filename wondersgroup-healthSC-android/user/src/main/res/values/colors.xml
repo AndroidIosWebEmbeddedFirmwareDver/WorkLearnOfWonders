@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">@color/bc1</color>
+    <color name="colorPrimaryDark">@color/bc1</color>
+    <color name="colorAccent">@color/bc7</color>
+    <color name="colorTitleBar">@color/tc1</color>
+    <color name="colorActionText">@color/tc5</color>
+    <color name="camera_pop_normal">#5DB8FE</color>
+    <color name="transparent">#00000000</color>
+    <!-- 文字颜色 -->
+    <color name="tc0">#ffffff</color>
+    <color name="tc1">#333333</color>
+    <color name="tc2">#666666</color>
+    <color name="tc3">#9b9b9b</color>
+    <color name="tc4">#bbbbbb</color>
+    <color name="tc5">#2e7af0</color>
+    <!-- 文字色 特殊色 -->
+    <color name="stc1">#ffa217</color>
+    <color name="stc2">#fa3e34</color>
+    <color name="stc3">#009711</color>
+    <color name="stc4">#8ed408</color>
+    <!-- 背景色 -->
+    <color name="bc0">#000000</color>
+    <color name="bc1">#ffffff</color>
+    <color name="bc2">#f6f6f6</color>
+    <color name="bc3">#e1e1e1</color>
+    <color name="bc4">#e1e1e1</color>
+    <color name="bc5">#f6f6f6</color>
+    <color name="bc6">#ffffff</color>
+    <color name="bc7">#2e7af0</color>
+    <color name="bc8">#2461c0</color>
+    <!--背景色 特殊色-->
+    <color name="sbc1">#ffa217</color>
+    <color name="sbc2">#fa3e34</color>
+    <color name="sbc3">#009711</color>
+    <color name="sbc5">#ff665e</color>
+    <color name="sbc6">#1194ff</color>
+    <color name="sbc7">#eaf3ff</color>
+    <!-- 分割线 -->
+    <color name="dc1">#dddddd</color>
+    <color name="dc2">#cccccc</color>
+<!--popupWindow 颜色-->
+    <color name="white">#ffffff</color>
+    <color name="null_color">#00ffffff</color>
+    <color name="black">#000000</color>
+    <color name="divider_color">#b5b5b5</color>
+    <color name="menu_item_background">#f2f2f2</color>
+    <color name="menu_fragment_background">#B3000000</color>
+    <color name="light_grey">#f7f7f7</color>
+    <color name="red">#ff0000</color>
+</resources>

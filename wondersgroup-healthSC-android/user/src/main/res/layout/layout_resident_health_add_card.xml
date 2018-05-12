@@ -1,0 +1,106 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_card_add"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:visibility="visible">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="146dp"
+        android:background="#ffffff">
+
+        <TextView
+            android:id="@+id/tv_card_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:text="居民健康卡"
+            android:textSize="@dimen/text_size_16"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+        <RelativeLayout
+            android:id="@+id/rl_card_name_add"
+            android:layout_width="289dp"
+            android:layout_height="44dp"
+            android:layout_below="@id/tv_card_name"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/btn_height_S"
+            android:background="@mipmap/bg_addbar">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@mipmap/icon_add"
+                android:drawablePadding="5dp"
+                android:text="绑定居民健康卡"
+                android:textColor="@color/tc4"
+                android:textSize="@dimen/text_size_16"
+                tools:ignore="HardcodedText,RtlHardcoded" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff">
+
+        <TextView
+            android:id="@+id/tv_hospital_card_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:text="医院就诊卡"
+            android:textSize="@dimen/text_size_16"
+            tools:ignore="HardcodedText,RtlHardcoded" />
+
+        <RelativeLayout
+            android:id="@+id/rl_hospital_card_describe_add"
+            android:layout_width="289dp"
+            android:layout_height="44dp"
+            android:layout_below="@id/tv_hospital_card_name"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/btn_height_S"
+            android:background="@mipmap/bg_addbar">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@mipmap/icon_add"
+                android:drawablePadding="5dp"
+                android:text="绑定就诊卡"
+                android:textColor="@color/tc4"
+                android:textSize="@dimen/text_size_16"
+                tools:ignore="HardcodedText,RtlHardcoded" />
+
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_hospital_card_describe"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/rl_hospital_card_describe_add"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp"
+            android:layout_marginTop="@dimen/btn_height_S"
+            android:text="您未绑定任何就诊卡，请点击“绑定就诊卡”进行绑卡,绑卡成功后才能进行预约挂号，一个注册用户可以绑定5张就诊卡。"
+            android:textColor="@color/tc_addtion"
+            android:textSize="@dimen/text_size_14"
+            tools:ignore="HardcodedText" />
+    </RelativeLayout>
+
+
+</LinearLayout>

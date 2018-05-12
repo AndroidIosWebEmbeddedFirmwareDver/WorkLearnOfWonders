@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="scheme">com.wondersgroup.healthcloud</string>
+    <string name="host">/common</string>
+
+    <string name="path_main">/main</string>
+    <!-- webView -->
+    <string name="path_webview">/webview</string>
+
+</resources>

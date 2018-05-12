@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             xmlns:app="http://schemas.android.com/apk/res-auto"
+             android:layout_width="match_parent"
+             android:layout_height="match_parent" >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginBottom="@dimen/content_bottom_margin" >
+
+        <com.wondersgroup.hs.healthcloud.common.view.BaseRecyclerView
+            android:id="@+id/gv_photos_ar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:horizontalSpacing="@dimen/S"
+            android:listSelector="@null"
+            android:numColumns="3"
+            app:recyclerStyle="grid"
+            android:verticalSpacing="@dimen/S"
+            android:scrollbars="vertical"
+            android:scrollbarStyle="outsideOverlay"/>
+
+        <RelativeLayout
+            android:id="@+id/layout_album_ar"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:visibility="gone" >
+
+            <com.wondersgroup.hs.healthcloud.common.view.BaseRecyclerView
+                android:id="@+id/lv_ablum_ar"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_marginTop="60dp"
+                android:divider="@color/divider_color"
+                android:background="@color/bc1"
+                android:dividerHeight="@dimen/divider_line_thickness"
+                android:paddingLeft="@dimen/L"
+                android:paddingRight="@dimen/L"
+                android:scrollbars="vertical"
+                android:scrollbarStyle="outsideOverlay" >
+            </com.wondersgroup.hs.healthcloud.common.view.BaseRecyclerView>
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_toolbar_ar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/bottom_tab_heigt"
+        android:layout_gravity="bottom"
+        android:background="@color/bc2" >
+
+        <RelativeLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true" >
+
+            <TextView
+                android:id="@+id/tv_album_ar"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_centerVertical="true"
+                android:layout_marginLeft="10dp"
+                android:gravity="left|center_vertical"
+                android:background="@drawable/ic_spinner_white"
+                android:minWidth="50dp"
+                android:text="@string/recent_photos"
+                android:textColor="@color/tc1"
+                android:textSize="13sp" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginBottom="-3dp"
+                android:layout_marginLeft="-3dp"
+                android:layout_toRightOf="@+id/tv_album_ar"
+                android:scaleType="centerInside" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/tv_line_ar"
+            android:layout_width="1dp"
+            android:layout_height="match_parent"
+            android:layout_marginBottom="10dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="10dp"
+            android:layout_toLeftOf="@+id/tv_preview_ar"
+            android:background="@android:color/darker_gray" />
+
+        <TextView
+            android:id="@+id/tv_preview_ar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:clickable="true"
+            android:enabled="false"
+            android:padding="10dp"
+            android:textColor="@color/tc1"
+            android:text="@string/preview" />
+    </RelativeLayout>
+
+</FrameLayout>

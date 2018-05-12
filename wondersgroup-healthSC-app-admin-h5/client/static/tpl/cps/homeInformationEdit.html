@@ -1,0 +1,100 @@
+<div class="wrapper" ng-controller="AddInformationCtrl">
+    <div class="panel panel-default">
+        <div class="panel-heading font-bold">
+            <a ui-sref="app.cps.homeInformation"><i class="fa fa-mail-reply"></i></a>
+            {{title}}
+        </div>
+        <input type="hidden" ng-model="infoObj.id">
+        <div class="panel-body">
+            <form class="form-horizontal form-validation m-t-md" name="addHomeForm" ng-submit="submitInformation(infoObj);" novalidate>
+                <div class="form-group">
+                    <label class="col-lg-2 control-label" for="articleId">文章ID：</label>
+                    <div class="col-lg-6">
+                        <input type="text" class="form-control m-b-sm" id="articleid" ng-model="infoObj.article_id" ng-blur="getArticleTitle(infoObj.article_id)" ng-disabled="!allowEdit" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-2 control-label" for="rank">显示时间段：</label>
+                    <div class="col-lg-10">
+                        <div class="m-b">
+                            <div class="input-group col-lg-3" ng-controller="DatepickerDemoCtrl" style="float: left;">
+                                <input type="text" ng-model="infoObj.start_time" class="form-control" datepicker-popup="yyyy-MM-dd HH:mm:ss"
+                                       is-open="opened" datepicker-options="dateOptions"
+                                       ng-required="true" close-text="Close" required/>
+                                <span class="input-group-btn">
+                                  <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                                </span>
+                            </div>
+                            <div class="col-lg-1" style="line-height: 34px;text-align: center">
+                                <span>到</span>
+                            </div>
+                            <div class="input-group col-lg-3" ng-controller="DatepickerDemoCtrl" style="float: left;">
+                                <input type="text" ng-model="infoObj.end_time" class="form-control" datepicker-popup="yyyy-MM-dd HH:mm:ss"
+                                       is-open="opened" datepicker-options="dateOptions"
+                                       ng-required="true" close-text="Close" required/>
+                                <span class="input-group-btn">
+                                  <button type="button" class="btn btn-default" ng-click="open($event)"><i class="glyphicon glyphicon-calendar"></i></button>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">文章标题：</label>
+                    <div class="col-lg-6">
+                        <div>
+                            <input type="text" class="form-control" ng-model="infoObj.title" readonly/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">文章描述：</label>
+                    <div class="col-lg-6">
+                        <div>
+                            <textarea  class="form-control" ng-model="infoObj.brief" readonly></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">文章图片：</label>
+                    <div class="col-lg-4">
+                        <div>
+                            <img ng-src="{{infoObj.thumb}}" class="w" onerror="javascript:this.src='img/nopic.gif'" src=""/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-2 control-label" for="rank">文章排序：</label>
+                    <div class="col-lg-6">
+                        <div>
+                            <input type="number" class="form-control" id="rank" ng-model="infoObj.rank" required min="0" max="999">
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">阅读量：</label>
+                    <div class="col-lg-6">
+                        <div>
+                            <input type="text" class="form-control" ng-model="infoObj.fake_pv" min="0" readonly/>
+                        </div>
+                    </div>
+                    <label class="control-label text-danger">请输入0～999的正整数</label>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">关键词：</label>
+                    <div class="col-lg-6">
+                        <div>
+                            <input type="text" class="form-control" ng-model="infoObj.keyword" readonly/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group m-b-xl m-t-xl">
+                    <div class="col-lg-offset-2 col-lg-10">
+                        <button type="submit" class="btn btn-sm btn-success"  ng-disabled="addHomeForm.$invalid">保存</button>
+                        <a class="btn btn-sm btn-default" ui-sref="app.cps.homeInformation">取消</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

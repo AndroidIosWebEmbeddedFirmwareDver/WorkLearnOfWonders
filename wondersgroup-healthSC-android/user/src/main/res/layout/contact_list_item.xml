@@ -1,0 +1,55 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_item_white_selector"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="55dp"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:id="@+id/contact_list_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/XL"
+            android:layout_weight="1"
+            android:text="张**"
+            android:textColor="@color/tc5"
+            android:textSize="@dimen/text_size_16" />
+
+
+        <TextView
+            android:id="@+id/contact_list_default"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/XL"
+            android:text="【默认就诊人】"
+            android:textColor="@color/tc4"
+            android:textSize="@dimen/text_size_12" />
+
+        <TextView
+            android:id="@+id/contact_list_age"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="20岁"
+            android:layout_marginRight="@dimen/M"
+            android:textColor="@color/tc4"
+            android:textSize="@dimen/text_size_12" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/XL"
+            android:src="@mipmap/ic_launcher" />
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_line_thickness"
+        android:background="@color/dc1" />
+
+</LinearLayout>

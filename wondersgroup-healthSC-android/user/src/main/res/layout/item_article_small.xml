@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_item_white_selector"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/XL">
+
+        <ImageView
+            android:id="@+id/item_iv"
+            android:layout_width="90dp"
+            android:layout_height="67dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/ic_default_small"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@+id/item_iv"
+            android:layout_marginLeft="@dimen/XL"
+            android:layout_toRightOf="@id/item_iv"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/item_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:singleLine="true"
+                android:text="糖尿病的“糖”"
+                android:textColor="@color/tc1"
+                android:textSize="@dimen/text_size_16"/>
+
+            <TextView
+                android:id="@+id/item_desc"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/item_title"
+                android:layout_marginTop="@dimen/L"
+                android:lineSpacingExtra="4dp"
+                android:lines="2"
+                android:ellipsize="end"
+                android:text="糖尿病的“糖”糖尿病的“糖”糖尿病的“糖”糖尿病的hgfhdfghgfhgfhfgfhhd“糖”"
+                android:textColor="@color/tc3"
+                android:textSize="@dimen/text_size_14"/>
+
+            <TextView
+                android:id="@+id/item_pv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignBottom="@id/item_desc"
+                android:gravity="center"
+                android:text="235阅"
+                android:lineSpacingExtra="4dp"
+                android:textColor="@color/tc4"
+                android:textSize="@dimen/text_size_12"/>
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_marginLeft="@dimen/XL"
+        android:layout_height="@dimen/divider_line_thickness"
+        android:background="@color/dc1"/>
+</LinearLayout>

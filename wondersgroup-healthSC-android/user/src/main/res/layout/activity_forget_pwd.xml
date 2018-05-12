@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bc1"
+    android:orientation="vertical">
+
+    <com.wondersgroup.hs.healthcloud.common.view.ClearEditText
+        android:id="@+id/edit_mobile"
+        style="@style/LoginEditTextStyle"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/edit_text_height"
+        android:layout_marginLeft="@dimen/XXXXL"
+        android:layout_marginRight="@dimen/XXXXL"
+        android:layout_marginTop="@dimen/XXXXXL"
+        android:hint="手机号码"
+        android:inputType="phone"
+        app:clearDrawable="@mipmap/ic_login_cancel"/>
+
+    <View
+        android:id="@+id/di_mobile"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_line_thickness"
+        android:layout_marginLeft="@dimen/XXXXL"
+        android:layout_marginRight="@dimen/XXXXL"
+        android:background="@color/tc3"/>
+
+    <RelativeLayout
+        android:id="@+id/rl_get_code"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/XXXXL"
+        android:layout_marginRight="@dimen/XXXXL"
+        android:layout_marginTop="@dimen/L">
+
+        <LinearLayout
+            android:id="@+id/ll_code"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.wondersgroup.hs.healthcloud.common.view.ClearEditText
+                android:id="@+id/edit_code"
+                style="@style/LoginEditTextStyle"
+                android:layout_width="0dip"
+                android:layout_height="@dimen/edit_text_height"
+                android:layout_weight="1"
+                android:hint="验证码"
+                android:inputType="number"
+                android:maxLength="6"
+                app:clearDrawable="@mipmap/ic_login_cancel"/>
+
+            <TextView
+                android:id="@+id/tv_get_code"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/edit_text_height"
+                android:layout_alignParentRight="true"
+                android:gravity="center_vertical|right"
+                android:minWidth="90dip"
+                android:paddingBottom="@dimen/M"
+                android:paddingLeft="@dimen/M"
+                android:paddingTop="@dimen/M"
+                android:text="获取验证码"
+                android:textColor="@color/tc5"
+                android:textSize="@dimen/text_size_15"/>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/di_code"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_line_thickness"
+            android:layout_below="@id/ll_code"
+            android:background="@color/tc3"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/XXXXL"
+        android:layout_marginRight="@dimen/XXXXL"
+        android:layout_marginTop="@dimen/L">
+
+        <LinearLayout
+            android:id="@+id/ll_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.wondersgroup.hs.healthcloud.common.view.ClearEditText
+                android:id="@+id/edit_pwd"
+                style="@style/LoginEditTextStyle"
+                android:layout_width="0dip"
+                android:layout_height="@dimen/edit_text_height"
+                android:layout_weight="1"
+                android:hint="密码(长度6-16位,字母与数字组合)"
+                android:inputType="textPassword"
+                android:maxLength="16"
+                app:clearDrawable="@mipmap/ic_login_cancel"/>
+
+            <ImageView
+                android:id="@+id/iv_see_pwd"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/edit_text_height"
+                android:paddingLeft="@dimen/XL"
+                android:src="@drawable/ic_see_pwd_selector"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/di_pwd"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_line_thickness"
+            android:layout_below="@id/ll_pwd"
+            android:background="@color/tc3"/>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/XXXXL"
+        android:layout_marginRight="@dimen/XXXXL"
+        android:layout_marginTop="@dimen/L">
+
+        <LinearLayout
+            android:id="@+id/ll_pwd1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.wondersgroup.hs.healthcloud.common.view.ClearEditText
+                android:id="@+id/edit_pwd1"
+                style="@style/LoginEditTextStyle"
+                android:layout_width="0dip"
+                android:layout_height="@dimen/edit_text_height"
+                android:layout_weight="1"
+                android:hint="确认密码"
+                android:inputType="textPassword"
+                android:maxLength="16"
+                app:clearDrawable="@mipmap/ic_login_cancel"/>
+
+            <ImageView
+                android:id="@+id/iv_see_pwd1"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/edit_text_height"
+                android:paddingLeft="@dimen/XL"
+                android:src="@drawable/ic_see_pwd_selector"
+                android:visibility="gone"/>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/di_pwd1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_line_thickness"
+            android:layout_below="@id/ll_pwd1"
+            android:background="@color/tc3"/>
+
+        <TextView
+            android:id="@+id/tv_pwd_err"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/ll_pwd1"
+            android:layout_marginTop="@dimen/L"
+            android:textColor="@color/stc2"
+            android:textSize="@dimen/text_size_12"/>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/btn_submit"
+        style="@style/LoginButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/XXXXL"
+        android:layout_marginRight="@dimen/XXXXL"
+        android:layout_marginTop="@dimen/XXXXL"
+        android:text="完成"/>
+
+</LinearLayout>

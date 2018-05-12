@@ -1,0 +1,183 @@
+@import "../common/public";
+body{
+  background: #F6F6F6;
+  user-select: none;
+  -webkit-touch-callout: none;
+}
+em{font-style: normal;}
+
+.topmenu{
+  background: #fff;
+  height:1.066667rem;
+  border-bottom: 1px solid $border-color;
+  li{
+    float: left;
+    width: 25%;
+    text-align: center;
+    @include font-dpr(14px);
+    a{
+      color: #333;
+      height: 1.04rem;
+      line-height: 1.04rem;
+      border-bottom: 2px solid #fff;
+      display: inline-block;
+      width: 100%;
+      margin-top: 0;
+    }
+    &.current a{
+      color: $btn-color;
+      border-color: $btn-color;
+    }
+  }
+}
+#scrolling_wrap{
+  top:1.08rem;
+}
+.rarrow::after{
+  content: '';
+  display: inline-block;
+  width: 0.35rem;
+  height: 0.35rem;
+  border: 1px solid #d4d4d4;
+  border-width: 0.061667rem 0.061667rem 0 0;
+  position: absolute;
+  right: 0.4rem;
+  top: 50%;
+  margin-top: -0.175rem;
+  @include rotate(45deg);
+}
+.list-box{
+  background: #F6F6F6;
+  li{
+    background: #fff;
+    border-top:1px solid $border-color;
+    margin-top: 0;
+    padding: 0.3rem $btn-width;
+    position: relative;
+    @include font-dpr(14px);
+    color: #333;
+    .p_line {
+      padding: 0.066667rem 0;
+      display: table;
+      width: 100%;
+      label{
+        display: table-cell;
+        padding-right:0.266667rem;
+        white-space: nowrap;
+        vertical-align: top;
+        color: #666;
+      }
+      p,.td_p{
+        display: table-cell;
+        width: 100%;
+      }
+    }
+  }
+}
+.drug_list{
+  li{
+    position: relative;
+    background: #fff;
+    padding: 0.3rem $btn-width;
+    margin-top: 0.266667rem;
+    @include font-dpr(14px);
+    .p_line {
+      padding: 0.066667rem 0;
+      display: table;
+      width: 100%;
+      label{
+        display: table-cell;
+        padding-right:0.266667rem;
+        white-space: nowrap;
+        vertical-align: top;
+      }
+      p,.td_p{
+        display: table-cell;
+        width: 100%;
+      }
+    }
+    .line-border{
+      border-bottom: 1px solid $border-color;
+      padding:0 0 0.266667rem 0;
+      margin-bottom: 0.266667rem;
+    }
+  }
+}
+.table_wrap{
+  table{
+    td:first-of-type{
+    width: 35%;
+    }
+      td:nth-of-type(2){
+          width: 25%;
+      }
+  }
+    table:last-child{
+        margin: 0;
+    }
+}
+.max-hei{
+  @include max-line(2);
+}
+.max-hei-1{
+  @include max-line(1);
+}
+.drug-max-hei-1{
+  padding-right:0.75rem;
+  display:inline-block;
+  width:100%;
+  @include max-line(1);
+
+}
+.list-box-prescribing{
+  background: #F6F6F6;
+  @include font-dpr(14px);
+  li{
+    margin-top: 0.266667rem;
+    background: #fff;
+  }
+}
+
+.loading{
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  margin: -25px 0 0 -25px;
+
+  .double-bounce1, .double-bounce2 {
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background-color: #2E7AF0;
+    opacity: 0.4;
+    position: absolute;
+    top: 0;
+    left: 0;
+
+    -webkit-animation: bounce 2.0s infinite ease-in-out;
+    animation: bounce 2.0s infinite ease-in-out;
+  }
+
+  .double-bounce2 {
+    -webkit-animation-delay: -1.0s;
+    animation-delay: -1.0s;
+  }
+}
+
+#inner-wrap > div{
+   display: none;
+   &.current{
+    display: inline-block;
+   }
+}
+@keyframes bounce {
+  0%, 100% {
+    transform: scale(0.0);
+    -webkit-transform: scale(0.0);
+  } 50% {
+    transform: scale(1.0);
+    -webkit-transform: scale(1.0);
+  }
+}

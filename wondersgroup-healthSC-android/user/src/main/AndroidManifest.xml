@@ -1,0 +1,427 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.wonders.health.venus.open.user">
+    <!--sharedSDk start-->
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <!--sharedSdk end-->
+    <!-- 环信 -->
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.RECORD_AUDIO" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.MOUNT_UNMOUNT_FILESYSTEMS" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.GET_TASKS" />
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE" />
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
+    <uses-permission android:name="android.permission.WAKE_LOCK" />
+    <uses-permission android:name="android.permission.MODIFY_AUDIO_SETTINGS" />
+    <uses-permission android:name="android.permission.READ_PHONE_STATE" />
+    <uses-permission android:name="android.permission.RECEIVE_BOOT_COMPLETED" />
+    <uses-permission android:name="android.permission.GET_ACCOUNTS" />
+    <uses-permission android:name="android.permission.USE_CREDENTIALS" />
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS" />
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS" />
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS" />
+    <uses-permission android:name="android.permission.BROADCAST_STICKY" />
+    <uses-permission android:name="android.permission.WRITE_SETTINGS" />
+
+    <!-- Optional for location -->
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+    <uses-permission android:name="android.permission.WAKE_LOCK"/>
+    <!-- 访问精确位置的权限 -->
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+
+
+    <application
+        android:name=".BaseApp"
+        android:allowBackup="false"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <!-- 友盟 -->
+        <meta-data
+            android:name="UMENG_APPKEY"
+            android:value="5821995f8630f53e41000580"/>
+        <meta-data
+            android:name="UMENG_CHANNEL"
+            android:value="${channel}"/>
+        <meta-data
+            android:name="EASEMOB_APPKEY"
+            android:value="1118170526115566#healthcloudsc"/>
+        <meta-data
+            android:name="com.baidu.lbsapi.API_KEY"
+            android:value="rAMqUKDzf9fk5pPCTe2PupRunO94o3Yt"/>
+
+        <service
+            android:name="com.baidu.location.f"
+            android:enabled="true"
+            android:process=":remote"/>
+
+        <activity
+            android:name=".module.MainActivity"
+            android:launchMode="singleTask"
+            android:windowSoftInputMode="stateAlwaysHidden">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data
+                    android:host="@string/host"
+                    android:path="@string/path_main"
+                    android:scheme="@string/scheme"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".module.WebViewActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+
+                <data
+                    android:host="@string/host"
+                    android:path="@string/path_webview"
+                    android:scheme="@string/scheme"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".module.launch.SplashActivity"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+
+        <!-- 我的信息 -->
+        <activity android:name=".module.mine.UserInfoActivity"/>
+        <!-- 设置姓名 -->
+        <activity
+            android:name=".module.mine.SetNameActivity"
+            android:windowSoftInputMode="adjustResize|stateAlwaysVisible"/>
+        <!-- 我的订单 -->
+        <activity android:name=".module.mine.MyOrderActivity"/>
+        <activity android:name=".module.mine.MyAppointmentActivity"/>
+        <activity android:name=".module.mine.MyAppointmentDetalActivity"/>
+        <activity android:name=".module.mine.ResidentHealthCardActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data
+                    android:host="@string/host"
+                    android:path="@string/path_resident_health_card"
+                    android:scheme="@string/scheme" />
+            </intent-filter>
+        </activity>
+
+        <!--预约挂号-->
+        <activity android:name=".module.home.registration.HospitalListActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data
+                    android:host="@string/host"
+                    android:path="@string/path_appointment"
+                    android:scheme="@string/scheme"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".module.home.registration.DepartmentSelectActivity"/>
+        <activity android:name=".module.home.registration.RegistrationDoctorListActivity"/>
+        <activity
+            android:name=".module.home.registration.OrderedInformationActivity"
+            android:windowSoftInputMode="adjustResize">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data
+                    android:host="@string/host"
+                    android:path="@string/path_appointment_info"
+                    android:scheme="@string/scheme"/>
+            </intent-filter>
+
+        </activity>
+        <activity android:name=".module.home.registration.PayTypeActivity"/>
+        <activity android:name=".module.home.registration.RegistrationDoctorDetailActivity" />
+        <activity android:name=".module.home.registration.RegistrationDoctorDetailDescActivity"/>
+
+        <!--环信 start-->
+        <activity android:name=".module.consultation.MyChatActivity"
+                  android:windowSoftInputMode="adjustResize"/>
+        <activity android:name="com.wondersgroup.hs.healthcloud.common.huanxin.ui.EaseShowNormalFileActivity"/>
+        <!--环信 end-->
+
+        <!-- 在线支付 -->
+        <activity android:name=".module.home.PayOrderActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data
+                    android:host="@string/host"
+                    android:path="@string/path_pay_order"
+                    android:scheme="@string/scheme"/>
+            </intent-filter>
+        </activity>
+
+        <!-- 诊间支付列表 -->
+        <activity android:name=".module.home.PayClinicActivity"/>
+        <activity android:name=".module.home.registration.PayResultActivity"/>
+
+        <!-- 三方sdk -->
+        <!-- 统一支付  begin -->
+        <!-- WXPay sdk begin -->
+        <activity
+            android:name="cn.wd.checkout.api.WDWechatPaymentActivity"
+            android:launchMode="singleTop"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"/>
+
+        <activity-alias
+            android:name=".wxapi.WXPayEntryActivity"
+            android:exported="true"
+            android:targetActivity="cn.wd.checkout.api.WDWechatPaymentActivity"/>
+        <!-- WXPay sdk end -->
+
+
+        <!-- alipay sdk begin -->
+        <activity
+            android:name="com.alipay.sdk.app.H5PayActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+        <!-- alipay sdk end -->
+
+
+        <!-- 银联支付 -->
+        <activity
+            android:name="cn.wd.checkout.api.WDUnionPaymentActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+
+        <!-- 链支付 -->
+        <activity
+            android:name="cn.wanda.lianpay.LPFragmentActivity"
+            android:configChanges="orientation|keyboardHidden|navigation"
+            android:exported="false"
+            android:launchMode="singleTop"
+            android:screenOrientation="behind"
+            android:windowSoftInputMode="adjustResize|stateHidden"/>
+
+        <!-- 统一支付  end -->
+
+
+        <!-- for sharedSDK start -->
+        <activity
+            android:name="com.mob.tools.MobUIShell"
+            android:configChanges="keyboardHidden|orientation|screenSize"
+            android:screenOrientation="portrait"
+            android:theme="@android:style/Theme.Translucent.NoTitleBar"
+            android:windowSoftInputMode="stateHidden|adjustResize">
+
+            <!--
+            	AuthorizeAdapter表示一个继承自cn.sharesdk.framework.authorize.AuthorizeAdapter
+            	的类，这个类可以监听到页面的生命周期，也可以获取授权页面的各种UI控件。
+            	开发者可以通过继承AuthorizeAdapter，重写其方法，并获取各种UI来自定义这个页面的行为。
+            -->
+            <meta-data
+                android:name="AuthorizeAdapter"
+                android:value="cn.sharesdk.demo.MyAdapter"/>
+
+            <!--
+            	QZoneWebShareAdapter表示一个继承自cn.sharesdk.tencent.qzone.QZoneWebShareAdapter
+            	的类，这个类可以监听到页面的生命周期，也可以获QQ空间网页分享权页面的各种UI控件。
+            	开发者可以通过继承QZoneWebShareAdapter，重写其方法，并获取各种UI来自定义这个页面的行为。
+
+            <meta-data android:name="QZoneWebShareAdapter" android:value="cn.sharesdk.demo.MyQZoneWebShareAdapter" />
+            -->
+            <!--
+            	Dropbox的SSO功能需要在此处添加一个对ACTION_VIEW事件的过滤器，其中的scheme是
+            	“db-”前缀再开发者应用的加上appKey。如果此过滤器不设置，则不能完成SSO功能授权
+            -->
+            <intent-filter>
+                <data android:scheme="db-7janx53ilz11gbs"/>
+
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+            <intent-filter>
+                <data android:scheme="tencent1105714473"/>
+
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.BROWSABLE"/>
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+
+            <!-- 调用新浪原生SDK，需要注册的回调activity -->
+            <intent-filter>
+                <action android:name="com.sina.weibo.sdk.action.ACTION_SDK_REQ_ACTIVITY"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".wxapi.WXEntryActivity"
+            android:configChanges="orientation|keyboardHidden"
+            android:exported="true"/>
+        <activity android:name=".module.mine.LoginActivity"/>
+        <activity android:name=".module.mine.ForgetPwdActivity"/>
+        <activity android:name=".module.mine.SetPwdActivity"/>
+        <activity android:name=".module.mine.PwdSetActivity"/>
+        <activity android:name=".module.mine.AddCardTypeActivity"/>
+        <!--实名认证start-->
+        <activity android:name=".module.mine.auth.AuthActivity"/>
+        <activity android:name=".module.mine.BindingResidentCard"/>
+        <activity
+            android:name=".module.mine.auth.AuthChooseActivity"
+            android:launchMode="singleTask"
+            android:theme="@style/TransparentTheme">
+        </activity>
+        <activity
+            android:name=".module.mine.auth.AuthResultActivity">
+        </activity>
+        <activity android:name=".module.mine.auth.AuthSampleActivity"/>
+        <!--实名认证end-->
+        <!--我的start-->
+        <activity android:name=".module.mine.attention.MyAttentionActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data
+                    android:host="@string/host"
+                    android:path="@string/path_my_attention"
+                    android:scheme="@string/scheme"/>
+            </intent-filter>
+        </activity>
+        <!--我的end-->
+        <!--  设置start  -->
+        <activity android:name=".module.mine.SettingActivity"/>
+        <activity android:name=".module.mine.AccountSettingActivity"/>
+        <!--  设置end  -->
+
+        <activity android:name=".module.msg.SystemMsgListActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data
+                    android:host="@string/host"
+                    android:path="@string/path_system_message"
+                    android:scheme="@string/scheme"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".module.msg.PayMsgListActivity"/>
+        <activity android:name=".module.health.HospitalHomeActivity"/>
+        <activity android:name=".module.health.EvaluateListActivity"/>
+        <activity android:name=".module.mine.ModifyPwdActivity"/>
+        <activity android:name=".module.health.HospitalDescActivity"/>
+
+        <!--附近就医-->
+        <activity android:name=".module.home.NearByHospitalActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data
+                    android:host="@string/host"
+                    android:path="@string/path_nearby_hospital"
+                    android:scheme="@string/scheme"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".module.home.search.NearbyHospitalSearchActivity"/>
+        <!--首页搜索-->
+        <activity android:name=".module.home.search.HomeSearchActivity"/>
+        <activity android:name=".module.home.search.SearchHospitalListActivity"/>
+        <activity android:name=".module.home.search.SearchDoctorListActivity"/>
+        <activity android:name=".module.home.search.SearchArticleListActivity"/>
+        <activity android:name=".module.home.search.RegistrationHospitalSearchActivity"/>
+
+        <!--医生排班表-->
+        <activity android:name=".module.home.registration.DoctorScheduleActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data
+                    android:host="@string/host"
+                    android:path="@string/path_doctor_schedule"
+                    android:scheme="@string/scheme"/>
+            </intent-filter>
+        </activity>
+        <!--医院位置，地图-->
+        <activity android:name=".module.home.HospitalPointActivity"/>
+        <activity
+            android:name=".module.home.search.HomeSearchResultActivity"
+            android:windowSoftInputMode="adjustResize|stateAlwaysHidden"/>
+        <activity android:name=".module.launch.TutorialActivity"/>
+        <activity android:name=".module.home.AreaSelectActivity"/>
+
+        <!--电子处方-->
+        <activity android:name=".module.home.elecprescription.PrescriptionItemActivity"/>
+        <!--提取报告-->
+        <activity android:name=".module.home.extractreport.ExtractActivity">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+
+                <data
+                    android:host="@string/host"
+                    android:path="@string/path_extract"
+                    android:scheme="@string/scheme"/>
+            </intent-filter>
+        </activity>
+        <activity android:name=".module.home.extractreport.ExtractTimeActivity"/>
+        <activity android:name=".module.home.extractreport.ExtractReportActivity"/>
+        <activity android:name=".module.health.SignFamilyDoctorActivity"/>
+        <activity android:name=".module.health.SignDoctorTeamActivity"/>
+
+        <!--转诊记录-->
+        <activity android:name=".module.referral.TurnDiagnosisRecordActivity"/>
+        <activity android:name=".module.referral.TurnDiagnosisInformationActivity"/>
+    </application>
+
+</manifest>

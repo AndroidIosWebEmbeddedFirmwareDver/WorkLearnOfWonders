@@ -1,0 +1,46 @@
+@import "../common/init";
+@import "../common/basic";
+@import "../common/public";
+@font-face {font-family: "iconfont";
+  src: url('../../libs/fonts/iconfont.eot?t=1465717216'); /* IE9*/
+  src: url('../../libs/fonts/iconfont.eot?t=1465717216#iefix') format('embedded-opentype'), /* IE6-IE8 */
+  url('../../libs/fonts/iconfont.woff?t=1465717216') format('woff'), /* chrome, firefox */
+  url('../../libs/fonts/iconfont.ttf?t=1465717216') format('truetype'), /* chrome, firefox, opera, Safari, Android, iOS 4.2+*/
+  url('../../libs/fonts/iconfont.svg?t=1465717216#iconfont') format('svg'); /* iOS 4.1- */
+}
+
+.iconfont {
+    font-family:"iconfont" !important;
+    @include font-dpr(18px);
+    font-style:normal;
+    -webkit-font-smoothing: antialiased;
+    -webkit-text-stroke-width: 0.2px;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+.icon-eye:before { content: "\e857"; }
+.icon-share:before { content: "\e601"; }
+.icon-1:before { content: "\e600"; }
+
+.wrap{
+    padding: 0.4rem;
+    img{
+        max-width: 100%;
+    }
+    .title{
+        padding-bottom: 0.266667rem;
+        @include font-dpr(20px);
+    }
+    .interaction{
+        @include font-dpr(14px);
+        padding-top: 0.266667rem;
+        padding-bottom: 0.266667rem;
+        span{
+            margin-right: 1.333333rem;
+        }
+    }
+    .content{
+        @include font-dpr(16px);
+        padding-top: 0.4rem;
+    }
+}

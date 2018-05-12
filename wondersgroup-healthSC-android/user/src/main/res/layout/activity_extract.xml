@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <android.support.v4.widget.Space
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/L"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bc1"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:paddingLeft="@dimen/XL"
+            android:paddingRight="@dimen/XL">
+
+            <EditText
+                android:id="@+id/et_hospital_name"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@null"
+                android:hint="请输入医院名称"
+                android:paddingBottom="@dimen/XL"
+                android:paddingTop="@dimen/XL"
+                android:textColor="@color/tc2"
+                android:textSize="@dimen/text_size_16"/>
+
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view_line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_line_thickness"
+            android:layout_marginLeft="@dimen/XL"
+            android:layout_marginRight="@dimen/XL"
+            android:background="@color/divider_color"/>
+
+        <RelativeLayout
+            android:id="@+id/rl_date"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingBottom="@dimen/XL"
+            android:paddingLeft="@dimen/XL"
+            android:paddingRight="@dimen/XL"
+            android:paddingTop="@dimen/XL">
+
+            <TextView
+                android:id="@+id/tv_date_choose"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="请选择时间段"
+                android:textColor="@color/tc2"
+                android:textSize="@dimen/text_size_16"/>
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:src="@mipmap/ic_default_arrow"/>
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/XL"
+            android:layout_marginRight="@dimen/XL"
+            android:visibility="gone">
+
+            <com.wondersgroup.hs.healthcloud.common.view.BaseRecyclerView
+                android:id="@+id/recycle_search"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                android:scrollbars="vertical"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/btn_extract"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/XL"
+        android:layout_marginRight="@dimen/XL"
+        android:layout_marginTop="50dp"
+        android:background="@drawable/btn_submit_selector"
+        android:gravity="center"
+        android:paddingBottom="@dimen/XL"
+        android:paddingTop="@dimen/XL"
+        android:text="提取"
+        android:textColor="@color/tc0"/>
+    <LinearLayout
+        android:id="@+id/ll_container"
+        android:layout_width="match_parent"
+        android:layout_height="500dp"
+        android:layout_marginTop="@dimen/XXL"
+        android:orientation="vertical"
+        android:visibility="gone">
+
+    </LinearLayout>
+</LinearLayout>

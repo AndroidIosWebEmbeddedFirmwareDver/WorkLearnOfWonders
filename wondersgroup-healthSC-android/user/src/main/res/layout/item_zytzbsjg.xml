@@ -1,0 +1,201 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@drawable/shape_round_bc3"
+              android:orientation="vertical"
+    >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/XL"
+            android:layout_marginTop="@dimen/XL"
+            android:layout_marginRight="@dimen/XL"
+            android:drawablePadding="5dp"
+            android:gravity="center_vertical"
+            android:text="根据中医体质辨识测试题，您的体质类型为："
+            android:textColor="@color/tc2"
+            android:textSize="@dimen/text_size_16"/>
+
+        <TextView
+            android:id="@+id/tv_tizhi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/XXXL"
+            android:layout_marginBottom="@dimen/XXXL"
+            android:gravity="center"
+            android:text="阳虚体质"
+            android:textColor="@color/tc5"
+            android:textSize="@dimen/text_size_18"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="15dp"
+            android:gravity="center"
+            android:text="结果仅供参考"
+            android:textColor="@color/tc2"
+            android:textSize="@dimen/text_size_12"
+            android:visibility="gone"/>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_line_thickness"
+        android:background="@color/divider_color"/>
+
+    <LinearLayout
+        android:id="@+id/ll_jianyi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/rl_jianyi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/XL"
+            android:gravity="center"
+            android:text="健康建议"
+            android:textColor="@color/tc1"
+            android:textSize="@dimen/text_size_16"/>
+
+        <View
+            android:layout_width="28dp"
+            android:layout_height="2dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="8dp"
+            android:background="@mipmap/rectangle"/>
+    </LinearLayout>
+
+    <FrameLayout
+        android:id="@+id/rl_qiju"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/XL">
+
+        <TextView
+            android:id="@+id/tv_qiju"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="@dimen/XXXL"
+            android:text="起居\n注意饮食均衡，不宜多食生冷寒苦、辛辣燥热及过于滋腻、难消化以及有耗气作用食物。"
+            android:textColor="@color/tc2"
+            android:textSize="@dimen/text_size_14"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/ic_result_live"
+            android:drawablePadding="@dimen/XL"
+            android:text="起居"
+            android:textColor="@color/tc1"
+            android:textSize="@dimen/text_size_16"/>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/rl_yinshi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/XL">
+
+        <TextView
+            android:id="@+id/tv_yinshi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="30dp"
+            android:text="饮食\n注意饮食均衡，不宜多食生冷寒苦、辛辣燥热及过于滋腻、难消化以及有耗气作用食物。"
+            android:textColor="@color/tc2"
+            android:textSize="@dimen/text_size_14"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/ic_result_food"
+            android:drawablePadding="@dimen/XL"
+            android:text="饮食"
+            android:textColor="@color/tc1"
+            android:textSize="@dimen/text_size_16"/>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/rl_duanlian"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/XL">
+
+        <TextView
+            android:id="@+id/tv_duanlian"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="30dp"
+            android:text="锻炼\n注意饮食均衡，不宜多食生冷寒苦、辛辣燥热及过于滋腻、难消化以及有耗气作用食物。"
+            android:textColor="@color/tc2"
+            android:textSize="@dimen/text_size_14"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/ic_result_exercise"
+            android:drawablePadding="@dimen/XL"
+            android:text="锻炼"
+            android:textColor="@color/tc1"
+            android:textSize="@dimen/text_size_16"/>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/rl_qingzhi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/XL">
+
+        <TextView
+            android:id="@+id/tv_qingzhi"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="30dp"
+            android:text="情志\n注意饮食均衡，不宜多食生冷寒苦、辛辣燥热及过于滋腻、难消化以及有耗气作用食物。"
+            android:textColor="@color/tc2"
+            android:textSize="@dimen/text_size_14"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/ic_result_soul"
+            android:drawablePadding="@dimen/XL"
+            android:text="情志"
+            android:textColor="@color/tc1"
+            android:textSize="@dimen/text_size_16"/>
+    </FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/rl_baojian"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/XL">
+
+        <TextView
+            android:id="@+id/tv_baojian"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:paddingTop="30dp"
+            android:text="保健\n注意饮食均衡，不宜多食生冷寒苦、辛辣燥热及过于滋腻、难消化以及有耗气作用食物。"
+            android:textColor="@color/tc2"
+            android:textSize="@dimen/text_size_14"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:drawableLeft="@mipmap/ic_result_health"
+            android:drawablePadding="@dimen/XL"
+            android:text="保健"
+            android:textColor="@color/tc1"
+            android:textSize="@dimen/text_size_16"/>
+    </FrameLayout>
+</LinearLayout>

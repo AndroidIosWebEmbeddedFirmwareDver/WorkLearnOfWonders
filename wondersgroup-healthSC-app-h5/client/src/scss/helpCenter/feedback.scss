@@ -1,0 +1,47 @@
+@import "../common/public";
+.wrap{
+    text-align: center;
+    .content{
+        margin: 0.26666666666666666rem 0;
+        padding: 0.26666666666666666rem;
+        width: 100%;
+        height: 6.76rem;
+        @include font-dpr(14px);
+        outline:none;
+        border: 0;
+    }
+    .mobilePhone{
+        padding: 0.26666666666666666rem;
+        width: 100%;
+        height: 1.2rem;
+        @include font-dpr(14px);
+        outline:none;
+        border: 0;
+    }
+    .submit{
+        margin: 1.2rem auto;
+        width: 90%;
+        height: 1.1733333333333333rem;
+        background-color: #2E7AF0;
+        @include font-dpr(14px);
+        color: #FFF;
+        border: 0;
+        outline:none;
+        border-radius: 0.06666666666666667rem;
+    }
+}
+.tip{
+    width: 70%;
+    border-radius: 0.06666666666666667rem;
+    color: #fff;
+    background-color: #2f2e2e;
+    text-align: center;
+    line-height: 0.26666666666666666rem;
+    @include font-dpr(14px);
+    box-shadow: 0 0.08rem 0.06666666666666667rem rgba(57,57,57,0.5);
+    padding: 2% 2%;
+    position: fixed;
+    left: 13%;
+    opacity: 0;
+    z-index: 100;
+}

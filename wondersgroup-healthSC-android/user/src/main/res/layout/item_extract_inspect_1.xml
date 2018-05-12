@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bc1"
+    android:orientation="vertical"
+    android:layout_marginTop="@dimen/L"
+    android:paddingLeft="@dimen/XL"
+    android:paddingRight="@dimen/XL">
+
+    <TextView
+        android:id="@+id/tv_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/XL"
+        android:paddingTop="@dimen/XL"
+        android:text="临床诊断报告"
+        android:textColor="@color/tc1"
+        android:textSize="@dimen/text_size_16"/>
+
+    <include layout="@layout/common_divider"/>
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/XL"
+        android:paddingTop="@dimen/L"
+        android:text="djksjdkfajdl;fkjdkajdjlkfjk"
+        android:textColor="@color/tc1"
+        android:textSize="@dimen/text_size_16"/>
+
+</LinearLayout>

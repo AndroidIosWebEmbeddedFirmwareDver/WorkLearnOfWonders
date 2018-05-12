@@ -1,0 +1,94 @@
+<link rel='stylesheet' href='<%=_src('/css/common/bottom_style.min.css')%>'/>
+<div>
+    <p style="height:2.08rem;"></p>
+    <div class="btm_wrap">
+        <img src="<%=_src('/images/btm1.png')%>" class="btm1">
+        <em class="btm2">养橙|预约接种<br><img src="<%=_src('/images/btm2.png')%>" ></em>
+        <a id='download' class="btm3">
+        <img src="<%=_src('/images/btm3.png')%>"></a>
+    </div>
+</div>
+<script type="text/javascript">
+    (function() {
+        var $download = document.getElementById('download');
+
+        if(isIos()){
+            $download.href = "VaccinePatient://com.homeszone.ios.VaccinePatient";
+        }
+
+        $download.addEventListener('click', function(e) {
+            main();
+        });
+
+        // 主流程
+        function main(){
+            if(isWeixinBrowser()){    //判断是否是微信浏览器
+                openGuide();          //显示引导页面
+                removeTouchmove();    //禁用滑动事件，遮罩层下面的页面滑动
+            }else{
+                callApp();            //唤醒app
+            }
+        }
+
+        //唤醒app
+        function callApp() {
+            var clickedAt = +new Date;
+            setTimeout(function() {
+                !window.document.webkitHidden && setTimeout(function() {
+                    if (+new Date - clickedAt < 2000) {
+                        makeIframe('home');
+                    }
+                }, 500);
+            }, 500)
+            callAppIframe('com.wolf.vaccine://patient/main');
+        }
+
+        //访问下载主页
+        function makeIframe(url) {
+            document.getElementsByTagName('html')[0].style.height = '100%';
+            document.body.innerHTML = '<iframe src="'+url+'" style="width: 100%; height: 100%; border: none; margin: 0px; padding: 0px;"></iframe>';
+        }
+
+        function callAppIframe(url) {
+            document.body.innerHTML = '<iframe src="'+url+'" style="display: none"></iframe>';
+        }
+
+        //判断是否是微信
+        function isWeixinBrowser(){
+            return /micromessenger/.test(navigator.userAgent.toLowerCase());
+        }
+
+        //判断是否是IOS
+        function isIos() {
+            var u = navigator.userAgent.toLowerCase();
+            return !!u.match(/\(i[^;]+;( u;)? cpu.+mac os x/);
+        }
+
+        //禁用滑动事件
+        function removeTouchmove(){
+            document.getElementsByTagName('html')[0].addEventListener('touchmove', function(e) {
+                e.preventDefault();
+            })
+        }
+
+        //打开引导页面
+        function openGuide(){
+            var div = document.createElement('div');
+            div.id = 'weixin-tip';
+            div.innerHTML = '<p><img width="100%" src="http://o99kne90l.qnssl.com/1471507525016" alt="微信打开"/></p>';
+            document.body.appendChild(div);
+
+            var cssText = "#weixin-tip{position: fixed; left:0; top:0; background: rgba(0,0,0,0.8); filter:alpha(opacity=80); width: 100%; height:100%; z-index: 10000;} #weixin-tip p{text-align: center; margin-top: 10%; padding:0 5%;}";
+            var style = document.createElement('style');
+            style.rel = 'stylesheet';
+            style.type = 'text/css';
+            try {
+                style.appendChild(document.createTextNode(cssText));
+            } catch (e) {
+                style.styleSheet.cssText = cssText; //ie9以下
+            }
+            var head=document.getElementsByTagName("head")[0]; //head标签之间加上style样式
+            head.appendChild(style);
+        }
+    })();
+</script>

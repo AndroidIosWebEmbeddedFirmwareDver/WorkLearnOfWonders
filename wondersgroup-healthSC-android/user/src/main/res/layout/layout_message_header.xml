@@ -1,0 +1,188 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_line_thickness"
+        android:layout_marginTop="@dimen/L"
+        android:background="@color/divider_color" />
+
+    <RelativeLayout
+        android:id="@+id/rl_system_msg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/albumitem_content_height"
+        android:background="@drawable/bg_item_white_selector">
+
+        <RelativeLayout
+            android:id="@+id/rl_img_system"
+            android:layout_width="@dimen/content_bottom_margin"
+            android:layout_height="@dimen/content_bottom_margin"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/XL">
+
+            <ImageView
+                android:id="@+id/img_system"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_sys_msg" />
+
+            <TextView
+                android:id="@+id/txt_sys_count"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:minWidth="@dimen/XL"
+                android:background="@drawable/dot_shape"
+                android:text="21"
+                android:padding="@dimen/S"
+                android:gravity="center"
+                android:visibility="gone"
+                android:textColor="@color/tc0"
+                android:textSize="@dimen/text_size_10"
+                android:layout_alignParentTop="true"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentEnd="true" />
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/XL"
+            android:layout_toRightOf="@id/rl_img_system"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_sys_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="系统消息"
+                android:textColor="@color/tc1"
+                android:textSize="@dimen/text_size_16" />
+
+            <TextView
+                android:id="@+id/txt_sys_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:layout_marginRight="120dp"
+                android:text=" "
+                android:textColor="@color/tc2"
+                android:textSize="@dimen/text_size_14" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_sys_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/btn_height_S"
+            android:layout_marginTop="@dimen/albumitem_image_height"
+            android:text=" "
+            android:textColor="#9b9b9b"
+            android:textSize="@dimen/text_size_12" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/XL"
+            android:src="@mipmap/ic_link_right" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_line_thickness"
+        android:background="@color/divider_color" />
+
+    <RelativeLayout
+        android:id="@+id/rl_pay_msg"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/albumitem_content_height"
+        android:background="@drawable/bg_item_white_selector">
+        <RelativeLayout
+            android:id="@+id/rl_img_pay"
+            android:layout_width="@dimen/content_bottom_margin"
+            android:layout_height="@dimen/content_bottom_margin"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/XL">
+
+            <ImageView
+                android:id="@+id/img_pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@mipmap/icon_pay_msg" />
+
+            <TextView
+                android:id="@+id/txt_pay_count"
+                android:layout_width="wrap_content"
+                android:minWidth="@dimen/XL"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:padding="@dimen/S"
+                android:background="@drawable/dot_shape"
+                android:text="99.."
+                android:gravity="center"
+                android:visibility="gone"
+                android:textColor="@color/tc0"
+                android:textSize="@dimen/text_size_10" />
+        </RelativeLayout>
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="@dimen/XL"
+            android:layout_toRightOf="@id/rl_img_pay"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txt_pay_title"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="支付通知"
+                android:textColor="@color/tc1"
+                android:textSize="@dimen/text_size_16" />
+
+            <TextView
+                android:id="@+id/txt_pay_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:singleLine="true"
+                android:ellipsize="end"
+                android:layout_marginRight="120dp"
+                android:text=" "
+                android:textColor="@color/tc2"
+                android:textSize="@dimen/text_size_14" />
+        </LinearLayout>
+
+        <TextView
+            android:id="@+id/txt_pay_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_marginRight="@dimen/btn_height_S"
+            android:layout_marginTop="@dimen/albumitem_image_height"
+            android:text=" "
+            android:textColor="#9b9b9b"
+            android:textSize="@dimen/text_size_12" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginRight="@dimen/XL"
+            android:src="@mipmap/ic_link_right" />
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_line_thickness"
+        android:background="@color/divider_color" />
+</LinearLayout>

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <com.wondersgroup.hs.healthcloud.common.view.PullToRefreshView
+        android:id="@+id/layout_resident_health_refresh_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.wondersgroup.hs.healthcloud.common.view.BaseRecyclerView
+            android:id="@+id/layout_resident_health_recycle_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none" />
+    </com.wondersgroup.hs.healthcloud.common.view.PullToRefreshView>
+
+
+</LinearLayout>

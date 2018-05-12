@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@drawable/bg_item_white_selector"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/tv_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:ellipsize="end"
+        android:lines="1"
+        android:padding="@dimen/XL"
+        android:text="测试"
+        android:textColor="@color/tc1"
+        android:textSize="@dimen/text_size_14"/>
+
+    <include layout="@layout/common_divider"/>
+
+</LinearLayout>

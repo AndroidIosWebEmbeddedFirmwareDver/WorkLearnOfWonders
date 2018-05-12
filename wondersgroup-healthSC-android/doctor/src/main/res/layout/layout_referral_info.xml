@@ -1,0 +1,255 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/item_height"
+        android:layout_marginTop="@dimen/L"
+        android:paddingLeft="@dimen/L"
+        android:paddingRight="@dimen/L"
+        android:id="@+id/ll_referral_info_hospital_in"
+        android:background="@color/bc1"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="*"
+            android:textColor="#FFF56735"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/M"
+            android:layout_weight="1"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:text="转入医院名称"
+            android:textColor="@color/tc2"
+            android:textSize="@dimen/text_size_14" />
+
+        <android.support.v7.widget.AppCompatEditText
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="@dimen/L"
+            android:background="@color/transparent"
+            android:ellipsize="end"
+            android:gravity="right"
+            android:maxLines="1"
+            android:text="sss"
+            android:textColor="@color/tc1"
+            android:textSize="@dimen/text_size_14" />
+
+        <ImageView
+            android:layout_width="7dp"
+            android:layout_height="14dp"
+            android:src="@mipmap/ic_arrow_right_small" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="@dimen/L"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bc1"
+        android:paddingLeft="@dimen/L"
+        android:paddingRight="@dimen/L"
+        android:layout_below="@id/ll_referral_info_hospital_in"
+        android:orientation="vertical">
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height"
+            android:layout_marginTop="@dimen/L"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="*"
+                android:textColor="#FFF56735"
+                android:textSize="@dimen/text_size_14" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/M"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="发起医院名称"
+                android:textColor="@color/tc2"
+                android:textSize="@dimen/text_size_14" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/L"
+                android:background="@color/transparent"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="sss"
+                android:textColor="@color/tc1"
+                android:textSize="@dimen/text_size_14" />
+
+            <ImageView
+                android:layout_width="7dp"
+                android:layout_height="14dp"
+                android:src="@mipmap/ic_arrow_right_small"
+                android:visibility="invisible" />
+
+        </LinearLayout>
+
+        <include layout="@layout/common_divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="发起科室名称"
+                android:textColor="@color/tc2"
+                android:textSize="@dimen/text_size_14" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/L"
+                android:background="@color/transparent"
+                android:ellipsize="end"
+                android:hint="选填"
+                android:maxLines="1"
+                android:text="sss"
+                android:textColor="@color/tc1"
+                android:textSize="@dimen/text_size_14" />
+
+        </LinearLayout>
+
+        <include layout="@layout/common_divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="发起医生姓名"
+                android:textColor="@color/tc2"
+                android:textSize="@dimen/text_size_14" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/L"
+                android:background="@color/transparent"
+                android:ellipsize="end"
+                android:hint="选填"
+                android:maxLines="1"
+                android:text="sss"
+                android:textColor="@color/tc1"
+                android:textSize="@dimen/text_size_14" />
+
+        </LinearLayout>
+
+        <include layout="@layout/common_divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="发起医生手机"
+                android:textColor="@color/tc2"
+                android:textSize="@dimen/text_size_14" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/L"
+                android:background="@color/transparent"
+                android:ellipsize="end"
+                android:hint="选填"
+                android:maxLines="1"
+                android:text="sss"
+                android:textColor="@color/tc1"
+                android:textSize="@dimen/text_size_14" />
+
+        </LinearLayout>
+
+        <include layout="@layout/common_divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text="转诊办手机"
+                android:textColor="@color/tc2"
+                android:textSize="@dimen/text_size_14" />
+
+            <android.support.v7.widget.AppCompatEditText
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/L"
+                android:background="@color/transparent"
+                android:ellipsize="end"
+                android:hint="选填"
+                android:maxLines="1"
+                android:text="sss"
+                android:textColor="@color/tc1"
+                android:textSize="@dimen/text_size_14" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+        <Button
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/L"
+            android:background="@drawable/btn_submit_selector_blue"
+            android:text="预约挂号"
+            android:layout_alignParentBottom="true"
+            android:id="@+id/registration_btn"
+            android:textColor="@color/tc0" />
+
+
+</RelativeLayout>

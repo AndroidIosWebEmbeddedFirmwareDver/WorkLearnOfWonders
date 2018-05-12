@@ -1,0 +1,96 @@
+<div class="wrapper" ng-controller="departmentEditController">
+    <div class="panel panel-default">
+        <div class="panel-heading font-bold">
+            <span ng-click="backToList()"><i class="fa fa-mail-reply"></i></span>
+            <string>科室编辑</string>
+        </div>
+        <div class="panel-body">
+            <form class="form-horizontal m-t-md m-b-md" name="departmentEdit">
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">科室编码：</label>
+                    <div class="col-lg-6">
+                        <label class="control-label" ng-bind="departmentObj.deptCode"></label>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">科室名称：</label>
+                    <div class="col-lg-6">
+                        <input type="text" class="form-control" ng-model="departmentObj.deptName" maxlength="20" required />
+                    </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-lg-2 control-label">是否一级科室：</label>
+                  <div class="col-lg-4">
+                    <div class="radio-inline">
+                      <label>
+                        <input type="radio" name="isTop" value="1" ng-model="departmentObj.isTop" required />是
+                      </label>
+                    </div>
+                    <div class="radio-inline">
+                      <label>
+                        <input type="radio" name="isTop" value="0" ng-model="departmentObj.isTop" required />否
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-lg-2 control-label">是否特色科室：</label>
+                  <div class="col-lg-4">
+                    <div class="radio-inline">
+                      <label>
+                        <input type="radio" name="isSpecial" value="1" ng-model="departmentObj.isSpecial" required />是
+                      </label>
+                    </div>
+                    <div class="radio-inline">
+                      <label>
+                        <input type="radio" name="isSpecial" value="0" ng-model="departmentObj.isSpecial" required />否
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group" ng-show="departmentObj.isTop==0">
+                    <label class="col-lg-2 control-label">上级科室名称：</label>
+                    <div class="col-lg-4">
+                        <select class="form-control" style="width: 150px" ng-model="departmentObj.upperDeptCode">
+                            <option value="">请选择</option>
+                            <option ng-repeat="item in departmentList track by $index" value="{{item.deptCode}}" ng-selected="departmentObj.upperDeptCode===item.deptCode">{{item.deptName}}</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">科室简介：</label>
+                    <div class="col-lg-6">
+                        <input type="text" class="form-control" ng-model="departmentObj.deptDesc" maxlength="250" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">科室地址：</label>
+                    <div class="col-lg-6">
+                        <input type="text" class="form-control" ng-model="departmentObj.deptAddr" maxlength="250" />
+                    </div>
+                </div>
+                <div class="form-group">
+                  <label class="col-lg-2 control-label">是否删除：</label>
+                  <div class="col-lg-4">
+                    <div class="radio-inline">
+                      <label>
+                        <input type="radio" name="delFlag" value="1" ng-model="departmentObj.delFlag" required />是
+                      </label>
+                    </div>
+                    <div class="radio-inline">
+                      <label>
+                        <input type="radio" name="delFlag" value="0" ng-model="departmentObj.delFlag" required />否
+                      </label>
+                    </div>
+                  </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-4 col-lg-offset-2">
+                        <button type="button" class="btn btn-success" ng-disabled="departmentEdit.$invalid" ng-click="saveData(departmentObj)">保存</button>
+                        <span ng-click="backToList()" class="btn btn-default">返回</span>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

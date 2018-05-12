@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical">
+
+    <ImageView
+        android:id="@+id/login_launcher"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="140dp"
+        android:gravity="center_horizontal"
+        android:src="@mipmap/ic_launcher" />
+
+
+    <LinearLayout
+        android:id="@+id/login_content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/doctor_login_userName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/XL"
+            android:layout_marginLeft="@dimen/XXL"
+            android:layout_marginRight="@dimen/XXL">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="@dimen/L"
+                android:layout_marginRight="@dimen/L"
+                android:id="@+id/ib_bg_phone"
+                android:src="@mipmap/ic_login_no_enable" />
+
+            <com.wondersgroup.hs.healthcloud.common.view.ClearEditText
+                android:id="@+id/edit_mobile"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_bg_edit"
+                android:inputType="number"
+                android:maxLength="13"
+                android:paddingBottom="@dimen/L"
+                android:hint="手机号"
+                android:paddingTop="@dimen/L"
+                android:textColor="@color/tc1"
+                android:textColorHint="@color/tc4"
+                android:textSize="@dimen/text_size_13" />
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/XL"
+            android:layout_marginLeft="@dimen/XXL"
+            android:layout_marginRight="@dimen/XXL">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="bottom"
+                android:layout_marginLeft="@dimen/L"
+                android:layout_marginRight="@dimen/L"
+                android:id="@+id/ib_bg_pwd"
+                android:src="@mipmap/ic_login_pwd_enable_" />
+
+
+            <com.wondersgroup.hs.healthcloud.common.view.ClearEditText
+                android:id="@+id/edit_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/selector_bg_edit"
+                android:inputType="number"
+                android:maxLength="13"
+                android:paddingBottom="@dimen/L"
+                android:hint="密码"
+                android:paddingTop="@dimen/L"
+                android:textColor="@color/tc1"
+                android:textColorHint="@color/tc4"
+                android:textSize="@dimen/text_size_13" />
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/doctor_login_btn"
+        style="@style/LoginButtonStyle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/XXXL"
+        android:layout_marginRight="@dimen/XXXL"
+        android:layout_marginTop="50dp"
+        android:text="登录" />
+</LinearLayout>

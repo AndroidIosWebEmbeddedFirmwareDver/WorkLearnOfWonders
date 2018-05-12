@@ -1,0 +1,154 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+             android:layout_width="match_parent"
+             android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/rl_update_cancel"
+        android:layout_width="60dp"
+        android:layout_height="60dp"
+        android:layout_gravity="top|right"
+        android:visibility="gone">
+
+        <ImageView
+            android:id="@+id/iv_update_cancel"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:layout_marginRight="5dp"
+            android:layout_marginTop="5dp"
+            android:background="@mipmap/ic_version_update_cancel"/>
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="280dp"
+        android:layout_height="250dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_marginLeft="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="3dp"
+        android:background="@drawable/btn_radius_stroke_white"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_version"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@mipmap/bg_version_update"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/tc0"
+                android:textSize="@dimen/text_size_24"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="@color/tc0"
+                android:textSize="@dimen/text_size_24"/>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_bottom"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:layout_alignParentBottom="true">
+
+            <View
+                android:id="@+id/di_update"
+                android:layout_width="@dimen/divider_line_thickness"
+                android:layout_height="45dp"
+                android:background="@color/divider_color"/>
+
+            <TextView
+                android:id="@+id/tv_update_no"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_alignParentLeft="true"
+                android:layout_alignParentStart="true"
+                android:layout_alignTop="@+id/view2"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="稍后再说"
+                android:textColor="@color/tc4"
+                android:textSize="@dimen/text_size_16"/>
+
+            <TextView
+                android:id="@+id/tv_update_ok"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginBottom="@dimen/S"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:text="立即更新"
+                android:textColor="@color/tc_addtion2"
+                android:textSize="@dimen/text_size_16"/>
+        </LinearLayout>
+
+        <View
+            android:id="@+id/view2"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_line_thickness"
+            android:layout_above="@+id/ll_bottom"
+            android:background="@color/divider_color"/>
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="120dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_below="@+id/ll_version"
+            android:layout_marginTop="15dp"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/tv_version"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="@dimen/XL"
+                    android:paddingRight="@dimen/XL"
+                    android:text="您的当前版本v1.0,发现新版本v1.1"
+                    android:textColor="@color/tc1"
+                    android:textSize="@dimen/text_size_14"/>
+
+                <TextView
+                    android:id="@+id/textView"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/XL"
+                    android:paddingLeft="@dimen/XL"
+                    android:paddingRight="@dimen/XL"
+                    android:text="新版本更新内容:"
+                    android:textColor="@color/tc1"
+                    android:textSize="@dimen/text_size_14"/>
+
+                <TextView
+                    android:id="@+id/tv_message"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:lineSpacingExtra="@dimen/M"
+                    android:paddingLeft="@dimen/XL"
+                    android:paddingRight="@dimen/XL"
+                    android:text="kffff"
+                    android:textColor="@color/tc1"
+                    android:textSize="@dimen/text_size_12"/>
+            </LinearLayout>
+        </ScrollView>
+
+
+    </RelativeLayout>
+</FrameLayout>

@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+
+    <!-- top-->
+    <RelativeLayout
+        android:id="@+id/rl_top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="50dp"
+        android:paddingTop="50dp">
+
+        <ImageView
+            android:id="@+id/iv_wanda_version"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:layout_centerHorizontal="true"
+            android:src="@mipmap/ic_launcher" />
+
+        <TextView
+            android:id="@+id/tv_wanda_version"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/iv_wanda_version"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/L"
+            android:gravity="center"
+            android:text="微健康"
+            android:textColor="@color/tc2"
+            android:textSize="@dimen/text_size_14" />
+
+    </RelativeLayout>
+    <!-- middle-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/bc1"
+        android:orientation="vertical">
+
+        <include layout="@layout/common_divider" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/tv_account_setting"
+                android:layout_width="0dp"
+                android:layout_height="@dimen/item_height"
+                android:background="@drawable/bg_item_white_selector"
+                android:gravity="center_vertical"
+                android:layout_weight="1"
+                android:paddingLeft="@dimen/XL"
+                android:paddingRight="@dimen/XL"
+                android:text="图文咨询新消息提示"
+                android:textColor="@color/tc1"
+                android:textSize="@dimen/text_size_14" />
+
+            <com.wondersgroup.hs.healthcloud.common.view.ToggleButton
+                android:id="@+id/registration_contact_isDefault"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginRight="@dimen/L"
+                android:layout_gravity="center_vertical"
+                android:background="@color/transparent"
+                android:checked="false" />
+        </LinearLayout>
+
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_line_thickness"
+            android:layout_marginLeft="@dimen/L"
+            android:background="@color/divider_color" />
+
+        <RelativeLayout
+            android:id="@+id/rl_version_update"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/item_height"
+            android:background="@drawable/bg_item_white_selector"
+            android:paddingLeft="@dimen/XL"
+            android:paddingRight="@dimen/XL">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:text="功能介绍"
+                android:textColor="@color/tc1"
+                android:textSize="@dimen/text_size_14" />
+
+            <TextView
+                android:id="@+id/tv_version"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:visibility="gone" />
+
+            <TextView
+                android:id="@+id/tv_new_version_icon"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_centerInParent="true"
+                android:layout_marginRight="@dimen/XL"
+                android:layout_toLeftOf="@+id/iv_version_update_arrow"
+                android:paddingBottom="@dimen/S"
+                android:paddingLeft="@dimen/M"
+                android:paddingRight="@dimen/M"
+                android:paddingTop="@dimen/S"
+                android:text="发现新版本"
+                android:textColor="@color/tc3"
+                android:textSize="@dimen/text_size_14"
+                android:visibility="gone" />
+
+            <ImageView
+                android:id="@+id/iv_version_update_arrow"
+                android:layout_width="16dp"
+                android:layout_height="16dp"
+                android:layout_alignParentRight="true"
+                android:layout_centerVertical="true"
+                android:src="@mipmap/ic_arrow" />
+        </RelativeLayout>
+
+        <include layout="@layout/common_divider" />
+    </LinearLayout>
+    <!--bottom-->
+    <Button
+        android:id="@+id/btn_logout"
+        android:layout_width="match_parent"
+        android:layout_height="45dip"
+        android:layout_marginBottom="@dimen/XL"
+        android:layout_marginLeft="@dimen/XL"
+        android:layout_marginRight="@dimen/XL"
+        android:layout_marginTop="@dimen/XXXXXL"
+        android:background="@drawable/btn_logout_selector"
+        android:text="退出当前账号"
+        android:textColor="@color/tc5"
+        android:textSize="@dimen/text_size_16" />
+</LinearLayout>

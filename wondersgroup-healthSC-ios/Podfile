@@ -1,0 +1,42 @@
+source 'https://github.com/CocoaPods/Specs.git'#官方仓库地址
+#source 'http://git.wdjky.me/ios/wondersgroup-healthCloud-ios-specs.git'#私有仓库地址
+platform :ios, '8.0'
+inhibit_all_warnings!
+use_frameworks!
+
+abstract_target 'BASE_POD' do
+    #    pod 'TMCode', '~> 0.1.0'
+    pod 'MBProgressHUD', '~> 0.9'
+    pod 'MJRefresh', '~> 3.1.12'
+    pod 'AFNetworking', '~> 3.1.0'
+    pod 'MJExtension', '~> 3.0.13'
+    #    pod 'ReactiveCocoa'
+    pod 'ReactiveObjC', '~> 3.0.0'
+    pod 'SDWebImage', '~> 3.7'
+    pod 'Masonry', '~> 1.0.1'
+    pod 'FMDB', '~> 2.6.2'
+    pod 'LKDBHelper', '~> 2.3.4'
+    pod 'Base64', '~> 1.1.2'
+    pod 'MTDates', '~> 1.0.3'
+    pod 'VTMagic', '~> 1.2.4'
+    pod 'UITableView+FDTemplateLayoutCell', '~> 1.5.beta'
+    pod 'TZImagePickerController', '~> 1.6.3'
+    pod 'Qiniu', :git => 'https://github.com/qiniu/objc-sdk.git', :branch => 'AFNetworking-3.x'
+    pod 'UMengAnalytics', '~> 4.0.4'
+    pod 'OpenUDID', '~> 1.0.0'
+    pod 'SDCycleScrollView', '~> 1.65'
+    pod 'MWPhotoBrowser', '~> 2.1.2'
+#    pod 'EaseUILite', :git =>'https://github.com/easemob/easeui-ios-hyphenate-cocoapods.git'
+    pod 'YYText'
+
+    # Release Target
+    target 'SCHCPatient' do 
+    end
+
+    target 'SCHCPatient_DEV' do 
+    end
+
+    target 'SCHCPatient_TEST' do 
+    end
+end
+

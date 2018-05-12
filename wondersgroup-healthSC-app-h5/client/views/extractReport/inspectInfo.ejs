@@ -1,0 +1,68 @@
+<!DOCTYPE HTMl>
+<html>
+<head>
+<title>检验报告</title>
+<% include ../commontags/metatags %>
+<link rel="stylesheet" href="<%=_src('/css/extractReport/extractReport.min.css')%>">
+</head>
+<body>
+<%if(data){%>
+<div class="block-box infoMes">
+  <h3>报告信息</h3>
+  <%if(data.info){ var info = data.info;%>
+  <div class="item">
+    <table width="100%" border="0">
+      <tr>
+        <td width="50%"><em>姓　　名：</em><span><%=info.name%></span></td>
+        <td width="50%"><em>性别：</em><span><%=info.sex%></span></td>
+      </tr>
+      <tr>
+        <td colspan="2"><em>年　　龄：</em><span><%=info.age%></span></td>
+      </tr>
+      <tr>
+        <td colspan="2"><em>医　　院：</em><span id="hosName"></span></td>
+      </tr>
+      <tr>
+        <td colspan="2"><em>科　　室：</em><span><%=info.dept%></span></td>
+      </tr>
+      <tr>
+        <td colspan="2"><em>检查日期：</em><span><%=info.inspectionDate%></span></td>
+      </tr>
+      <tr>
+        <td colspan="2"><em>报告日期：</em><span><%=info.printDate%></span></td>
+      </tr>
+    </table>
+  </div>
+  <%}%>
+</div>
+
+<%if(data.list){%>
+<div class="block-box">
+  <h3>检验报告</h3>
+  <%data.list.forEach(function(element){%>
+  <h5><em>检查项目：</em><span><%=element.specimen ? element.specimen : '未知'%></span></h5>
+  <% if(element.inspection){%>
+  <ul class="list-inspect">
+    <%element.inspection.forEach(function(el){%>
+    <li>
+      <h4><%=el.inspectionName%></h4>
+      <p><span>参考值：<%=el.value%></p>
+      <em class="judge"><%=el.result%></span></em>
+    </li>
+    <%})%>
+  </ul>
+  <%}%>
+  <%})%>
+</div>
+<%}%>
+<%}else{%>
+  <div class="nodata" ><p>暂无内容</p></div>
+<%}%>
+</body>
+<script>
+    function queryString(key){
+        return decodeURIComponent((document.location.search.match(new RegExp("(?:^\\?|&)"+key+"=(.*?)(?=&|$)"))||['',null])[1]);
+    }
+    queryString('hosName') && $('#hosName').html(queryString('hosName'));
+</script>
+</html>

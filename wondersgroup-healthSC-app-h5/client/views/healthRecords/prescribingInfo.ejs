@@ -1,0 +1,80 @@
+<!DOCTYPE HTMl>
+<html>
+<head>
+<title>处方详情</title>
+<% include ../commontags/metatags %>
+<link rel="stylesheet" href="<%=_src('/css/prescribing/prescribing.min.css')%>">
+</head>
+<body>
+<div class="list-box-prescribing list-box-info">
+<%if(list.length > 0){%>
+  <ul>
+    <li>
+      <div class="p_line">
+          <label>开方时间：</label>
+          <p id="date"></p>
+      </div>
+      <div class="p_line">
+          <label>医　　院：</label>
+          <p id="name"></p>
+      </div>
+      <div class="p_line">
+          <label>科　　室：</label>
+          <p id="department"></p>
+      </div>
+      <div class="p_line">
+          <label>金　　额：</label>
+          <p id="amount"></p>
+      </div>
+    </li>
+  </ul>
+<%}%>
+</div>
+
+<%if(list.length > 0){%>
+<%list.forEach(function(element){%>
+<div class="block-box">
+  <table width="100%" border="0">
+    <tr>
+      <td colspan="2">
+        <em>药名：</em><span><%=element.medicine_name%></span>
+      </td>
+    </tr>
+    <tr>
+      <td width="60%">
+        <em>规格：</em><span><%=element.specification%></span>
+      </td>
+      <td width="40%">
+        <em>频度：</em><span><%=element.day_use_num%></span>
+      </td>
+    </tr>
+    <tr>
+      <td width="60%">
+        <em>药量：</em><span><%=element.medicine_num%></span>
+      </td>
+      <td width="40%">
+        <em>用法：</em><span><%=element.use_type%></span>
+      </td>
+    </tr>
+  </table>
+</div>
+<%})%>
+<%}else{%>
+  <div class="nodata" ><p>暂无内容</p></div>
+<%}%>
+
+
+
+
+</div>
+</body>
+<script>
+    function queryString(key){
+        return decodeURIComponent((document.location.search.match(new RegExp("(?:^\\?|&)"+key+"=(.*?)(?=&|$)"))||['',null])[1]);
+    }
+    queryString('name') && $('#name').html(queryString('name'));
+    queryString('date') && $('#date').html(queryString('date'));
+    queryString('department') && $('#department').html(queryString('department'));
+    queryString('amount') && $('#amount').html('¥ '+queryString('amount'));
+</script>
+</html>

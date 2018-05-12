@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:paddingLeft="@dimen/XL"
+        android:paddingRight="@dimen/XL"
+        android:orientation="horizontal">
+        <View
+            android:layout_width="135dp"
+            android:layout_height="@dimen/divider_line_thickness"
+            android:background="@color/divider_color"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="@dimen/XL"
+            android:paddingRight="@dimen/XL"
+            android:gravity="center"
+            android:textColor="@color/tc2"
+            android:textSize="@dimen/text_size_14"
+            android:text="查询历史"/>
+        <View
+            android:layout_width="135dp"
+            android:layout_height="@dimen/divider_line_thickness"
+            android:background="@color/divider_color"/>
+    </LinearLayout>
+
+    <com.wondersgroup.hs.healthcloud.common.view.BaseRecyclerView
+        android:id="@+id/recycle_hospital"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/XL"/>
+
+</LinearLayout>

@@ -1,0 +1,381 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<wsdl:definitions xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:tns="http://webservice.fjzl.wondersgroup.com/"
+                  xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:ns1="http://schemas.xmlsoap.org/soap/http" name="QianyueImplService"
+                  targetNamespace="http://webservice.fjzl.wondersgroup.com/">
+    <wsdl:types>
+        <xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns="http://webservice.fjzl.wondersgroup.com/" elementFormDefault="unqualified"
+                   targetNamespace="http://webservice.fjzl.wondersgroup.com/" version="1.0">
+
+            <xs:element name="getContractResident" type="tns:getContractResident"/>
+
+            <xs:element name="getContractResidentResponse" type="tns:getContractResidentResponse"/>
+
+            <xs:element name="getMemberDetail" type="tns:getMemberDetail"/>
+
+            <xs:element name="getMemberDetailResponse" type="tns:getMemberDetailResponse"/>
+
+            <xs:element name="getMyTeamList" type="tns:getMyTeamList"/>
+
+            <xs:element name="getMyTeamListResponse" type="tns:getMyTeamListResponse"/>
+
+            <xs:element name="getMyTeamNum" type="tns:getMyTeamNum"/>
+
+            <xs:element name="getMyTeamNumResponse" type="tns:getMyTeamNumResponse"/>
+
+            <xs:element name="getPackDetail" type="tns:getPackDetail"/>
+
+            <xs:element name="getPackDetailResponse" type="tns:getPackDetailResponse"/>
+
+            <xs:element name="getPackList" type="tns:getPackList"/>
+
+            <xs:element name="getPackListResponse" type="tns:getPackListResponse"/>
+
+            <xs:element name="getTeamDetail" type="tns:getTeamDetail"/>
+
+            <xs:element name="getTeamDetailResponse" type="tns:getTeamDetailResponse"/>
+
+            <xs:element name="loginByPhone" type="tns:loginByPhone"/>
+
+            <xs:element name="loginByPhoneResponse" type="tns:loginByPhoneResponse"/>
+
+            <xs:element name="makeContract" type="tns:makeContract"/>
+
+            <xs:element name="makeContractResponse" type="tns:makeContractResponse"/>
+
+            <xs:complexType name="getPackDetail">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+                    <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+
+            <xs:complexType name="getPackDetailResponse">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="return" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+
+            <xs:complexType name="getMyTeamList">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+                    <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+
+            <xs:complexType name="getMyTeamListResponse">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="return" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+
+            <xs:complexType name="makeContract">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+                    <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+
+            <xs:complexType name="makeContractResponse">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="return" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+
+            <xs:complexType name="getContractResident">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+                    <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+
+            <xs:complexType name="getContractResidentResponse">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="return" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+
+            <xs:complexType name="getMemberDetail">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+                    <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+
+            <xs:complexType name="getMemberDetailResponse">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="return" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+
+            <xs:complexType name="getPackList">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+                    <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+
+            <xs:complexType name="getPackListResponse">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="return" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+
+            <xs:complexType name="loginByPhone">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+                    <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+
+            <xs:complexType name="loginByPhoneResponse">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="return" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+
+            <xs:complexType name="getMyTeamNum">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+                    <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+
+            <xs:complexType name="getMyTeamNumResponse">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="return" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+
+            <xs:complexType name="getTeamDetail">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="arg0" type="xs:string"/>
+                    <xs:element minOccurs="0" name="arg1" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+
+            <xs:complexType name="getTeamDetailResponse">
+                <xs:sequence>
+                    <xs:element minOccurs="0" name="return" type="xs:string"/>
+                </xs:sequence>
+            </xs:complexType>
+
+        </xs:schema>
+    </wsdl:types>
+    <wsdl:message name="getMyTeamNumResponse">
+        <wsdl:part element="tns:getMyTeamNumResponse" name="parameters">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="getMyTeamListResponse">
+        <wsdl:part element="tns:getMyTeamListResponse" name="parameters">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="makeContract">
+        <wsdl:part element="tns:makeContract" name="parameters">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="getContractResidentResponse">
+        <wsdl:part element="tns:getContractResidentResponse" name="parameters">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="makeContractResponse">
+        <wsdl:part element="tns:makeContractResponse" name="parameters">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="getMyTeamList">
+        <wsdl:part element="tns:getMyTeamList" name="parameters">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="getContractResident">
+        <wsdl:part element="tns:getContractResident" name="parameters">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="getPackList">
+        <wsdl:part element="tns:getPackList" name="parameters">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="getPackDetail">
+        <wsdl:part element="tns:getPackDetail" name="parameters">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="loginByPhone">
+        <wsdl:part element="tns:loginByPhone" name="parameters">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="getTeamDetail">
+        <wsdl:part element="tns:getTeamDetail" name="parameters">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="getPackDetailResponse">
+        <wsdl:part element="tns:getPackDetailResponse" name="parameters">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="getMemberDetailResponse">
+        <wsdl:part element="tns:getMemberDetailResponse" name="parameters">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="getMyTeamNum">
+        <wsdl:part element="tns:getMyTeamNum" name="parameters">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="getPackListResponse">
+        <wsdl:part element="tns:getPackListResponse" name="parameters">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="getMemberDetail">
+        <wsdl:part element="tns:getMemberDetail" name="parameters">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="loginByPhoneResponse">
+        <wsdl:part element="tns:loginByPhoneResponse" name="parameters">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:message name="getTeamDetailResponse">
+        <wsdl:part element="tns:getTeamDetailResponse" name="parameters">
+        </wsdl:part>
+    </wsdl:message>
+    <wsdl:portType name="QianyueInterface">
+        <wsdl:operation name="getPackDetail">
+            <wsdl:input message="tns:getPackDetail" name="getPackDetail">
+            </wsdl:input>
+            <wsdl:output message="tns:getPackDetailResponse" name="getPackDetailResponse">
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getMyTeamList">
+            <wsdl:input message="tns:getMyTeamList" name="getMyTeamList">
+            </wsdl:input>
+            <wsdl:output message="tns:getMyTeamListResponse" name="getMyTeamListResponse">
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="makeContract">
+            <wsdl:input message="tns:makeContract" name="makeContract">
+            </wsdl:input>
+            <wsdl:output message="tns:makeContractResponse" name="makeContractResponse">
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getContractResident">
+            <wsdl:input message="tns:getContractResident" name="getContractResident">
+            </wsdl:input>
+            <wsdl:output message="tns:getContractResidentResponse" name="getContractResidentResponse">
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getMemberDetail">
+            <wsdl:input message="tns:getMemberDetail" name="getMemberDetail">
+            </wsdl:input>
+            <wsdl:output message="tns:getMemberDetailResponse" name="getMemberDetailResponse">
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getPackList">
+            <wsdl:input message="tns:getPackList" name="getPackList">
+            </wsdl:input>
+            <wsdl:output message="tns:getPackListResponse" name="getPackListResponse">
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="loginByPhone">
+            <wsdl:input message="tns:loginByPhone" name="loginByPhone">
+            </wsdl:input>
+            <wsdl:output message="tns:loginByPhoneResponse" name="loginByPhoneResponse">
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getMyTeamNum">
+            <wsdl:input message="tns:getMyTeamNum" name="getMyTeamNum">
+            </wsdl:input>
+            <wsdl:output message="tns:getMyTeamNumResponse" name="getMyTeamNumResponse">
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getTeamDetail">
+            <wsdl:input message="tns:getTeamDetail" name="getTeamDetail">
+            </wsdl:input>
+            <wsdl:output message="tns:getTeamDetailResponse" name="getTeamDetailResponse">
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:portType>
+    <wsdl:binding name="QianyueImplServiceSoapBinding" type="tns:QianyueInterface">
+        <soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+        <wsdl:operation name="getPackDetail">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input name="getPackDetail">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="getPackDetailResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getMyTeamList">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input name="getMyTeamList">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="getMyTeamListResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getContractResident">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input name="getContractResident">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="getContractResidentResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="makeContract">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input name="makeContract">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="makeContractResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getMemberDetail">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input name="getMemberDetail">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="getMemberDetailResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getPackList">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input name="getPackList">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="getPackListResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="loginByPhone">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input name="loginByPhone">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="loginByPhoneResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getMyTeamNum">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input name="getMyTeamNum">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="getMyTeamNumResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+        <wsdl:operation name="getTeamDetail">
+            <soap:operation soapAction="" style="document"/>
+            <wsdl:input name="getTeamDetail">
+                <soap:body use="literal"/>
+            </wsdl:input>
+            <wsdl:output name="getTeamDetailResponse">
+                <soap:body use="literal"/>
+            </wsdl:output>
+        </wsdl:operation>
+    </wsdl:binding>
+    <wsdl:service name="QianyueImplService">
+        <wsdl:port binding="tns:QianyueImplServiceSoapBinding" name="QianyueImplPort">
+            <soap:address location="http://218.89.178.119:8088/fjzl/webservice/qianyue"/>
+        </wsdl:port>
+    </wsdl:service>
+</wsdl:definitions>

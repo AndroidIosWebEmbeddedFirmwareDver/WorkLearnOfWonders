@@ -1,0 +1,405 @@
+{
+	"variables": [],
+	"info": {
+		"name": "PlatFrom_MianYang",
+		"_postman_id": "2ec83227-19f8-b861-06ff-cf06a66cd523",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "",
+			"request": {
+				"url": "",
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "155\t451210007\t绵阳市第三人民医院\t四川省绵阳市剑南路东段190号\t\t    绵阳市第三人民医院始建于1955年，占地130亩，建筑面积8万余平方米， 总资产6亿元，开放床位1700余张，是一所以脑系和老年医学为特色的三级甲等医院，系四川省精神卫生中心。   \n\n        专业学科设置齐全   \n        医院开设大内科、大外科、精神大科、门诊大科四个学科体系60余个临床业务科室，建成省甲级重点学科1个、乙级重点学科3个，省甲级重点专科1个；市级重点学科9个、质控中心9个，辖游仙区中医医院、高新区医院两个分院。     \n\n        学术队伍不断优化   \n        医院现有在岗员工1886名，其中硕士研究生导师10名，省市学科带头人、拔尖人才60多名，具有硕博学位人员144名，拥有正高职称人员43名、副高职称157名、中级职称298名，担任国家级、省市级专业委员会委员职务的人员200多人。 \n\t0816-2282249（总机） 2283078（急救） 2282997（传真）\t三级甲等\t104.766527\t31.475738\thttp://og3xulzx6.bkt.clouddn.com/1495093375159.png\t510701000000\t\t1\t52\t0\t\t\t305111700000109\tyj7hhb3pzhfv0nr7fb8ypeosx5d0aee6\t0\t2017-05-04 10:41:56\t2017-06-02 10:57:03\n\n----------+---------------------+-------------+----------------------------------+----------------------------------+--------------------+-----------+\n| id                               | password                         | nickname            | mobile      | avatar | gender | birthday   | name      | idcard             | verification_level | join_time           | health_card | talkid                           | talkpwd                          | sign_family_teamid | sign_time |\n+----------------------------------+----------------------------------+---------------------+-------------+--------+--------+------------+-----------+--------------------+--------------------+---------------------+-------------+----------------------------------+----------------------------------+--------------------+-----------+\n| 4ba3b84d58f7427ab645151bdcb1b74f | 07fcaf443b3910922ccc200a0cf593cf | 微健康用户5477      | 13608065477 | NULL   | 1      | 1995-11-19 | 刘东明    | 511521199511194056 |                  1 | 2017-03-22 15:07:00 | NULL        | c0d72d6203f1487cb09cc3f8b7a12bee | 8fb3df5b50b84163b53317ea7586fbb5 | NULL               | NULL      |\n+----------------------------------+----------------------------------+---------------------+-------------+--------+--------+------------+-----------+--------------------+--------------------+---------------------+-------------+----------------------------------+----------------------------------+--------------------+-----------+\n\n\n\n\n\n"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "【检验检查】2.1.1\t检验报告列表查询",
+			"request": {
+				"url": {
+					"raw": "http://218.89.178.119:8088/ehrview_pre/lisris?st=examTest.getLisRecord&medicalOrgId=451210007&idCard=511521199511194056&startDate=2018-03-20&endDate=2018-04-26",
+					"protocol": "http",
+					"host": [
+						"218",
+						"89",
+						"178",
+						"119"
+					],
+					"port": "8088",
+					"path": [
+						"ehrview_pre",
+						"lisris"
+					],
+					"query": [
+						{
+							"key": "st",
+							"value": "examTest.getLisRecord",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "medicalOrgId",
+							"value": "451210007",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "idCard",
+							"value": "511521199511194056",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "startDate",
+							"value": "2018-03-20",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "endDate",
+							"value": "2018-04-26",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/xml",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "【检验检查】2.2.1\t检查报告列表查询",
+			"request": {
+				"url": {
+					"raw": "http://218.89.178.119:8088/ehrview_pre/lisris?st=examTest.getRisRecord&medicalOrgId=451210007&idCard=511521199511194056&startDate=2018-03-20&endDate=2018-04-26",
+					"protocol": "http",
+					"host": [
+						"218",
+						"89",
+						"178",
+						"119"
+					],
+					"port": "8088",
+					"path": [
+						"ehrview_pre",
+						"lisris"
+					],
+					"query": [
+						{
+							"key": "st",
+							"value": "examTest.getRisRecord",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "medicalOrgId",
+							"value": "451210007",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "idCard",
+							"value": "511521199511194056",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "startDate",
+							"value": "2018-03-20",
+							"equals": true,
+							"description": ""
+						},
+						{
+							"key": "endDate",
+							"value": "2018-04-26",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "POST",
+				"header": [],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "【院内支付】2.1.1.1\t门诊就诊记录查询",
+			"request": {
+				"url": {
+					"raw": "http://218.89.178.119:8088/ehrview_pre/payment?st=payment.getOutpatientRecord",
+					"protocol": "http",
+					"host": [
+						"218",
+						"89",
+						"178",
+						"119"
+					],
+					"port": "8088",
+					"path": [
+						"ehrview_pre",
+						"payment"
+					],
+					"query": [
+						{
+							"key": "st",
+							"value": "payment.getOutpatientRecord",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/xml",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<request>\n\t<yljgdm>451210007</yljgdm>\n\t<klx>01</klx>\n\t<kh>511521199511194056</kh>\n\t<ksrq>2018-03-22</ksrq>\n\t<jsrq>2018-04-27</jsrq>\n</request>"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "【院内支付】2.2.3\t门诊待缴费费用信息获取",
+			"request": {
+				"url": {
+					"raw": "http://218.89.178.119:8088/ehrview_pre/payment?st=payment.getPendingPaymentInfo",
+					"protocol": "http",
+					"host": [
+						"218",
+						"89",
+						"178",
+						"119"
+					],
+					"port": "8088",
+					"path": [
+						"ehrview_pre",
+						"payment"
+					],
+					"query": [
+						{
+							"key": "st",
+							"value": "payment.getPendingPaymentInfo",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/xml",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<request>\n\t<yljgdm>451210007</yljgdm>\n\t<klx>01</klx>\n\t<kh>511521199511194056</kh>\n</request>"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "【院内支付】2.1.2\t住院记录查询",
+			"request": {
+				"url": {
+					"raw": "http://218.89.178.119:8088/ehrview_pre/payment?st=payment.getInpatientRecord",
+					"protocol": "http",
+					"host": [
+						"218",
+						"89",
+						"178",
+						"119"
+					],
+					"port": "8088",
+					"path": [
+						"ehrview_pre",
+						"payment"
+					],
+					"query": [
+						{
+							"key": "st",
+							"value": "payment.getInpatientRecord",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/xml",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<request>\n\t<yljgdm>451210007</yljgdm>\n\t<klx>01</klx>\n\t<kh>511521199511194056</kh>\n\t<ksrq>2018-03-22</ksrq>\n\t<jsrq>2018-04-27</jsrq>\n</request>"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "【院内支付】2.2.1\t门诊处方查询",
+			"request": {
+				"url": {
+					"raw": "http://218.89.178.119:8088/ehrview_pre/payment?st=payment.getPrescriptionRecord",
+					"protocol": "http",
+					"host": [
+						"218",
+						"89",
+						"178",
+						"119"
+					],
+					"port": "8088",
+					"path": [
+						"ehrview_pre",
+						"payment"
+					],
+					"query": [
+						{
+							"key": "st",
+							"value": "payment.getPrescriptionRecord",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/xml",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<request>\n\t<yljgdm>451210007</yljgdm>\n\t<klx>01</klx>\n\t<kh>511521199511194056</kh>\n\t<ksrq>2018-03-22</ksrq>\n\t<jsrq>2018-04-27</jsrq>\n</request>"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "【院内支付】2.2.5\t门诊缴费记录查询",
+			"request": {
+				"url": {
+					"raw": "http://218.89.178.119:8088/ehrview_pre/payment?st=payment.findCompletePayRecord",
+					"protocol": "http",
+					"host": [
+						"218",
+						"89",
+						"178",
+						"119"
+					],
+					"port": "8088",
+					"path": [
+						"ehrview_pre",
+						"payment"
+					],
+					"query": [
+						{
+							"key": "st",
+							"value": "payment.findCompletePayRecord",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/xml",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<request>\n\t<yljgdm>451210007</yljgdm>\n\t<klx>01</klx>\n\t<kh>511521199511194056</kh>\n\t<ksrq>2018-03-22</ksrq>\n\t<jsrq>2018-04-27</jsrq>\n</request>"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "【院内支付】2.3.1\t住院预交金缴纳记录查询",
+			"request": {
+				"url": {
+					"raw": "http://218.89.178.119:8088/ehrview_pre/payment?st=payment.findPrepaidPayRecord",
+					"protocol": "http",
+					"host": [
+						"218",
+						"89",
+						"178",
+						"119"
+					],
+					"port": "8088",
+					"path": [
+						"ehrview_pre",
+						"payment"
+					],
+					"query": [
+						{
+							"key": "st",
+							"value": "payment.findPrepaidPayRecord",
+							"equals": true,
+							"description": ""
+						}
+					],
+					"variable": []
+				},
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/xml",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "<request>\n\t<yljgdm>451210007</yljgdm>\n\t<klx>01</klx>\n\t<kh>511521199511194056</kh>\n\t<ksrq>2018-03-22</ksrq>\n\t<jsrq>2018-04-27</jsrq>\n</request>"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}

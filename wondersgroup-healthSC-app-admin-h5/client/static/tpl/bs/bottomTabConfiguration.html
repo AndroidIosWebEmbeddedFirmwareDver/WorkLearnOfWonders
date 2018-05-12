@@ -1,0 +1,60 @@
+<div class="wrapper" ng-controller="AddTabCtrl">
+    <div class="panel panel-default">
+        <div class="panel-heading font-bold">
+            APP底部Tab
+        </div>
+        <div class="panel-body">
+            <form class="form-horizontal form-validation m-t-md" name="addTabForm" ng-submit="savePictures()" novalidate>
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">背景图片：</label>
+                    <div class="col-lg-4">
+                        <div class="upload-box" upw="100" uph="100" flg="0" get-url="getUrl(url,flg)"  on-close="onClose(flg)" url="pictures[0].img_url" fileread/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">非高亮图标：</label>
+                    <div class="col-lg-8">
+                        <div class="row">
+                            <div class="col-lg-2">
+                                <div class="upload-box inline" upw="100" uph="100" flg="1" get-url="getUrl(url,flg)"  on-close="onClose(flg)" url="pictures[1].img_url" fileread/>
+                            </div>
+                            <div class="col-lg-2">
+                                <div class="upload-box inline" upw="100" uph="100" flg="2" get-url="getUrl(url,flg)"  on-close="onClose(flg)" url="pictures[2].img_url" fileread/>
+                            </div>
+                            <div class="col-lg-2">
+                                <div class="upload-box inline" upw="100" uph="100" flg="3" get-url="getUrl(url,flg)"  on-close="onClose(flg)" url="pictures[3].img_url" fileread/>
+                            </div>
+                            <div class="col-lg-2">
+                                <div class="upload-box inline" upw="100" uph="100" flg="4" get-url="getUrl(url,flg)"  on-close="onClose(flg)" url="pictures[4].img_url" fileread/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">高亮图标：</label>
+                    <div class="col-lg-8">
+                        <div class="row">
+                            <div class="col-lg-2">
+                                <div class="upload-box inline" upw="100" uph="100" flg="5" get-url="getUrl(url,flg)" on-close="onClose(flg)" url="pictures[5].img_url" fileread/>
+                            </div>
+                            <div class="col-lg-2">
+                                <div class="upload-box inline" upw="100" uph="100" flg="6" get-url="getUrl(url,flg)" on-close="onClose(flg)" url="pictures[6].img_url" fileread/>
+                            </div>
+                            <div class="col-lg-2">
+                                <div class="upload-box inline" upw="100" uph="100" flg="7" get-url="getUrl(url,flg)" on-close="onClose(flg)" url="pictures[7].img_url" fileread/>
+                            </div>
+                            <div class="col-lg-2">
+                                <div class="upload-box inline" upw="100" uph="100" flg="8" get-url="getUrl(url,flg)" on-close="onClose(flg)" url="pictures[8].img_url" fileread/>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-lg-4 col-lg-offset-2">
+                        <button type="submit" class="btn btn-success" ng-disabled="addTabForm.$invalid">保存</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

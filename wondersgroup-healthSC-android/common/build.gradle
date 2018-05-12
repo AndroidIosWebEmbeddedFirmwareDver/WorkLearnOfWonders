@@ -1,0 +1,41 @@
+apply plugin: 'com.android.library'
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+    buildToolsVersion rootProject.ext.android.buildToolsVersion
+
+    defaultConfig {
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        debug {
+            minifyEnabled false
+        }
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    testCompile 'junit:junit:4.12'
+    compile rootProject.ext.dependencies["multidex"]
+    compile rootProject.ext.dependencies["appcompat-v7"]
+    compile rootProject.ext.dependencies["recyclerview-v7"]
+    compile rootProject.ext.dependencies["gridlayout-v7"]
+    compile rootProject.ext.dependencies["okhttp3-integration"]
+    compile rootProject.ext.dependencies["okhttp3"]
+    compile rootProject.ext.dependencies["glide"]
+    compile rootProject.ext.dependencies["eventbus"]
+    compile rootProject.ext.dependencies["calligraphy"]
+    compile rootProject.ext.dependencies["rebound"]
+    compile rootProject.ext.dependencies["percent"]
+
+    compile rootProject.ext.dependencies["butterknife"]
+    compile rootProject.ext.dependencies["butterknife-apt"]
+}

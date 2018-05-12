@@ -1,0 +1,42 @@
+ext {
+
+    android = [
+            compileSdkVersion: 25,
+            buildToolsVersion: "25.0.3",
+
+            minSdkVersion    : 14,
+            targetSdkVersion : 25,
+
+            userVersionCode  : 3,
+            userVersionName  : '1.0.5',
+
+            doctorVersionCode: 1,
+            doctorVersionName: '1.0.0',
+
+            VSupportSdk      : '25.3.1',
+            VOkhttp          : "3.4.2",
+    ]
+
+    dependencies = [
+            "multidex"           : "com.android.support:multidex:1.0.1",
+
+            "appcompat-v7"       : "com.android.support:appcompat-v7:${android["VSupportSdk"]}",
+            "support-v4"         : "com.android.support:support-v4:${android["VSupportSdk"]}",
+            "design"             : "com.android.support:design:${android["VSupportSdk"]}",
+            "percent"            : "com.android.support:percent:${android["VSupportSdk"]}",
+            "annotations"        : "com.android.support:support-annotations:${android["VSupportSdk"]}",
+            "recyclerview-v7"    : "com.android.support:recyclerview-v7:${android["VSupportSdk"]}",
+            "gridlayout-v7"      : "com.android.support:gridlayout-v7:${android["VSupportSdk"]}",
+
+            "butterknife"        : "com.jakewharton:butterknife:8.6.0",
+            "butterknife-apt"    : "com.jakewharton:butterknife-compiler:8.6.0",
+            "eventbus"           : "de.greenrobot:eventbus:2.4.0",
+            "glide"              : "com.github.bumptech.glide:glide:3.7.0",
+            "rebound"            : "com.facebook.rebound:rebound:0.3.8",
+            "okhttp3-integration": "com.github.bumptech.glide:okhttp3-integration:1.4.0@aar",
+            "okhttp3"            : "com.squareup.okhttp3:okhttp:${android["VOkhttp"]}",
+            "calligraphy"        : "uk.co.chrisjenx:calligraphy:2.1.0",
+            "qiniu-android-sdk"  : "com.qiniu:qiniu-android-sdk:7.2.+",
+    ]
+
+}

@@ -1,0 +1,26 @@
+<!DOCTYPE HTMl>
+<html>
+<head>
+<title>选择时间段</title>
+<% include ../commontags/metatags %>
+<link rel="stylesheet" href="<%=_src('/css/prescribing/prescribing.min.css')%>">
+</head>
+<body>
+<div class="index-box">
+  <ul class="list-selectTime">
+    <li class="choosed">
+      <label>今天<span><input type="radio" name="time" class="radio"></span></label>
+    </li>
+    <li>
+      <label>最近三天<span><input type="radio" name="time" class="radio"></span></label>
+    </li>
+    <li>
+      <label>最近一周<span><input type="radio" name="time" class="radio"></span></label>
+    </li>
+    <li>
+      <label>最近一个月<span><input type="radio" name="time" class="radio"></span></label>
+    </li>
+  </ul>
+</div>
+</body>
+</html>

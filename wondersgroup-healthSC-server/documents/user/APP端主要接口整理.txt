@@ -1,0 +1,44 @@
+系统部分
+注册获取验证码 GET：http://www.scwdjk.com/sichuan-user/api/sms?mobile=13551803334&type=1
+验证码登录 GET：http://www.scwdjk.com/sichuan-user/api/token/code?code=670617&mobile=13551803334
+用户帐号密码登录 GET：http://www.scwdjk.com/sichuan-user/api/token?mobile=13551803334&password=B2nqNDkP3H9UMU4idMdqPRPGB1W%2BEhQyhOcShC2YYXcu56UlU535f5xelGnY/oEu%2B/tlr7ePgYcs%0Ac496C8Akb2EMGck/nMg0p4qVk%2BOvb%2Bs%2BPW0QLJyP1SYiWQjloOBEY1m4cMt5P8I3Ih/%2B4cWBySSh%0A8Lfw/BHhXI%2BiwdOStZvbCbCaS/v18ml9oxmkV15MeON1hJRHbvvbXwt/trZrZCwPBzEbEyB12rfG%0AwCAEcGYSbK1OwGMdXrNk3agLNOC5mNTCDDp0MujpEgq949goTIcLUb%2BdP1B9cwhN%2BAY%2BY7Y4oxPa%0AghqzJF2Ce5o3fUYIA446DlwAU6JuhGZbasmFvw%3D%3D
+首页访问 GET：http://www.scwdjk.com/sichuan-user/api/home
+消息获取 GET：http://www.scwdjk.com/sichuan-user/api/message/newMessage?uid=01fe3ddded4d474797334bde6a181c64
+
+预约挂号
+查找医院 GET: http://218.80.250.99/sichuan-user-te/api/queryHospitls?cityCode=510600000000
+查找医院科室 GET: http://218.80.250.99/sichuan-user-te/api/queryDeps?hosDeptCode=1&hospitalCode=G52569553
+查找医院科室医生 GET: http://218.80.250.99/sichuan-user-te/api/queryDoctorList?hosDeptCode=Z103&hospitalCode=G52569553
+查找医院科室排班信息 GET: http://218.80.250.99/sichuan-user-te/api/querySchedulByTime?hosDeptCode=Z103&hospitalCode=G52569553&time=2018-04-12
+查找医院科室医生排班信息 GET: http://www.scwdjk.com/sichuan-user/api/querySchedulInfo?hosDeptCode=1112&hosDoctCode=2019&hospitalCode=451210007
+提交预约订单 POST：http://www.scwdjk.com/sichuan-user/api/order/submitOrder
+提交支付前获取医院appid和appSecret返回给APP GET: http://www.scwdjk.com/sichuan-user/api/api/pay/info?id=1092832323232
+提交支付前需要先向链支付获取一个动态的key返回给APP GET: http://www.scwdjk.com/sichuan-user/api/api/pay/key?id=1092832323232&channel=alipay&app=sc
+App支付直接调用链支付SDK，参数包含医院appid、appSecret和动态key
+链支付支付成功回调 POST：http://www.scwdjk.com/sichuan-user/api/pay/callback/pay  验签->更改本地订单状态->调平台支付成功->发送短信，异常退款
+
+诊间支付
+门诊处方查询 GET：http://218.80.250.99/sichuan-user-te/api/eprescription/list
+门诊处方明细查询 GET：http://218.80.250.99/sichuan-user-te/api/eprescription/details
+
+
+
+我的订单
+我的订单查询 GET: http://www.scwdjk.com/sichuan-user/api/interDiaPayment/orders?status=NOTPAY&uid=01fe3ddded4d474797334bde6a181c64
+取消订单：
+链支付退款回调 POST：http://www.scwdjk.com/sichuan-user/api/pay/callback/refund  验签->更改本地订单状态->发送短信
+
+
+我的预约
+我的预约查询 GET: http://www.scwdjk.com/sichuan-user/api/order/getOrderList?state=2&uid=01fe3ddded4d474797334bde6a181c64
+预约详情 GET：http://www.scwdjk.com/sichuan-user/api/order/getOrderDetail?orderId=6c947829322844458cf29ffd669b4619
+取消预约 POST：http://218.80.250.99/sichuan-user-te/api/order/cancelOrder 验证->调平台取消预约->链支付退款->本地数据处理(tb_refund_order)->链支付退款回调(同上)
+
+医院/平台主动回调
+履约回调 POST：http://218.80.250.99/sichuan-his/orderService/setPromiseNoticeService
+医院/平台的回调只有一个接口，接口参数为订单的当前数据，回调接口以平台订单数据处理所有本地业务。
+
+定时任务
+预约挂号成功后，启动15分钟定时任务：/wondersgroup-SC-jobclient/pay/schedule/timer
+15分钟到达后，定时任务回调：/sichuan-internal/api/pay/timer
+

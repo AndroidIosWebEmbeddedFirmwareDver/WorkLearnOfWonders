@@ -1,0 +1,297 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bc5"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/txt_create_date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/XL"
+        android:layout_gravity="center_horizontal"
+        android:paddingLeft="@dimen/XL"
+        android:paddingRight="@dimen/XL"
+        android:paddingTop="@dimen/S"
+        android:paddingBottom="@dimen/S"
+        android:background="@drawable/btn_radius_stroke_gray"
+        android:textSize="@dimen/text_size_12"
+        android:textColor="@color/tc0"
+        android:text="" />
+
+    <LinearLayout
+        android:id="@+id/ll_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/XL"
+        android:layout_marginTop="@dimen/XL"
+        android:layout_marginRight="@dimen/XL"
+        android:background="@drawable/btn_radius_stroke_white"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/txt_pay_type_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/XL"
+                android:layout_marginLeft="@dimen/XL"
+                android:textColor="@color/tc2"
+                android:textSize="@dimen/text_size_14"
+                android:text="类别名称" />
+
+            <TextView
+                android:id="@+id/txt_pay_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/XL"
+                android:layout_marginTop="@dimen/XL"
+                android:textColor="@color/tc2"
+                android:textSize="@dimen/text_size_14"
+                android:text="支付成功" />
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_line_thickness"
+            android:layout_marginTop="@dimen/XL"
+            android:layout_marginLeft="@dimen/XL"
+            android:layout_marginRight="@dimen/XL"
+            android:background="@color/divider_color" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/XL"
+            android:paddingLeft="@dimen/XL"
+            android:paddingRight="@dimen/XL">
+            <LinearLayout
+                android:id="@+id/ll_register_pay"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="visible"
+                android:orientation="vertical">
+                <TextView
+                    android:id="@+id/txt_hospital1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/tc1"
+                    android:textSize="@dimen/text_size_16"
+                    android:text="成都第一人民医院" />
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/L_"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:id="@+id/txt_dpt_dct_clncTp"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/tc1"
+                        android:textSize="@dimen/text_size_16"
+                        android:singleLine="true"
+                        android:ellipsize="end"
+                        android:text="科室  医生姓名  门诊类型"/>
+<!--                    <TextView
+                        android:id="@+id/txt_department"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/tc1"
+                        android:textSize="@dimen/text_size_16"
+                        android:text="科室"/>
+
+                    <TextView
+                        android:layout_marginLeft="@dimen/XL"
+                        android:id="@+id/txt_doctor_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/tc1"
+                        android:textSize="@dimen/text_size_16"
+                        android:text="医生姓名"/>
+                    <TextView
+                        android:layout_marginLeft="@dimen/XL"
+                        android:id="@+id/txt_clinic_type"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/tc1"
+                        android:textSize="@dimen/text_size_16"
+                        android:text="门诊类型"/>-->
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/L_"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="@dimen/albumitem_content_height"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/tc1"
+                        android:textSize="@dimen/text_size_16"
+                        android:text="就诊人："/>
+                    <TextView
+                        android:id="@+id/txt_patient_name"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/tc1"
+                        android:textSize="@dimen/text_size_16"
+                        android:text="某某某"/>
+                </LinearLayout>
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/L_"
+                    android:orientation="horizontal">
+                    <TextView
+                        android:layout_width="@dimen/albumitem_content_height"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/tc1"
+                        android:textSize="@dimen/text_size_16"
+                        android:text="挂号金额："/>
+                    <TextView
+                        android:id="@+id/txt_price1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/tc1"
+                        android:textSize="@dimen/text_size_16"
+                        android:text="50元"/>
+                </LinearLayout>
+                <TextView
+                    android:layout_marginTop="@dimen/L_"
+                    android:id="@+id/txt_order_time"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textColor="@color/tc2"
+                    android:textSize="@dimen/text_size_16"
+                    android:text="2016-11-07 周一 上午"/>
+            </LinearLayout>
+            <LinearLayout
+                android:id="@+id/ll_diagnosing_pay"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:orientation="vertical">
+
+                <TextView
+                    android:id="@+id/txt_hospital"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_16"
+                    android:textColor="@color/tc1"
+                    android:text="成都第一人民医院" />
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/L_"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_size_16"
+                        android:textColor="@color/tc1"
+                        android:text="支付金额：" />
+
+                    <TextView
+                        android:id="@+id/txt_price"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_size_16"
+                        android:textColor="@color/tc1"
+                        android:text="5元" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/L_"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_size_16"
+                        android:textColor="@color/tc1"
+                        android:text="开方时间：" />
+
+                    <TextView
+                        android:id="@+id/txt_prescription_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_size_16"
+                        android:textColor="@color/tc1"
+                        android:text="2016-11-07 16:39" />
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/L_"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_size_16"
+                        android:textColor="@color/tc2"
+                        android:text="处方号码：" />
+
+                    <TextView
+                        android:id="@+id/txt_prescription_code"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textSize="@dimen/text_size_16"
+                        android:textColor="@color/tc2"
+                        android:text="123123123" />
+                </LinearLayout>
+            </LinearLayout>
+        </RelativeLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_line_thickness"
+            android:layout_marginTop="@dimen/XL"
+            android:layout_marginLeft="@dimen/XL"
+            android:layout_marginRight="@dimen/XL"
+            android:background="@color/divider_color"/>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:paddingBottom="@dimen/XL"
+            android:paddingTop="@dimen/XL"
+            android:layout_height="wrap_content">
+            <TextView
+                android:id="@+id/txt1"
+                android:layout_marginLeft="@dimen/XL"
+                android:layout_width="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_height="wrap_content"
+                android:textColor="@color/tc2"
+                android:textSize="@dimen/text_size_12"
+                android:text="订单号："/>
+            <TextView
+                android:id="@+id/txt_order_id"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toRightOf="@id/txt1"
+                android:layout_centerVertical="true"
+                android:textColor="@color/tc2"
+                android:textSize="@dimen/text_size_12"
+                android:text="1239387872384008"/>
+            <Button
+                android:id="@+id/btn_action"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="@dimen/XL"
+                android:text="去支付"/>
+        </RelativeLayout>
+    </LinearLayout>
+</LinearLayout>

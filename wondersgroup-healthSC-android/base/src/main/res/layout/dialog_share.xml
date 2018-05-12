@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent"
+    android:background="@color/bc1"
+    android:gravity="center"
+    android:orientation="vertical">
+    <com.wondersgroup.hs.healthcloud.common.view.BaseRecyclerView
+        android:id="@+id/recycler_view_share"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="@dimen/XXL"
+        android:layout_marginRight="@dimen/XXL"
+        android:orientation="vertical"
+        app:recyclerStyle="grid"
+        android:numColumns="2" />
+    <TextView
+        android:id="@+id/share_cancel"
+        android:layout_width="fill_parent"
+        android:layout_height="45dp"
+        android:gravity="center"
+        android:text="取消"
+        android:textColor="@color/tc1"
+        android:textSize="@dimen/text_size_16"/>
+
+
+</LinearLayout>

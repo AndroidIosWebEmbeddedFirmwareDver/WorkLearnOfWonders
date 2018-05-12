@@ -1,0 +1,33 @@
+@import "../common/init";
+@import "../common/basic";
+body {
+  padding-bottom: 2.133333rem;
+}
+
+footer {
+  position: fixed;
+  bottom: 0;
+  width: 100%;
+  height: 2.1333333rem;
+  background: #eee url(http://img.wdjky.com/ee80587f9102d1479717830949.png?imageView2) .5333333rem center no-repeat, #eee url(http://img.wdjky.com/4b488908eeaf91479719664039.png?imageView2) 2.1333333rem center no-repeat;
+  background-size: auto 65%, auto 55%;
+  .download {
+    position: absolute;
+    top: .5866667rem;
+    right: .5333333rem;
+    width: 2.9866667rem;
+    height: .9333333rem;
+    background-color: #3EC282;
+    border-radius: .6rem;
+    border: none;
+    color: #fff;
+    padding-left: .7rem;
+    background: #3EC282 url(http://img.wdjky.com/77cc163dddf6e1459242072832.png?imageView2) no-repeat .26666667rem center;
+    background-size: auto 55%;
+    font-size: 0.32rem;
+    user-select: none;
+    &:focus {
+      outline: 0;
+    }
+  }
+}

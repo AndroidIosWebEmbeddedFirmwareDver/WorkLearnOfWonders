@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bc1"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/XL"
+    android:paddingRight="@dimen/XL">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/XL"
+        android:paddingTop="@dimen/XL">
+
+        <TextView
+            android:id="@+id/tv_date_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="开方时间："
+            android:textColor="@color/tc2"
+            android:textSize="@dimen/text_size_16"/>
+
+        <TextView
+            android:id="@+id/tv_date_content"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text=""
+            android:textColor="@color/tc2"
+            android:textSize="@dimen/text_size_16"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_line_thickness"
+        android:background="@color/divider_color"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/XL"
+        android:paddingTop="@dimen/XL">
+
+        <TextView
+            android:id="@+id/tv_hospital_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="医   院："
+            android:textColor="@color/tc2"
+            android:textSize="@dimen/text_size_16"/>
+
+        <TextView
+            android:id="@+id/tv_hospital_content"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text=""
+            android:textColor="@color/tc2"
+            android:textSize="@dimen/text_size_16"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_line_thickness"
+        android:background="@color/divider_color"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/XL"
+        android:paddingTop="@dimen/XL">
+
+        <TextView
+            android:id="@+id/tv_department_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="科   室："
+            android:textColor="@color/tc2"
+            android:textSize="@dimen/text_size_16"/>
+
+        <TextView
+            android:id="@+id/tv_department_content"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text=""
+            android:textColor="@color/tc2"
+            android:textSize="@dimen/text_size_16"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_line_thickness"
+        android:background="@color/divider_color"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingBottom="@dimen/XL"
+        android:paddingTop="@dimen/XL">
+
+        <TextView
+            android:id="@+id/tv_money_title"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text="金   额："
+            android:textColor="@color/tc2"
+            android:textSize="@dimen/text_size_16"/>
+
+        <TextView
+            android:id="@+id/tv_money_content"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:text=""
+            android:textColor="@color/tc2"
+            android:textSize="@dimen/text_size_16"/>
+
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider_line_thickness"
+        android:background="@color/divider_color"/>
+
+</LinearLayout>

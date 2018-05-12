@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <com.wondersgroup.hs.healthcloud.common.view.PullToRefreshView
+        android:id="@+id/pull_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <com.wondersgroup.hs.healthcloud.common.view.BaseRecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </com.wondersgroup.hs.healthcloud.common.view.PullToRefreshView>
+    <!--悬浮titlbar-->
+    <TextView
+        android:id="@+id/tv_titlebar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/actionbar_height"
+        android:background="@color/transparent"
+        android:gravity="center"
+        android:text="健康"
+        android:textSize="@dimen/text_size_18"
+        android:textColor="#ffffff"/>
+        <View
+            android:id="@+id/view_titlebar_below_line"
+            android:layout_below="@+id/tv_titlebar"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_line_thickness"
+            android:background="@color/divider_color"
+            android:visibility="gone"/>
+        <!--文章分类层-->
+        <com.wonders.health.venus.open.user.view.SlidingTabStrip
+            android:id="@+id/tabs_hidden"
+            android:layout_below="@+id/view_titlebar_below_line"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/XXXXL"
+            android:background="@color/bc1"
+            app:pstsIndicatorColor="@color/bc7"
+            app:pstsIndicatorHeight="@dimen/S"
+            app:pstsSelectedTabTextColor="@color/tc5"
+            app:pstsSelectedTabTextSize="@dimen/text_size_14"
+            app:pstsTabTextSize="@dimen/text_size_14"
+            app:pstsTabPaddingLeftRight="@dimen/L"
+            app:pstsUnderlinePadding="@dimen/M"
+            app:pstsTabTextColor="@color/tc1"
+            android:visibility="invisible"/>
+
+</RelativeLayout>

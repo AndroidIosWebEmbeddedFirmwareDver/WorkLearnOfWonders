@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<included>
+    <include resource="org/springframework/boot/logging/logback/defaults.xml"/>
+    <include resource="org/springframework/boot/logging/logback/console-appender.xml"/>
+
+    <appender name="FILE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <FileNamePattern>
+                ${LOG_HOME:-/usr/local/dir_samba/HC_logs}/${APP_NAME}/info/%d{yyyy-MM}/%d{dd}.%i.log
+            </FileNamePattern>
+            <maxFileSize>100MB</maxFileSize>
+        </rollingPolicy>
+        <encoder>
+            <pattern>${FILE_LOG_PATTERN}</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="GATE" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <FileNamePattern>
+                ${LOG_HOME:-/usr/local/dir_samba/HC_logs}/${APP_NAME}/gate/%d{yyyy-MM}/%d{dd}.%i.log
+            </FileNamePattern>
+            <maxFileSize>100MB</maxFileSize>
+        </rollingPolicy>
+        <encoder>
+            <pattern>${FILE_LOG_PATTERN}</pattern>
+        </encoder>
+    </appender>
+
+    <!--2018年01月17日18:13:34-->
+
+    <appender name="ERROR" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <FileNamePattern>
+                ${LOG_HOME:-/usr/local/dir_samba/HC_logs}/${APP_NAME}/error/%d{yyyy-MM}/%d{dd}.%i.log
+            </FileNamePattern>
+            <maxFileSize>100MB</maxFileSize>
+        </rollingPolicy>
+        <encoder>
+            <pattern>${FILE_LOG_PATTERN}</pattern>
+        </encoder>
+    </appender>
+
+    <appender name="EX" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <rollingPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedRollingPolicy">
+            <FileNamePattern>
+                ${LOG_HOME:-/usr/local/dir_samba/HC_logs}/${APP_NAME}/ex/%d{yyyy-MM}/%d{dd}.%i.log
+            </FileNamePattern>
+            <maxFileSize>100MB</maxFileSize>
+        </rollingPolicy>
+        <encoder>
+            <pattern>${FILE_LOG_PATTERN}</pattern>
+        </encoder>
+    </appender>
+
+    <logger name="exlog" level="INFO" additivity="false">
+        <springProfile name="de">
+            <appender-ref ref="CONSOLE"/>
+        </springProfile>
+        <appender-ref ref="EX"/>
+    </logger>
+
+    <logger name="gatelog" level="INFO" additivity="false">
+        <springProfile name="de">
+            <appender-ref ref="CONSOLE"/>
+        </springProfile>
+        <appender-ref ref="GATE"/>
+    </logger>
+
+    <logger name="com.wondersgroup" level="INFO" additivity="false">
+        <springProfile name="de">
+            <appender-ref ref="CONSOLE"/>
+        </springProfile>
+        <appender-ref ref="FILE"/>
+    </logger>
+
+    <root level="INFO">
+        <appender-ref ref="CONSOLE"/>
+        <appender-ref ref="FILE"/>
+    </root>
+</included>

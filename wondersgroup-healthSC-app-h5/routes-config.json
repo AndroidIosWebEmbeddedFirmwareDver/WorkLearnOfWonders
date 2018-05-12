@@ -1,0 +1,50 @@
+{
+    "root": "/healthSC-app-h5",
+    "routes": [
+        {
+            "desc":"首页",
+            "parentUri":"/",
+            "routePath":"/home.rute"
+        },
+        {
+            "desc":"文章",
+            "parentUri":"/article",
+            "routePath":"/article/article.rute"
+        },
+        {
+            "desc":"中医未治病",
+            "parentUri":"/measurement",
+            "routePath":"/measurement/measurement.rute"
+        },
+        {
+            "desc": "帮助",
+            "parentUri": "/help",
+            "routePath": "/help/help.rute"
+        },
+        {
+            "desc": "健康档案",
+            "parentUri": "/healthRecords",
+            "routePath": "/healthRecords/healthRecords.rute"
+        },
+        {
+            "desc": "提取报告",
+            "parentUri": "/extractReport",
+            "routePath": "/extractReport/extractReport.rute"
+        },
+        {
+            "desc": "电子处方",
+            "parentUri": "/prescribing",
+            "routePath": "/prescribing/prescribing.rute"
+        },
+        {
+            "desc": "规则",
+            "parentUri": "/ruler",
+            "routePath": "/ruler/ruler.rute"
+        },
+        {
+            "desc": "家庭医生",
+            "parentUri": "/familyDoctor",
+            "routePath": "/familyDoctor/familyDoctor.rute"
+        }
+    ]
+}

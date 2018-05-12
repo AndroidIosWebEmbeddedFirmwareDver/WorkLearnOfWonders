@@ -1,0 +1,141 @@
+<div class="wrapper" ng-controller="addMenuController">
+    <div class="panel panel-default">
+        <div class="panel-heading font-bold">
+            菜单管理
+        </div>
+        <div class="panel-body">
+            <div class="hbox hbox-auto-xs hbox-auto-sm">
+                <div class="col-lg-5 m-t-md">
+                    <div class="wrapper-md">
+                        <div class="m-b-md">
+                            <button type="submit" class="btn btn-defalut" ng-class="type==1?'btn-success':''" ng-click="type=1;my_tree.expand_all();isopen=1">新增菜单</button>
+                            <button type="submit" class="btn btn-danger" ng-class="type==2?'btn-success':''" ng-click="type=2;my_tree.expand_all();isopen=1">删除菜单</button>
+                            <button type="submit" class="btn btn-defalut" ng-class="type==3?'btn-success':''" ng-click="type=3;my_tree.expand_all();isopen=1">修改菜单</button>
+                            <a class="btn btn-default" ng-click="fold()">展开/折叠</a>
+                        </div>
+                        <div class="b-a bg-light dk r r-2x">
+                            <span ng-if="doing_async">...loading...</span>
+                            <abn-tree2
+                                    tree-data         = "my_data"
+                                    tree-control      = "my_tree"
+                                    on-select         = "my_tree_handler(branch)"
+                                    expand-level      = "3"
+                                    initial-selection = "四川健康云"
+                                    icon-leaf         = "fa fa-file-o"
+                                    icon-expand       = "fa fa-plus"
+                                    icon-collapse     = "fa fa-minus"
+                            >
+                            </abn-tree2>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-7">
+                    <div class="wrapper-md">
+                        <form class="form-horizontal form-validation m-t-md m-b-md" name="delet" ng-submit="delete()" novalidate ng-if="type==2">
+                            <b class="font-bold"><i class="fa fa-minus"></i>删除菜单</b>
+                            <div class="line line-dashed b-b line-lg pull-in"></div>
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label">菜单名称：</label>
+                                <div class="col-lg-6">
+                                    <input type="text" class="form-control"  ng-model="menuObj.output" required placeholder="必填,请在左侧选择需删除的菜单项" disabled>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-lg-6 col-lg-offset-2">
+                                    <button type="submit" class="btn btn-success" ng-disabled="issubmiting||delet.$invalid">删除菜单</button>
+                                    <a class="btn btn-default" ng-click="clear()">取消</a>
+                                </div>
+                            </div>
+                        </form>
+                        <form class="form-horizontal form-validation m-t-md m-b-md" name="adStartForm" ng-submit="save()" novalidate ng-if="type==1">
+                            <b class="font-bold"><i class="fa fa-plus"></i>新增菜单</b>
+                            <div class="line line-dashed b-b line-lg pull-in"></div>
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label">菜单名称：</label>
+                                <div class="col-lg-6">
+                                    <input type="text" class="form-control"  ng-model="menuObj.name" placeholder="必填">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label">{{menuObj.type==1?'链接：':'权限：'}}</label>
+                                <div class="col-lg-6">
+                                    <input type="text" class="form-control" ng-model="menuObj.link" placeholder="{{menuObj.type==1?'选填':'必填'}}">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label">类型：</label>
+                                <div class="col-lg-6">
+                                    <select class="form-control" ng-model="menuObj.type">
+                                        <option value="1">菜单</option>
+                                        <option value="2">操作</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label">同层级顺序：</label>
+                                <div class="col-lg-6">
+                                    <input type="number" class="form-control" ng-model="menuObj.sort">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label">父菜单：</label>
+                                <div class="col-lg-6">
+                                    <input type="text" class="form-control" ng-model="menuObj.output" placeholder="必填,请在左侧选择父菜单" disabled>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <div class="col-lg-6 col-lg-offset-2">
+                                    <button type="submit" class="btn btn-success" ng-disabled="issubmiting||adStartForm.$invalid">生成菜单</button>
+                                    <a class="btn btn-default"  ng-click="clear()">取消</a>
+                                </div>
+                            </div>
+                        </form>
+                        <form class="form-horizontal form-validation m-t-md m-b-md" name="adStartForm" ng-submit="edit()" novalidate ng-if="type==3">
+                            <b class="font-bold"><i class="fa fa-plus"></i>修改菜单</b>
+                            <div class="line line-dashed b-b line-lg pull-in"></div>
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label">菜单名称：</label>
+                                <div class="col-lg-6">
+                                    <input type="text" class="form-control" ng-model="menuObj.output" placeholder="请在左侧选择要修改的菜单">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label">{{menuObj.editType==1?'链接：':'权限：'}}</label>
+                                <div class="col-lg-6">
+                                    <input type="text" class="form-control" ng-model="menuObj.href" placeholder="{{menuObj.editType==1?'选填':'必填'}}">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label">类型：</label>
+                                <div class="col-lg-6">
+                                    <select class="form-control" ng-model="menuObj.editType">
+                                        <option value="1">菜单</option>
+                                        <option value="2">操作</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="col-lg-2 control-label">同层级顺序：</label>
+                                <div class="col-lg-6">
+                                    <input type="text" class="form-control" ng-model="menuObj.sort">
+                                </div>
+                            </div>
+                            <!--<div class="form-group">-->
+                            <!--<label class="col-lg-2 control-label">父菜单：</label>-->
+                            <!--<div class="col-lg-6">-->
+                            <!--<input type="text" class="form-control" ng-model="menuObj.output" placeholder="必填,请在左侧选择父菜单" disabled>-->
+                            <!--</div>-->
+                            <!--</div>-->
+                            <div class="form-group">
+                                <div class="col-lg-6 col-lg-offset-2">
+                                    <button type="submit" class="btn btn-success" ng-disabled="issubmiting||adStartForm.$invalid">修改菜单</button>
+                                    <a class="btn btn-default"  ng-click="clear()">取消</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

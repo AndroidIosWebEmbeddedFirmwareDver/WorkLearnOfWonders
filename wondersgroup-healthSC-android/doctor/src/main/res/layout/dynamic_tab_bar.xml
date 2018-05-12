@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/bg_tab_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tab_host_height"
+        android:layout_gravity="bottom|right"
+        android:scaleType="centerCrop"
+        android:src="@color/bc1" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/tab_host_height"
+        android:layout_gravity="center_vertical"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:paddingBottom="1dp">
+
+        <RelativeLayout
+            android:id="@+id/tab_container_0"
+            android:layout_width="0dip"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="@dimen/XL"
+            android:clickable="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerInParent="true"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/tab_home_0"
+                    android:layout_width="@dimen/tab_icon_width"
+                    android:layout_height="@dimen/tab_icon_height"
+                    android:scaleType="fitEnd"
+                    android:src="@mipmap/ic_tab0_selected" />
+
+                <TextView
+                    android:layout_marginLeft="@dimen/L"
+                    android:layout_marginRight="@dimen/L"
+                    android:id="@+id/tab_home_0_desc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:textSize="@dimen/text_size_16"
+                    android:text="工作台" />
+            </LinearLayout>
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/tab_container_1"
+            android:layout_width="0dip"
+            android:layout_height="match_parent"
+            android:layout_marginRight="@dimen/XL"
+            android:layout_weight="1"
+            android:clickable="true">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:gravity="center">
+
+                <ImageView
+                    android:id="@+id/tab_home_1"
+                    android:layout_width="@dimen/tab_icon_width"
+                    android:layout_height="@dimen/tab_icon_height"
+                    android:scaleType="fitEnd"
+                    android:src="@mipmap/ic_tab1" />
+
+                <TextView
+                    android:layout_marginLeft="@dimen/L"
+                    android:layout_marginRight="@dimen/L"
+                    android:id="@+id/tab_home_1_desc"
+                    android:layout_width="wrap_content"
+                    android:textSize="@dimen/text_size_16"
+                    android:layout_height="wrap_content"
+                    android:text="个人" />
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+</FrameLayout>

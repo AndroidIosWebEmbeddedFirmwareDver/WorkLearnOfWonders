@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:background="@color/bc1"
+              android:paddingLeft="@dimen/L"
+              android:paddingRight="@dimen/L">
+
+    <LinearLayout
+        android:id="@+id/ll_content"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:padding="@dimen/L"
+            >
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="检查时间:"
+                android:textColor="@color/tc2"
+                android:textSize="@dimen/text_size_14"/>
+
+            <TextView
+                android:id="@+id/tv_date_content"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_marginLeft="@dimen/XL"
+                android:layout_gravity="center_vertical"
+                android:textColor="@color/tc1"
+                android:textSize="@dimen/text_size_14"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/L">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="医        院:"
+                android:textColor="@color/tc2"
+                android:textSize="@dimen/text_size_14"/>
+
+            <TextView
+                android:id="@+id/tv_hospital_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/XL"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textColor="@color/tc1"
+                android:textSize="@dimen/text_size_14"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/L">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="科        室:"
+                android:textColor="@color/tc2"
+                android:textSize="@dimen/text_size_14"/>
+
+            <TextView
+                android:id="@+id/tv_department_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/XL"
+                android:textColor="@color/tc1"
+                android:textSize="@dimen/text_size_14"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="@dimen/L">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="检查类别:"
+                android:textColor="@color/tc2"
+                android:textSize="@dimen/text_size_14"/>
+
+            <TextView
+                android:id="@+id/tv_category_content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/XL"
+                android:ellipsize="end"
+                android:lines="1"
+                android:textColor="@color/tc1"
+                android:textSize="@dimen/text_size_14"/>
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:paddingLeft="@dimen/L"
+        android:src="@mipmap/ic_default_arrow"/>
+
+</LinearLayout>
+

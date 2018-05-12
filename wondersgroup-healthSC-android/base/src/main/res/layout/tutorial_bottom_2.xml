@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="80dp"
+    android:layout_alignParentBottom="true"
+    android:id="@+id/ll_bottom"
+    android:gravity="bottom"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/bottom_separator"
+        android:layout_width="fill_parent"
+        android:layout_height="1px"
+        android:background="#55000000"
+        android:visibility="gone"></TextView>
+
+    <LinearLayout
+        android:id="@+id/bottom_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginBottom="16dp"
+        android:layout_weight="1"
+        android:background="#00000000"
+        android:orientation="horizontal">
+
+        <Button
+            android:id="@+id/skip"
+            android:layout_width="60dp"
+            android:layout_height="fill_parent"
+            android:layout_gravity="start"
+            android:layout_weight="0.2"
+            android:background="#00000000"
+            android:text="跳过"
+            android:textColor="#ffffff" />
+
+        <LinearLayout
+            android:id="@+id/circles"
+            android:layout_width="wrap_content"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_weight="0.8"
+            android:gravity="center"
+            android:orientation="horizontal"></LinearLayout>
+
+        <ImageButton
+            android:id="@+id/next"
+            android:layout_width="60dp"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_weight="0.2"
+            android:background="@null"
+            android:src="@mipmap/ic_arrow_forward_white_24px" />
+
+        <ImageButton
+            android:id="@+id/done"
+            android:layout_width="60dp"
+            android:layout_height="fill_parent"
+            android:layout_gravity="center"
+            android:layout_weight="0.2"
+            android:background="@null"
+            android:src="@mipmap/ic_done_white_24px"
+            android:visibility="gone" />
+    </LinearLayout>
+</LinearLayout>

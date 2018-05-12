@@ -1,0 +1,45 @@
+<ul class="nav" id="dashabi" ng-repeat='item in Menus'>
+    <li ng-if="item.href" ui-sref-active="active">
+        <a ui-sref="{{item.href}}">
+            <span class="font-bold">{{item.menuName}}</span>
+        </a>
+    </li>
+    <li ng-if="!item.href">
+        <a href class="auto">
+            <span class="pull-right text-muted">
+                    <i class="fa fa-fw fa-angle-right text"></i>
+                    <i class="fa fa-fw fa-angle-down text-active"></i>
+                </span>
+            <span class="font-bold">{{item.menuName}}</span>
+        </a>
+        <ul class="nav nav-sub dk">
+            <li class="nav-sub-header">
+                <a href>
+                    <span>{{item.menuName}}</span>
+                </a>
+            </li>
+            <li ui-sref-active="active" ng-repeat="_item in item.children | orderBy:'sort'">
+                <a class="auto" ui-sref="{{_item.href}}">
+                    <span class="font-bold">{{_item.menuName}}</span>
+                </a>
+            </li>
+        </ul>
+    </li>
+</ul>
+
+<div ng-controller="func"></div>
+<script>
+app.controller('func',['$scope','$state',function($scope,$state){
+    var name = $state.current.name;
+    setTimeout(function(){
+      var obj = $('#dashabi a');
+      for(var i=0; i<obj.length;i++){
+          var object = $(obj[i])
+          var attr = object.attr('ui-sref')
+          if(attr == name){
+             object.parents('ul').parent('li').addClass('active')
+          }
+      }
+    },400)
+}]);
+</script>

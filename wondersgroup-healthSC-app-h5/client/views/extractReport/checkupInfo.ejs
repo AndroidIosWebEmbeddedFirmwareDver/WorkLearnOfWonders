@@ -1,0 +1,60 @@
+<!DOCTYPE HTMl>
+<html>
+<head>
+<title>检查报告</title>
+<% include ../commontags/metatags %>
+<link rel="stylesheet" href="<%=_src('/css/extractReport/extractReport.min.css')%>">
+</head>
+<body>
+<%if(data){%>
+<div class="block-box infoMes">
+  <h3>报告信息</h3>
+  <div class="item">
+    <table width="100%" border="0">
+      <tr>
+        <td width="60%"><em>姓　　名：</em><span><%=data.name%></span></td>
+        <td width="40%"><em>性别：</em><span><%=data.sex%></span></td>
+      </tr>
+      <tr>
+        <td colspan="2"><em>年　　龄：</em><span><%=data.age%></span></td>
+      </tr>
+      <tr>
+        <td colspan="2"><em>医　　院：</em><span id="hosName"></span></td>
+      </tr>
+      <tr>
+        <td colspan="2"><em>检查项目：</em><span><%=data.examName%></span></td>
+      </tr>
+      <tr>
+        <td colspan="2"><em>检查部位：</em><span><%=data.examSite%></span></td>
+      </tr>
+      <tr>
+        <td colspan="2"><em>科　　室：</em><span><%=data.dept%></span></td>
+      </tr>
+      <tr>
+        <td colspan="2"><em>检查日期：</em><span><%=data.examDate%></span></td>
+      </tr>
+      <tr>
+        <td colspan="2"><em>报告日期：</em><span><%=data.reportDate%></span></td>
+      </tr>
+    </table>
+  </div>
+</div>
+<div class="block-box">
+  <h3>临床诊断报告</h3>
+  <p class="con"><%=data.clinicalDiagnosis%></p>
+</div>
+<div class="block-box">
+  <h3>医嘱</h3>
+  <p class="con"><%=data.remark%></p>
+</div>
+<%}else{%>
+  <div class="nodata" ><p>暂无内容</p></div>
+<%}%>
+<script>
+    function queryString(key){
+        return decodeURIComponent((document.location.search.match(new RegExp("(?:^\\?|&)"+key+"=(.*?)(?=&|$)"))||['',null])[1]);
+    }
+    queryString('hosName') && $('#hosName').html(queryString('hosName'));
+</script>
+</body>
+</html>

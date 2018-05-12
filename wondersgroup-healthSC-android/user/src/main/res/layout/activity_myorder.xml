@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.wondersgroup.hs.healthcloud.common.view.PagerSlidingTabStrip
+        android:id="@+id/tabs"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_height_L"
+        android:background="@color/bc1"
+        app:pstsIndicatorColor="@color/tc5"
+        app:pstsIndicatorHeight="3dp"
+        app:pstsSelectedTabTextColor="@color/tc5"
+        app:pstsSelectedTabTextSize="@dimen/text_size_14"
+        app:pstsTabPaddingLeftRight="@dimen/L"
+        app:pstsTabTextColor="@color/tc1"
+        app:pstsTabTextSize="@dimen/text_size_14"
+        app:pstsUnderlineColor="@color/dc1"
+        app:pstsUnderlinePadding="@dimen/L" />
+
+    <android.support.v4.view.ViewPager
+        android:id="@+id/pager"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tabs" />
+
+</RelativeLayout>

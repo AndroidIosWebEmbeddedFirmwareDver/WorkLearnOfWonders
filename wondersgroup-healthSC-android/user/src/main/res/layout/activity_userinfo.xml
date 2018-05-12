@@ -1,0 +1,222 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/L"
+        android:background="@color/bc1"
+        android:orientation="vertical">
+        <LinearLayout
+            android:id="@+id/ll_avator"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_item_transparent_selector"
+            android:paddingLeft="@dimen/XL"
+            android:paddingRight="@dimen/XL"
+            android:gravity="center_vertical">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="头像"
+                android:textColor="@color/tc2"
+                android:textSize="@dimen/text_size_14" />
+
+            <com.wondersgroup.hs.healthcloud.common.view.CircleImageView
+                android:id="@+id/iv_avator"
+                android:layout_width="33dp"
+                android:layout_height="33dp"
+                android:src="@mipmap/ic_user_default" />
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/L"
+                android:src="@mipmap/ic_default_arrow"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_line_thickness"
+            android:layout_marginLeft="@dimen/XL"
+            android:background="@color/divider_color"/>
+
+        <LinearLayout
+            android:id="@+id/ll_name"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_item_transparent_selector"
+            android:paddingLeft="@dimen/XL"
+            android:paddingRight="@dimen/XL"
+            android:gravity="center_vertical">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="姓名"
+                android:textColor="@color/tc2"
+                android:textSize="@dimen/text_size_14" />
+
+            <TextView
+                android:id="@+id/tv_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/tc1"
+                android:textSize="@dimen/text_size_14" />
+
+            <ImageView
+                android:id="@+id/iv_name_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/L"
+                android:src="@mipmap/ic_default_arrow"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_line_thickness"
+            android:layout_marginLeft="@dimen/XL"
+            android:background="@color/divider_color"/>
+
+        <LinearLayout
+            android:id="@+id/ll_phone"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_item_transparent_selector"
+            android:paddingLeft="@dimen/XL"
+            android:paddingRight="@dimen/XL"
+            android:gravity="center_vertical">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="账号"
+                android:textColor="@color/tc2"
+                android:textSize="@dimen/text_size_14" />
+
+            <TextView
+                android:id="@+id/tv_phone"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/tc1"
+                android:textSize="@dimen/text_size_14" />
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_line_thickness"
+            android:layout_marginLeft="@dimen/XL"
+            android:background="@color/divider_color"/>
+
+        <LinearLayout
+            android:id="@+id/ll_gender"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_item_transparent_selector"
+            android:paddingLeft="@dimen/XL"
+            android:paddingRight="@dimen/XL"
+            android:gravity="center_vertical">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="性别"
+                android:textColor="@color/tc2"
+                android:textSize="@dimen/text_size_14" />
+
+            <TextView
+                android:id="@+id/tv_gender"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/tc1"
+                android:textSize="@dimen/text_size_14" />
+
+            <ImageView
+                android:id="@+id/iv_gender_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/L"
+                android:src="@mipmap/ic_default_arrow"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider_line_thickness"
+            android:layout_marginLeft="@dimen/XL"
+            android:background="@color/divider_color"/>
+
+        <LinearLayout
+            android:id="@+id/ll_age"
+            android:layout_width="match_parent"
+            android:layout_height="45dp"
+            android:orientation="horizontal"
+            android:background="@drawable/bg_item_transparent_selector"
+            android:paddingLeft="@dimen/XL"
+            android:paddingRight="@dimen/XL"
+            android:gravity="center_vertical">
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="年龄"
+                android:textColor="@color/tc2"
+                android:textSize="@dimen/text_size_14" />
+
+            <TextView
+                android:id="@+id/tv_age"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/tc1"
+                android:textSize="@dimen/text_size_14" />
+
+            <ImageView
+                android:id="@+id/iv_age_arrow"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="@dimen/L"
+                android:src="@mipmap/ic_default_arrow"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_auth"
+        android:layout_width="match_parent"
+        android:layout_height="45dp"
+        android:orientation="horizontal"
+        android:background="@drawable/bg_item_white_selector"
+        android:layout_marginTop="@dimen/L"
+        android:paddingLeft="@dimen/XL"
+        android:paddingRight="@dimen/XL"
+        android:gravity="center_vertical">
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="实名认证"
+            android:textColor="@color/tc2"
+            android:textSize="@dimen/text_size_14" />
+
+        <TextView
+            android:id="@+id/tv_auth"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="未认证"
+            android:textColor="@color/tc1"
+            android:textSize="@dimen/text_size_14" />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="@dimen/L"
+            android:src="@mipmap/ic_default_arrow"/>
+    </LinearLayout>
+</LinearLayout>
+

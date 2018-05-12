@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="wrap_content"
+              android:padding="@dimen/XL"
+              android:background="@drawable/butten_normail_pop"
+        android:orientation="vertical"
+              xmlns:custom="http://schemas.android.com/apk/res-auto">
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="正在下载..."
+        android:textColor="@color/tc5"
+        android:textSize="@dimen/text_size_16"/>
+
+    <com.wondersgroup.hs.healthcloud.common.view.NumberProgressBar
+        android:id="@+id/number_progress_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/XL"
+        custom:progress_max="100"
+        custom:progress_current="0"
+        custom:progress_unreached_color="#CCCCCC"
+        custom:progress_reached_color="#3498DB"
+        custom:progress_text_size="@dimen/text_size_15"
+        custom:progress_text_color="#3498DB"
+        custom:progress_reached_bar_height="3dp"
+        custom:progress_unreached_bar_height="1.5dp"
+        />
+    <Button
+        android:id="@+id/btn_cancel_download"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/btn_height_M"
+        android:layout_margin="@dimen/M"
+        android:background="@drawable/btn_selector"
+        android:text="取消"
+        android:textColor="@color/tc1"/>
+
+</LinearLayout>

@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:id="@+id/tutorial_container"
+    android:layout_centerHorizontal="true" >
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:paddingBottom="64dp">
+        <TextView
+            android:id="@+id/heading"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:textSize="30sp"
+            android:text="患教"/>
+        <TextView
+            android:id="@+id/content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textColor="#ffffff"
+            android:textSize="18sp"
+            android:text="贴心咨询，关爱零距离"
+            android:layout_marginTop="@dimen/XXL"
+            android:layout_marginBottom="@dimen/XXXL"/>
+
+        <LinearLayout
+            android:id="@+id/images"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:id="@+id/welcome_img"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"/>
+        </LinearLayout>
+    </LinearLayout>
+    <TextView
+        android:layout_alignParentBottom="true"
+        android:layout_width="fill_parent"
+        android:layout_height="64dp" />
+</RelativeLayout>

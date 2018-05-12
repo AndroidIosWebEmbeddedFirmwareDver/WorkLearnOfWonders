@@ -1,0 +1,149 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#ffffff">
+
+        <TextView
+            android:id="@+id/tv_card_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:text="居民健康卡"
+            android:textSize="@dimen/text_size_16" />
+
+
+        <LinearLayout
+            android:id="@+id/ll_idCard_register"
+            android:layout_width="318dp"
+            android:layout_height="263dp"
+            android:layout_below="@id/tv_card_name"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/btn_height_S"
+            android:background="@mipmap/bg_idcardbtn_male"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="27dp"
+                android:layout_marginRight="27dp"
+                android:layout_marginTop="101dp"
+                android:text="居民健康卡号"
+                android:textColor="@color/tc0" />
+
+            <TextView
+                android:id="@+id/id_card_no_number"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="27dp"
+                android:layout_marginRight="27dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:text=""
+                android:textColor="@color/tc0"
+                android:textSize="@dimen/text_size_21" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="27dp"
+                android:layout_marginRight="27dp">
+
+                <TextView
+                    android:id="@+id/id_card_name"
+                    android:layout_width="wrap_content"
+
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginTop="@dimen/L"
+
+                    android:ellipsize="end"
+                    android:text="张有德"
+                    android:textColor="@color/tc0"
+                    android:textSize="@dimen/text_size_16" />
+
+                <TextView
+                    android:id="@+id/tv_idcard_number1_title"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+
+                    android:layout_marginLeft="31dp"
+                    android:layout_marginTop="@dimen/L"
+                    android:layout_toRightOf="@id/id_card_name"
+
+                    android:ellipsize="end"
+                    android:text="张有德"
+                    android:textColor="@color/tc0"
+                    android:textSize="@dimen/text_size_16" />
+
+                <TextView
+                    android:id="@+id/tv_idcard_number1_content"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:layout_centerVertical="true"
+                    android:layout_marginLeft="5dp"
+                    android:layout_marginTop="@dimen/L"
+                    android:layout_toRightOf="@+id/tv_idcard_number1_title"
+
+                    android:ellipsize="end"
+                    android:text="123444555566"
+                    android:textColor="@color/tc0"
+                    android:textSize="@dimen/text_size_16" />
+            </RelativeLayout>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="#ffffff">
+
+        <TextView
+            android:id="@+id/tv_hospital_card_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="16dp"
+            android:layout_marginTop="16dp"
+            android:text="医院就诊卡"
+            android:textSize="@dimen/text_size_16" />
+
+        <RelativeLayout
+            android:id="@+id/rl_hospital_card_describe_add_one"
+            android:layout_width="289dp"
+            android:layout_height="44dp"
+            android:layout_below="@id/tv_hospital_card_name"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="38dp"
+            android:layout_marginTop="@dimen/btn_height_S"
+            android:background="@mipmap/bg_addbar">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_centerVertical="true"
+                android:drawableLeft="@mipmap/icon_add"
+                android:drawablePadding="5dp"
+                android:text="添加一张就诊卡"
+                android:textColor="@color/tc2"
+                android:textSize="@dimen/text_size_16" />
+
+        </RelativeLayout>
+    </RelativeLayout>
+
+
+</LinearLayout>

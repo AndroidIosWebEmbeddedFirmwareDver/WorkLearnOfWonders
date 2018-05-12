@@ -1,0 +1,88 @@
+@import "../common/_public";
+body {
+  background: #fff;
+  color: #666;
+}
+
+.wrap {
+  margin: $apx * 3 $apx * 1.25;
+  word-break: break-all;
+  color: #555;
+  text-align: justify;
+  @include font-dpr(14px);
+}
+
+h1 {
+  @include font-dpr(16px);
+  text-align: center;
+  font-weight: bold;
+  padding-bottom: $apx * 1.25;
+}
+
+p {
+  @include font-dpr(14px);
+  margin-bottom: $apx * 1.5;
+}
+
+h4.ignore {
+  padding-top: 0;
+}
+
+h4 {
+  @include font-dpr(14px);
+  padding-top: $apx * 1.5;
+  font-weight: bold;
+  padding-bottom: $apx;
+  border-bottom: 1px solid #ddd;
+  margin-bottom: $apx * 1.5;
+}
+
+ol {
+  margin-left: $apx * 1.25;
+  margin-top: $apx * 1;
+}
+
+ol > li {
+  margin-bottom: $apx * 0.5;
+  margin-left: $apx * 0.8;
+  list-style-type: lower-latin;
+}
+
+ol.dot > li {
+  list-style-type: disc;
+}
+ul {
+  list-style: disc;
+}
+
+ul > li {
+  margin-left: $apx * 2.5;
+  margin-bottom: $apx * 1;
+  list-style-type: decimal;
+}
+
+p > span {
+  text-decoration: underline;
+}
+
+a {
+  font-weight: 600;
+  color: #787878;
+  text-decoration: underline;
+  &:link,
+  &:visited,
+  &:hover,
+  &:active {
+    color: #787878;
+    text-decoration: underline;
+  }
+}
+
+p:nth-last-of-type(2) {
+  padding-top: $apx * 2.5;
+}
+
+p.footer {
+  text-align: right !important;
+  margin-bottom: 0;
+}

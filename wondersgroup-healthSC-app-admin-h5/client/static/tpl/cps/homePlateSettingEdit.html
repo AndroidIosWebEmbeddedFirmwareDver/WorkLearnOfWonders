@@ -1,0 +1,52 @@
+<div class="wrapper" ng-controller="HomeAddCtrl">
+    <div class="panel panel-default">
+        <div class="panel-heading font-bold">
+            <a ui-sref="app.cps.homePlateSetting"><i class="fa fa-mail-reply"></i></a>
+            {{title}}
+        </div>
+        <input type="hidden" ng-model="homeObj.id">
+        <div class="panel-body">
+            <form class="form-horizontal form-validation m-t-md" name="addHomeForm" ng-submit="submitHome(homeObj);" novalidate>
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">版本号：</label>
+                    <div class="col-lg-6">
+                        <div>
+                            <input type="text" class="form-control" ng-model="homeObj.version" ng-disabled="homeObj.id && type=='edit'" placeholder="必填" required/>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">备注：</label>
+                    <div class="col-lg-6">
+                        <div>
+                            <textarea  class="form-control" ng-model="homeObj.remark"></textarea>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-lg-2 control-label">Icon：</label>
+                    <div class="col-lg-3 icon-div" ng-repeat="images in homeObj.images" ng-class="{'serviceStyle':$index==3}">
+                        <div style="overflow: hidden;margin-bottom: 15px">
+                            <div class="upload-box col-lg-3" upw="200" uph="100" get-url="setPicurl(url,$index)" on-close="onClose($index)" url="images.imgUrl" fileread/>
+                        </div>
+                        <div class="form-group icon-group">
+                            <input type="text" class="form-control" ng-model="homeObj.images[$index].mainTitle" ng-bind="images.mainTitle" placeholder="请输入按钮标题,字数不能大于10" required maxlength="10">
+                        </div>
+                        <div class="form-group icon-group">
+                            <input type="text" class="form-control" ng-model="homeObj.images[$index].subTitle" ng-bind="images.subTitle" placeholder="请输入按钮副标题,字数不能大于10" maxlength="10" required>
+                        </div>
+                        <div class="form-group icon-group">
+                            <input type="text" class="form-control" ng-model="homeObj.images[$index].hoplink" ng-bind="images.hoplink" placeholder="请输入合法的链接地址" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-group m-b-xl m-t-xl">
+                    <div class="col-lg-offset-2 col-lg-10">
+                        <button type="submit" class="btn btn-sm btn-success"  ng-disabled="addHomeForm.$invalid">保存</button>
+                        <a class="btn btn-sm btn-default" ui-sref="app.cps.homePlateSetting">取消</a>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

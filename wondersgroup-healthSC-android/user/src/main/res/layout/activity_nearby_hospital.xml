@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+    android:orientation="vertical">
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.baidu.mapapi.map.MapView
+            android:id="@+id/map"
+            android:layout_width="match_parent"
+            android:layout_height="230dp"
+            android:clickable="true" />
+        <RelativeLayout
+            android:id="@+id/rl_search"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:background="@drawable/btn_radius_stroke_white_gray"
+            android:descendantFocusability="beforeDescendants"
+            android:gravity="center"
+            android:layout_marginTop="11dp"
+            android:layout_marginLeft="16dp"
+            android:layout_marginRight="16dp">
+            <TextView
+                android:id="@+id/tv_search"
+                android:layout_width="wrap_content"
+                android:layout_height="32dp"
+                android:drawableLeft="@mipmap/icon_search_dark"
+                android:drawablePadding="@dimen/M"
+                android:gravity="center_vertical"
+                android:hint="搜索医院"
+                android:paddingLeft="@dimen/L"
+                android:paddingRight="@dimen/L"
+                android:singleLine="true"
+                android:textColor="@color/tc3"
+                android:textColorHint="@color/tc3"
+                android:textSize="@dimen/text_size_14"/>
+        </RelativeLayout>
+    </RelativeLayout>
+    <com.wondersgroup.hs.healthcloud.common.view.PullToRefreshView
+        android:id="@+id/pull_view"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+        <com.wondersgroup.hs.healthcloud.common.view.BaseRecyclerView
+            android:id="@+id/recycler_view"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"/>
+    </com.wondersgroup.hs.healthcloud.common.view.PullToRefreshView>
+
+</LinearLayout>

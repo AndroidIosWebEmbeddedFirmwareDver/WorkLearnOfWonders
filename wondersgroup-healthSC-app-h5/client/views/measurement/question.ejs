@@ -1,0 +1,54 @@
+<!DOCTYPE HTMl>
+<html>
+<head>
+<title>中医治未病</title>
+<% include ../commontags/metatags %>
+<link rel="stylesheet" href="<%=_src('/css/measurement/measurement.min.css')%>">
+<script type="text/javascript" src="<%=_src('/js/measurement/question.min.js')%>"></script>
+</head>
+<body>
+    <% for(var i=0;i<data.content.length;i++) {%>
+        <div class="question_item" id="<%=(i+1)%>">
+            <div class="question clearfix">
+                <p class="num"><%=data.content[i].index%>/<em>33</em></p>&nbsp;
+                <p class="title"><%=data.content[i].title%></p>
+            </div>
+            <ul class="option_list">
+                <% if(data.content[i].index==14){%>
+                    <li value="1" key="<%=data.content[i].key%>"><label class="radio">&nbsp;</label>一年不超过2次</li>
+                    <li value="2" key="<%=data.content[i].key%>"><label class="radio">&nbsp;</label>一年2—4次</li>
+                    <li value="3" key="<%=data.content[i].key%>"><label class="radio">&nbsp;</label>一年5—6次</li>
+                    <li value="4" key="<%=data.content[i].key%>"><label class="radio">&nbsp;</label>一年8次以上</li>
+                    <li value="5" key="<%=data.content[i].key%>"><label class="radio">&nbsp;</label>几乎每月都感冒</li>
+                <%} else if(data.content[i].index==17){%>
+                    <li value="1" key="<%=data.content[i].key%>"><label class="radio">&nbsp;</label>没有</li>
+                    <li value="2" key="<%=data.content[i].key%>"><label class="radio">&nbsp;</label>一年1、2次</li>
+                    <li value="3" key="<%=data.content[i].key%>"><label class="radio">&nbsp;</label>一年3、4次</li>
+                    <li value="4" key="<%=data.content[i].key%>"><label class="radio">&nbsp;</label>一年5、6次</li>
+                    <li value="5" key="<%=data.content[i].key%>"><label class="radio">&nbsp;</label>每次遇到上述原因都过敏</li>
+                <%} else if(data.content[i].index==28){%>
+                    <li value="1" key="<%=data.content[i].key%>"><label class="radio">&nbsp;</label>腹围<2.4尺</li>
+                    <li value="2" key="<%=data.content[i].key%>"><label class="radio">&nbsp;</label>腹围2.4—2.55尺</li>
+                    <li value="3" key="<%=data.content[i].key%>"><label class="radio">&nbsp;</label>腹围2.56—2.7尺</li>
+                    <li value="4" key="<%=data.content[i].key%>"><label class="radio">&nbsp;</label>腹围2.71—3.15尺</li>
+                    <li value="5" key="<%=data.content[i].key%>"><label class="radio">&nbsp;</label>腹围>3.15尺</li>
+                <%} else {%>
+                    <% for (var j=0;j<data.radios.length;j++) {%>
+                        <li value="<%=data.radios[j].value%>" key="<%=data.content[i].key%>"><label class="radio">&nbsp;</label><%=data.radios[j].name%></li>
+                    <% } %>
+                <% } %>
+            </ul>
+        </div>
+    <% } %>
+    <div class="btn_box">
+        <button class="btn_up">上一题</button>
+        <button class="btn_down">下一题</button>
+        <button class="btn_normal btn_default" id="submit">完成</button>
+    </div>
+    </body>
+    <script>
+        uri='<%=global.cf.root%>';
+        registerid='<%=data.registerid%>'
+    </script>
+</body>
+</html>

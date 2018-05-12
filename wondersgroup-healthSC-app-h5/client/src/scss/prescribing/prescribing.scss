@@ -1,0 +1,151 @@
+@import "../common/public";
+body{
+  background: #F6F6F6;
+}
+em{font-style: normal;}
+.pos-relative{
+  position: relative;
+}
+.pos-fixed{
+  position: fixed;
+  bottom: $btn-width;
+  width: 100%;
+  text-align: center;
+}
+.rarrow::after{
+  content: '';
+  display: inline-block;
+  width: 0.35rem;
+  height: 0.35rem;
+  border: 1px solid #d4d4d4;
+  border-width: 0.061667rem 0.061667rem 0 0;
+  position: absolute;
+  right: 0.4rem;
+  top: 50%;
+  margin-top: -0.175rem;
+  @include rotate(45deg);
+}
+.index-box{
+  background: #fff;
+  padding:0 $btn-width;
+  @include font-dpr(16px);
+  .ipt-text{
+    border: none;
+    height: 1.333333rem;
+    line-height: normal;
+    margin-top: 2px;
+    width: 100%;
+    border-bottom: 1px solid $border-color;
+  }
+  .search-box{
+    display: none;
+    border-top: 2px solid #FFA217;
+    li{
+      height: 1.333333rem;
+      line-height: 1.333333rem;
+      width: 100%;
+      border-bottom: 1px solid $border-color;
+      span{
+        color:$btn-color;
+      }
+    }
+  }
+  .list-selectTime{
+    li{
+      height: 1.666666rem;
+      width: 100%;
+      border-bottom: 1px solid $border-color;
+      position: relative;
+      label{
+        display: inline-block;
+        width: 100%;
+        padding-top: 0.433333rem;
+      }
+      span{
+        position: absolute;
+        right: 0;
+        top: 0.43333rem;
+        bottom: 0;
+      }
+      &.choosed{
+        color: $btn-color;
+      }
+      &:last-child{
+        border:0;
+      }
+    }
+  }
+}
+.list-box-prescribing{
+  background: #F6F6F6;
+  li{
+    background: #fff;
+    margin-top: 0.266667rem;
+    padding: 0.4rem $btn-width;
+    position: relative;
+    @include font-dpr(16px);
+    .p_line {
+      padding: 0.066667rem 0;
+      display: table;
+      width: 100%;
+      label{
+        display: table-cell;
+        padding-right:0.266667rem;
+        white-space: nowrap;
+        vertical-align: top;
+      }
+      p,.td_p{
+        display: table-cell;
+        width: 100%;
+      }
+    }
+  }
+}
+.list-box-info{
+  li{
+    padding:0 $btn-width;
+    .p_line{
+      border-bottom: 1px solid $border-color;
+      padding:0.266667rem 0;
+      &:last-child{
+        border:0;
+      }
+    }
+  }
+}
+.max-hei{
+  @include max-line(2);
+}
+.max-hei-1{
+  @include max-line(1);
+}
+.txt1{
+  text-align: center;
+  padding-top: 0.266667rem;
+  @include font-dpr(14px);
+}
+.block-box{
+  background: #fff;
+  margin-top: 0.266667rem;
+  padding:0 $btn-width $btn-width;
+  h3{
+    @include font-dpr(18px);
+    height: 1.333333rem;
+    line-height: 1.333333rem;
+    border-bottom: 1px solid $border-color;
+    margin-bottom: 0.266667rem;
+  }
+  .con{
+    @include font-dpr(16px);
+    padding:0.266667rem 0 0;
+  }
+  table{
+    td{
+      padding: 0.2rem 0;
+      @include font-dpr(14px);
+      span{
+        color: #000;
+      }
+    }
+  }
+}

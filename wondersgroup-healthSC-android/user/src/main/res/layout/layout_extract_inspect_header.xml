@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/bc1"
+    android:orientation="vertical"
+    android:paddingLeft="@dimen/XL"
+    android:paddingRight="@dimen/XL">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="@dimen/XL"
+        android:paddingTop="@dimen/XL">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="报告信息"
+            android:textColor="@color/tc1"
+            android:textSize="@dimen/text_size_16"/>
+    </LinearLayout>
+
+    <include layout="@layout/common_divider"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/M"
+                android:paddingTop="@dimen/M">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="姓名："
+                    android:textColor="@color/tc2"
+                    android:textSize="@dimen/text_size_14"/>
+
+                <TextView
+                    android:id="@+id/tv_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="张三"
+                    android:textColor="@color/tc1"
+                    android:textSize="@dimen/text_size_14"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/M"
+                android:paddingTop="@dimen/M">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="年龄："
+                    android:textColor="@color/tc2"
+                    android:textSize="@dimen/text_size_14"/>
+
+                <TextView
+                    android:id="@+id/tv_age"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="24"
+                    android:textColor="@color/tc1"
+                    android:textSize="@dimen/text_size_14"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/M"
+                android:paddingTop="@dimen/M">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="年别："
+                    android:textColor="@color/tc2"
+                    android:textSize="@dimen/text_size_14"/>
+
+                <TextView
+                    android:id="@+id/tv_gender"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="男"
+                    android:textColor="@color/tc1"
+                    android:textSize="@dimen/text_size_14"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/M"
+            android:paddingTop="@dimen/M">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="医院："
+                android:textColor="@color/tc2"
+                android:textSize="@dimen/text_size_14"/>
+
+            <TextView
+                android:id="@+id/tv_hospital"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="第一人民医院"
+                android:textColor="@color/tc1"
+                android:textSize="@dimen/text_size_14"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingBottom="@dimen/M"
+            android:paddingTop="@dimen/M">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="检查项目："
+                android:textColor="@color/tc2"
+                android:textSize="@dimen/text_size_14"/>
+
+            <TextView
+                android:id="@+id/tv_inspect_pro"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="腹部立体"
+                android:textColor="@color/tc1"
+                android:textSize="@dimen/text_size_14"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:paddingBottom="@dimen/M"
+                android:paddingTop="@dimen/M">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="检查部位："
+                    android:textColor="@color/tc2"
+                    android:textSize="@dimen/text_size_14"/>
+
+                <TextView
+                    android:id="@+id/tv_inspect_position"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="腹部"
+                    android:textColor="@color/tc1"
+                    android:textSize="@dimen/text_size_14"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/M"
+                android:paddingTop="@dimen/M">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="检查日期："
+                    android:textColor="@color/tc2"
+                    android:textSize="@dimen/text_size_14"/>
+
+                <TextView
+                    android:id="@+id/tv_inspect_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2016-11-11"
+                    android:textColor="@color/tc1"
+                    android:textSize="@dimen/text_size_14"/>
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/M"
+                android:paddingTop="@dimen/M">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="科室："
+                    android:textColor="@color/tc2"
+                    android:textSize="@dimen/text_size_14"/>
+
+                <TextView
+                    android:id="@+id/tv_department"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="CT"
+                    android:textColor="@color/tc1"
+                    android:textSize="@dimen/text_size_14"/>
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingBottom="@dimen/M"
+                android:paddingTop="@dimen/M">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="报告日期："
+                    android:textColor="@color/tc2"
+                    android:textSize="@dimen/text_size_14"/>
+
+                <TextView
+                    android:id="@+id/tv_report_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="2016-11-11"
+                    android:textColor="@color/tc1"
+                    android:textSize="@dimen/text_size_14"/>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
